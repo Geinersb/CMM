@@ -1,0 +1,6 @@
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\Entidadades\bin\Debug\Entidadades.dll
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\Entidadades\bin\Debug\Entidadades.pdb
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\Entidadades\obj\Debug\Entidadades.csprojAssemblyReference.cache
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\Entidadades\obj\Debug\Entidadades.csproj.CoreCompileInputs.cache
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\Entidadades\obj\Debug\Entidadades.dll
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\Entidadades\obj\Debug\Entidadades.pdb

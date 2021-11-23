@@ -1,0 +1,11 @@
+C:\Users\geine\Desktop\INNOVATEC\Common\bin\Debug\Common.dll
+C:\Users\geine\Desktop\INNOVATEC\Common\bin\Debug\Common.pdb
+C:\Users\geine\Desktop\INNOVATEC\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\geine\Desktop\INNOVATEC\Common\obj\Debug\Common.dll
+C:\Users\geine\Desktop\INNOVATEC\Common\obj\Debug\Common.pdb
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\Common\bin\Debug\Common.dll
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\Common\bin\Debug\Common.pdb
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\Common\obj\Debug\Common.csprojAssemblyReference.cache
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\Common\obj\Debug\Common.dll
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\Common\obj\Debug\Common.pdb

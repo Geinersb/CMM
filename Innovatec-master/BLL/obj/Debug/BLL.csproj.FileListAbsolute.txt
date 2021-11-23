@@ -1,0 +1,35 @@
+C:\Users\geine\Desktop\INNOVATEC\BLL\bin\Debug\BLL.dll
+C:\Users\geine\Desktop\INNOVATEC\BLL\bin\Debug\BLL.pdb
+C:\Users\geine\Desktop\INNOVATEC\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\geine\Desktop\INNOVATEC\BLL\obj\Debug\BLL.dll
+C:\Users\geine\Desktop\INNOVATEC\BLL\obj\Debug\BLL.pdb
+C:\Users\geine\Desktop\INNOVATEC\BLL\bin\Debug\DAL.dll
+C:\Users\geine\Desktop\INNOVATEC\BLL\bin\Debug\DAL.pdb
+C:\Users\geine\Desktop\INNOVATEC\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\geine\Desktop\INNOVATEC\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\geine\Desktop\INNOVATEC\BLL\bin\Debug\Common.dll
+C:\Users\geine\Desktop\INNOVATEC\BLL\bin\Debug\Common.pdb
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\BLL\bin\Debug\BLL.dll
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\BLL\bin\Debug\BLL.pdb
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\BLL\bin\Debug\DAL.dll
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\BLL\bin\Debug\Entidadades.dll
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\BLL\bin\Debug\DAL.pdb
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\BLL\bin\Debug\DAL.dll.config
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\BLL\bin\Debug\Entidadades.pdb
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\BLL\obj\Debug\BLL.dll
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\BLL\obj\Debug\BLL.pdb
+C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\BLL\bin\Debug\BLL.dll
+C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\BLL\bin\Debug\BLL.pdb
+C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\BLL\bin\Debug\DAL.dll
+C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\BLL\bin\Debug\Entidadades.dll
+C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\BLL\bin\Debug\DAL.pdb
+C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\BLL\bin\Debug\DAL.dll.config
+C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\BLL\bin\Debug\Entidadades.pdb
+C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\BLL\obj\Debug\BLL.dll
+C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\BLL\obj\Debug\BLL.pdb

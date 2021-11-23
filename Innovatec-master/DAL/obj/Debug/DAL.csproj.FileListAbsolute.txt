@@ -1,0 +1,29 @@
+C:\Users\geine\Desktop\INNOVATEC\DAL\bin\Debug\DAL.dll
+C:\Users\geine\Desktop\INNOVATEC\DAL\bin\Debug\DAL.pdb
+C:\Users\geine\Desktop\INNOVATEC\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\geine\Desktop\INNOVATEC\DAL\obj\Debug\DAL.dll
+C:\Users\geine\Desktop\INNOVATEC\DAL\obj\Debug\DAL.pdb
+C:\Users\geine\Desktop\INNOVATEC\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\geine\Desktop\INNOVATEC\DAL\bin\Debug\Common.dll
+C:\Users\geine\Desktop\INNOVATEC\DAL\bin\Debug\Common.pdb
+C:\Users\geine\Desktop\INNOVATEC\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\DAL\bin\Debug\DAL.dll.config
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\DAL\bin\Debug\DAL.dll
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\DAL\bin\Debug\DAL.pdb
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\DAL\bin\Debug\Entidadades.dll
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\DAL\bin\Debug\Entidadades.pdb
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\DAL\obj\Debug\DAL.dll
+C:\Users\Marjorie\Documents\Proyecto de Centros\Innovatec\DAL\obj\Debug\DAL.pdb
+C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\DAL\bin\Debug\DAL.dll.config
+C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\DAL\bin\Debug\DAL.dll
+C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\DAL\bin\Debug\DAL.pdb
+C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\DAL\bin\Debug\Entidadades.dll
+C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\DAL\bin\Debug\Entidadades.pdb
+C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\DAL\obj\Debug\DAL.dll
+C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\DAL\obj\Debug\DAL.pdb
