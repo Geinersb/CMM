@@ -252,32 +252,6 @@ GO
 
 
 
-create procedure  [dbo].[SP_olvido_passwor]
-(
-@userRequesting varchar(20)
-)
-as
-begin
-select nombre,correo,cedula  from Empleados e where e.usuario=@userRequesting or e.correo=@userRequesting
-end
-go
-
-
-create procedure [dbo].[SP_cambio_password]
-(
-@cedula varchar(50),
-@pass varchar(20)
-)
-as 
-begin
-UPDATE [dbo].[Empleados]
-   SET [pass] = @pass
-      
- WHERE cedula = @cedula
- END
- go
-
-
 
 
 
