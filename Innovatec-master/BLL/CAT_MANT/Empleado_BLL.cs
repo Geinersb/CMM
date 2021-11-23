@@ -50,7 +50,11 @@ namespace BLL.CAT_MANT
 
         public void AgregarEmpleado(Empleado empleado)
         {
+            //agrega el empleado a la base
             oEmpleadoAccess.AgregarUsuario(empleado);
+            //agrega el historial
+
+
         }
 
         public void ModificarEmpleado(Empleado empleado)
