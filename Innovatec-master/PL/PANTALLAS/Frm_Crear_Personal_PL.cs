@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Entidadades;
 using BLL.CAT_MANT;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace PL.PANTALLAS
 {
@@ -105,5 +106,178 @@ namespace PL.PANTALLAS
         }
 
 
+        private void Validaciontextos()
+        {
+
+        }
+
+        #region BLOQUEA DE TECLAS EN TEXTBOX
+        public bool BloqueoTeclasLetras(KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || (e.KeyChar == (char)Keys.Back) || (e.KeyChar==(char)Keys.Space))
+            {
+                return false;
+
+            }
+            else
+            {
+                return true;
+            }
+
+
+        }
+
+
+        public bool BloqueoTeclasNumeros(KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || (e.KeyChar == (char)Keys.Back) || (e.KeyChar == (char)Keys.Space))
+            {
+                return false;
+                
+            }
+            else
+            {
+                
+                return true;
+            }
+
+
+        }
+
+
+
+
+        public bool BloqueoTeclasLetrasyespacio(KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || (e.KeyChar == (char)Keys.Back))
+            {
+                return false;
+
+            }
+            else
+            {
+                return true;
+            }
+
+
+        }
+
+        public bool BloqueoTeclasnumerosyespacio(KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || (e.KeyChar == (char)Keys.Back))
+            {
+                return false;
+
+            }
+            else
+            {
+                return true;
+            }         
+
+        }
+
+        public bool BloqueoteclaEspacio(KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || (e.KeyChar == (char)Keys.Back) || (char.IsNumber(e.KeyChar)))
+            {
+                return false;
+
+            }
+            else
+            {
+                return true;
+            }
+
+        }
+
+
+        #endregion
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs f)
+        {
+            f.Handled = BloqueoTeclasNumeros(f);
+        }
+
+        private void txtPrimerApellido_KeyPress(object sender, KeyPressEventArgs f)
+        {
+            f.Handled = BloqueoTeclasnumerosyespacio(f);
+        }
+
+        private void txt_SegundoApellido_KeyPress(object sender, KeyPressEventArgs f)
+        {
+            f.Handled = BloqueoTeclasnumerosyespacio(f);
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs f )
+        {
+            f.Handled = BloqueoTeclasLetrasyespacio(f);
+        }
+
+
+        public static bool ValidarCorreo(string email)
+        {
+            string formatos = @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
+                @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$";
+
+            if (Regex.IsMatch(email, formatos))
+            {
+                if (Regex.Replace(email, formatos, string.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+        private void txtCorreo_Leave(object sender, EventArgs e)
+        {
+            if (txtCorreo.Text == string.Empty)
+            {
+                error.SetError(txtCorreo, "Debe digitar un Correo");
+                txtCorreo.Focus();
+            }
+            else
+            {
+                btnGuardar.Enabled = true;
+                error.Clear();
+                if (ValidarCorreo(txtCorreo.Text))
+                {
+                    // Obj_DAL.sCorreo = txt_Correo.Text.Trim();
+
+                }
+                else
+                {
+                    error.SetError(txtCorreo, "Debe digitar un correo electrónico que sea valido");
+                    txtCorreo.Focus();
+                    btnGuardar.Enabled = false;
+
+                }
+
+
+            }
+        }
+
+        private void txt_Cedula_KeyPress(object sender, KeyPressEventArgs f)
+        {
+            f.Handled = BloqueoteclaEspacio(f);
+        }
+
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs f)
+        {
+            f.Handled = BloqueoteclaEspacio(f);
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs f)
+        {
+            f.Handled = BloqueoteclaEspacio(f);
+        }
     }
 }

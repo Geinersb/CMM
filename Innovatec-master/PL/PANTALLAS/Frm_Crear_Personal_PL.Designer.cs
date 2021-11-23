@@ -29,6 +29,7 @@ namespace PL.PANTALLAS
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label12 = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.txt_Cedula = new System.Windows.Forms.TextBox();
@@ -54,7 +55,9 @@ namespace PL.PANTALLAS
             this.cmbRol = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cmbDepartamento = new System.Windows.Forms.ComboBox();
+            this.error = new System.Windows.Forms.ErrorProvider(this.components);
             this.BarraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.SuspendLayout();
             // 
             // label12
@@ -75,6 +78,7 @@ namespace PL.PANTALLAS
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(326, 23);
             this.txtCorreo.TabIndex = 6;
+            this.txtCorreo.Leave += new System.EventHandler(this.txtCorreo_Leave);
             // 
             // txt_Cedula
             // 
@@ -84,6 +88,7 @@ namespace PL.PANTALLAS
             this.txt_Cedula.Name = "txt_Cedula";
             this.txt_Cedula.Size = new System.Drawing.Size(326, 20);
             this.txt_Cedula.TabIndex = 4;
+            this.txt_Cedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Cedula_KeyPress);
             // 
             // label5
             // 
@@ -163,6 +168,7 @@ namespace PL.PANTALLAS
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(326, 23);
             this.txtTelefono.TabIndex = 5;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txt_SegundoApellido
             // 
@@ -171,6 +177,7 @@ namespace PL.PANTALLAS
             this.txt_SegundoApellido.Name = "txt_SegundoApellido";
             this.txt_SegundoApellido.Size = new System.Drawing.Size(326, 23);
             this.txt_SegundoApellido.TabIndex = 3;
+            this.txt_SegundoApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_SegundoApellido_KeyPress);
             // 
             // txtPrimerApellido
             // 
@@ -179,6 +186,7 @@ namespace PL.PANTALLAS
             this.txtPrimerApellido.Name = "txtPrimerApellido";
             this.txtPrimerApellido.Size = new System.Drawing.Size(326, 23);
             this.txtPrimerApellido.TabIndex = 2;
+            this.txtPrimerApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrimerApellido_KeyPress);
             // 
             // txtNombre
             // 
@@ -187,6 +195,7 @@ namespace PL.PANTALLAS
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(326, 23);
             this.txtNombre.TabIndex = 1;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // BarraTitulo
             // 
@@ -259,6 +268,7 @@ namespace PL.PANTALLAS
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(326, 23);
             this.txtUsuario.TabIndex = 8;
+            this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
             // 
             // label13
             // 
@@ -278,6 +288,7 @@ namespace PL.PANTALLAS
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(326, 23);
             this.txtPassword.TabIndex = 9;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // label4
             // 
@@ -292,6 +303,7 @@ namespace PL.PANTALLAS
             // 
             // cmbRol
             // 
+            this.cmbRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRol.FormattingEnabled = true;
             this.cmbRol.Location = new System.Drawing.Point(244, 285);
             this.cmbRol.Name = "cmbRol";
@@ -311,11 +323,16 @@ namespace PL.PANTALLAS
             // 
             // cmbDepartamento
             // 
+            this.cmbDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDepartamento.FormattingEnabled = true;
             this.cmbDepartamento.Location = new System.Drawing.Point(244, 317);
             this.cmbDepartamento.Name = "cmbDepartamento";
             this.cmbDepartamento.Size = new System.Drawing.Size(326, 21);
             this.cmbDepartamento.TabIndex = 100;
+            // 
+            // error
+            // 
+            this.error.ContainerControl = this;
             // 
             // Frm_Crear_Personal_PL
             // 
@@ -352,6 +369,7 @@ namespace PL.PANTALLAS
             this.Load += new System.EventHandler(this.Frm_Crear_Personal_PL_Load);
             this.BarraTitulo.ResumeLayout(false);
             this.BarraTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -384,5 +402,6 @@ namespace PL.PANTALLAS
         private System.Windows.Forms.ComboBox cmbRol;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmbDepartamento;
+        private System.Windows.Forms.ErrorProvider error;
     }
 }
