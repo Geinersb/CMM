@@ -27,3 +27,13 @@ C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\DAL\obj\Debug\DAL.cspro
 C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\DAL\obj\Debug\DAL.dll
 C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\DAL\obj\Debug\DAL.pdb
+C:\Users\geine\Source\Repos\CMM\Innovatec-master\DAL\bin\Debug\DAL.dll.config
+C:\Users\geine\Source\Repos\CMM\Innovatec-master\DAL\bin\Debug\DAL.dll
+C:\Users\geine\Source\Repos\CMM\Innovatec-master\DAL\bin\Debug\DAL.pdb
+C:\Users\geine\Source\Repos\CMM\Innovatec-master\DAL\bin\Debug\Entidadades.dll
+C:\Users\geine\Source\Repos\CMM\Innovatec-master\DAL\bin\Debug\Entidadades.pdb
+C:\Users\geine\Source\Repos\CMM\Innovatec-master\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\geine\Source\Repos\CMM\Innovatec-master\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\geine\Source\Repos\CMM\Innovatec-master\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\geine\Source\Repos\CMM\Innovatec-master\DAL\obj\Debug\DAL.dll
+C:\Users\geine\Source\Repos\CMM\Innovatec-master\DAL\obj\Debug\DAL.pdb

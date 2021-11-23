@@ -101,8 +101,8 @@ namespace DAL.BD
                 command.Parameters.AddWithValue("@correo", oEmpleadoDAL.Correo);
                 command.Parameters.AddWithValue("@usuario", oEmpleadoDAL.Usuario);
                 command.Parameters.AddWithValue("@pass", oEmpleadoDAL.Pass);
-                command.Parameters.AddWithValue("@id_perfil", oEmpleadoDAL.Id_perfil);
-                command.Parameters.AddWithValue("@id_departamento", oEmpleadoDAL.Id_departamento);
+                command.Parameters.AddWithValue("@perfil", oEmpleadoDAL.Id_perfil);
+                command.Parameters.AddWithValue("@departamento", oEmpleadoDAL.Id_departamento);
 
                 command.CommandType = CommandType.StoredProcedure;
 

@@ -30,9 +30,15 @@ namespace PL.PANTALLAS
             this.Close();
         }
 
+        private int perfil = 0;
+        private int departamento = 0;
+      
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             Empleado Pempleado = new Empleado();
+
+           
 
             Pempleado.Nombre = txtNombre.Text.ToString();
             Pempleado.Apellido1 = txtPrimerApellido.Text.ToString();
@@ -42,9 +48,14 @@ namespace PL.PANTALLAS
             Pempleado.Correo= txtCorreo.Text.ToString();
             Pempleado.Usuario = txtUsuario.Text.ToString();
             Pempleado.Pass = txtPassword.Text.ToString();
-            Pempleado.Id_perfil = cmbRol.SelectedIndex;
-            Pempleado.Id_departamento = cmbDepartamento.SelectedIndex;
-           //crear los demas variables
+            perfil = cmbRol.SelectedIndex;
+            Pempleado.Id_perfil = perfil+1;
+            departamento = cmbDepartamento.SelectedIndex;
+            Pempleado.Id_departamento = departamento+1;
+            //crear los demas variables
+
+            
+
 
             EmpleadoBLL.AgregarEmpleado(Pempleado);
 

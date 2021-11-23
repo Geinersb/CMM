@@ -90,43 +90,36 @@ namespace PL.PANTALLAS
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
             if (txtUsuario.Text != "USUARIO" && txtUsuario.TextLength > 2)
             {
                 if (txtPassword.Text != "CONTRASEÑA")
                 {
-                   Empleado_BLL empleado_BLL = new Empleado_BLL();
-                    List<Empleado> lst_empleadoLogin = new List<Empleado>(); 
+                    Empleado_BLL empleado_BLL = new Empleado_BLL();
+                    List<Empleado> lst_empleadoLogin = new List<Empleado>();
                     Empleado em = new Empleado();
 
-                     em=empleado_BLL.LoginBLL(txtUsuario.Text, txtPassword.Text);
+                    em = empleado_BLL.LoginBLL(txtUsuario.Text, txtPassword.Text);
 
-                    if (em.Nombre!=null)
+                    if (em.Nombre != null)
                     {
                         Frm_Inicio_PL pantalla = new Frm_Inicio_PL();
-
-                        MessageBox.Show("BIENVENID@ " + em.Nombre + " " + em.Apellido1, "BIENVENID@", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        //MessageBox.Show("BIENVENID@ " + em.Nombre + " " + em.Apellido1);
-                        this.Hide();
-                        pantalla.ShowDialog();              
-
+                        MessageBox.Show("BIENVENID@ " + em.Nombre + " " + em.Apellido1);
+                        pantalla.Show();
                         pantalla.FormClosed += Logout;
-                       
+                        this.Hide();
                     }
                     else
                     {
-                        msgError("Incorrect username or password entered. \n   Please try again.");
-                        txtPassword.Text = "Password";
+                        msgError("Usuario o contraseña incorrecta. \n   Intentelo de nuevo.");
+                        txtPassword.Text = "CONTRASEÑA";
                         txtPassword.UseSystemPasswordChar = false;
-                        txtUsuario.Focus();
+                        txtUsuario.Text = "USUARIO";
+                        //txtUsuario.Focus();
                     }
                 }
-                else msgError("Please enter password.");
+                else msgError("Por favor ingrese el password.");
             }
-            else msgError("Please enter username.");
-
-
+            else msgError("Por favor ingrese el usuario.");
 
         }
 

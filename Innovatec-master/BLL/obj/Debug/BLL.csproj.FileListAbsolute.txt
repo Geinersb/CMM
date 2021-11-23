@@ -33,3 +33,15 @@ C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\BLL\bin\Debug\Entidadad
 C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\BLL\obj\Debug\BLL.dll
 C:\Users\geine\Desktop\INNOVATEC MASTER\Innovatec-master\BLL\obj\Debug\BLL.pdb
+C:\Users\geine\Source\Repos\CMM\Innovatec-master\BLL\bin\Debug\BLL.dll
+C:\Users\geine\Source\Repos\CMM\Innovatec-master\BLL\bin\Debug\BLL.pdb
+C:\Users\geine\Source\Repos\CMM\Innovatec-master\BLL\bin\Debug\DAL.dll
+C:\Users\geine\Source\Repos\CMM\Innovatec-master\BLL\bin\Debug\Entidadades.dll
+C:\Users\geine\Source\Repos\CMM\Innovatec-master\BLL\bin\Debug\DAL.pdb
+C:\Users\geine\Source\Repos\CMM\Innovatec-master\BLL\bin\Debug\DAL.dll.config
+C:\Users\geine\Source\Repos\CMM\Innovatec-master\BLL\bin\Debug\Entidadades.pdb
+C:\Users\geine\Source\Repos\CMM\Innovatec-master\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\geine\Source\Repos\CMM\Innovatec-master\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\geine\Source\Repos\CMM\Innovatec-master\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\geine\Source\Repos\CMM\Innovatec-master\BLL\obj\Debug\BLL.dll
+C:\Users\geine\Source\Repos\CMM\Innovatec-master\BLL\obj\Debug\BLL.pdb

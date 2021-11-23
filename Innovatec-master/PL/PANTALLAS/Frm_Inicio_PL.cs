@@ -320,6 +320,11 @@ namespace PL.PANTALLAS
             openChildForm(new Frm_Historial_PL());
         }
 
+        private void Frm_Inicio_PL_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void openChildForm(Form childForm)
         {
             if (activeForm != null)            
