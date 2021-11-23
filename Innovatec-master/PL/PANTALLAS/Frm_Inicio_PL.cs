@@ -319,7 +319,9 @@ namespace PL.PANTALLAS
         private void Frm_Inicio_PL_Load(object sender, EventArgs e)
         {
             if (UserCache.Id_perfil == 1){
-                btnAuditoria.Enabled = false;
+                btnAuditoria.Enabled = true;
+                btnAdmin.Enabled = true;
+                btnAuditoria.Enabled = true;
                 }
            
             if (UserCache.Id_perfil == 2)
@@ -331,7 +333,8 @@ namespace PL.PANTALLAS
 
             if (UserCache.Id_perfil == 3)
             {
-                btnAuditoria.Enabled = false;
+                btnAuditoria.Enabled = false;               
+                btnMantenimiento.Enabled = false;
             }
             
 
