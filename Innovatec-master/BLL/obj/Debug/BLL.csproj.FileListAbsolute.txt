@@ -57,3 +57,15 @@ C:\Users\Marjorie\Documents\Proyecto\CMM\Innovatec-master\BLL\obj\Debug\BLL.cspr
 C:\Users\Marjorie\Documents\Proyecto\CMM\Innovatec-master\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\Marjorie\Documents\Proyecto\CMM\Innovatec-master\BLL\obj\Debug\BLL.dll
 C:\Users\Marjorie\Documents\Proyecto\CMM\Innovatec-master\BLL\obj\Debug\BLL.pdb
+C:\Users\Marjorie\Downloads\CMM\Innovatec-master\BLL\bin\Debug\BLL.dll
+C:\Users\Marjorie\Downloads\CMM\Innovatec-master\BLL\bin\Debug\BLL.pdb
+C:\Users\Marjorie\Downloads\CMM\Innovatec-master\BLL\bin\Debug\DAL.dll
+C:\Users\Marjorie\Downloads\CMM\Innovatec-master\BLL\bin\Debug\Entidadades.dll
+C:\Users\Marjorie\Downloads\CMM\Innovatec-master\BLL\bin\Debug\DAL.pdb
+C:\Users\Marjorie\Downloads\CMM\Innovatec-master\BLL\bin\Debug\DAL.dll.config
+C:\Users\Marjorie\Downloads\CMM\Innovatec-master\BLL\bin\Debug\Entidadades.pdb
+C:\Users\Marjorie\Downloads\CMM\Innovatec-master\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\Marjorie\Downloads\CMM\Innovatec-master\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Marjorie\Downloads\CMM\Innovatec-master\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\Marjorie\Downloads\CMM\Innovatec-master\BLL\obj\Debug\BLL.dll
+C:\Users\Marjorie\Downloads\CMM\Innovatec-master\BLL\obj\Debug\BLL.pdb

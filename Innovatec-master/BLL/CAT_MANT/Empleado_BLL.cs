@@ -33,6 +33,14 @@ namespace BLL.CAT_MANT
 
         }
 
+        public string RecuperarPass(string dato)
+        {
+
+
+            return oEmpleadoAccess.RecoverPassword(dato);
+
+        }
+
 
 
         public List<Empleado> ConsultarEmpleado()

@@ -47,3 +47,13 @@ C:\Users\Marjorie\Documents\Proyecto\CMM\Innovatec-master\DAL\obj\Debug\DAL.cspr
 C:\Users\Marjorie\Documents\Proyecto\CMM\Innovatec-master\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\Marjorie\Documents\Proyecto\CMM\Innovatec-master\DAL\obj\Debug\DAL.dll
 C:\Users\Marjorie\Documents\Proyecto\CMM\Innovatec-master\DAL\obj\Debug\DAL.pdb
+C:\Users\Marjorie\Downloads\CMM\Innovatec-master\DAL\bin\Debug\DAL.dll.config
+C:\Users\Marjorie\Downloads\CMM\Innovatec-master\DAL\bin\Debug\DAL.dll
+C:\Users\Marjorie\Downloads\CMM\Innovatec-master\DAL\bin\Debug\DAL.pdb
+C:\Users\Marjorie\Downloads\CMM\Innovatec-master\DAL\bin\Debug\Entidadades.dll
+C:\Users\Marjorie\Downloads\CMM\Innovatec-master\DAL\bin\Debug\Entidadades.pdb
+C:\Users\Marjorie\Downloads\CMM\Innovatec-master\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Marjorie\Downloads\CMM\Innovatec-master\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Marjorie\Downloads\CMM\Innovatec-master\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Marjorie\Downloads\CMM\Innovatec-master\DAL\obj\Debug\DAL.dll
+C:\Users\Marjorie\Downloads\CMM\Innovatec-master\DAL\obj\Debug\DAL.pdb

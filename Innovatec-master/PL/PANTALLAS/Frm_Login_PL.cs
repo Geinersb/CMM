@@ -139,7 +139,10 @@ namespace PL.PANTALLAS
             //txtUsuario.Focus();
         }
 
-
-
+        private void linkpass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            var recoverPassword = new Form1();
+            recoverPassword.ShowDialog();
+        }
     }
 }

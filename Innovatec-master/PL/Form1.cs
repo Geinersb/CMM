@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL.CAT_MANT;
 
 namespace PL
 {
@@ -15,6 +16,15 @@ namespace PL
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void enviarResponse_btn_Click(object sender, EventArgs e)
+        {
+
+            var ebll = new Empleado_BLL();
+            var result = ebll.RecuperarPass(dato_txt.Text);
+            mensaje_lbl.Text = result;
+
         }
     }
 }

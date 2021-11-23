@@ -26,7 +26,8 @@ namespace DAL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-6BRVLJ4;Initial Catalog=db_cmm;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-5AQTLJ4\\SQLEXPRESS;Initial Catalog=db_cmm;User ID=sa;Password" +
+            "=base1234")]
         public string cadena {
             get {
                 return ((string)(this["cadena"]));

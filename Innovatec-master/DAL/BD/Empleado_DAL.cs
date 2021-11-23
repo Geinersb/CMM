@@ -243,6 +243,111 @@ namespace DAL.BD
         }
 
 
+        public string RecoverPassword(string userRequesting)
+        {
+            SqlCommand command;
+            string query = "SP_olvido_passwor";
+            string respuesta="";
+            using (SqlConnection connection = new SqlConnection(stringConexion))
+            {
+
+                command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@userRequesting ", userRequesting);
+               // command.Parameters.AddWithValue("@pass", userRequesting);
+                command.CommandType = CommandType.StoredProcedure;
+
+
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+
+                        string nombre = reader.GetString(0);
+                        string correo = reader.GetString(1);
+                        string cedula = reader.GetString(2);
+                        var mailService = new Entidadades.SystemSupportMail();
+
+                        //generar el nuevo password
+                        var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+                        var Charsarr = new char[8];
+                        var random = new Random();
+
+                        for (int i = 0; i < Charsarr.Length; i++)
+                        {
+                            Charsarr[i] = characters[random.Next(characters.Length)];
+                        }
+
+                        var resultString = new String(Charsarr);
+
+                        ActualizarPass(cedula, resultString);
+
+
+
+                        mailService.sendMail(
+                          subject: "SYSTEM: Password recovery request",
+                          body: "Hola, " + nombre + "\nRecibimos una solicitud de cambio de password.\n" +
+                          "su nuevo password es : " + resultString +
+                          "\n",
+                          recipientMail: new List<string> { correo }
+                          );
+                        respuesta= "Hi, " + nombre + "\n Se enviò un nuevo password a su correo asociado.\n" +
+                          "Por favor verifique su correo : " + correo +
+                          "\nBuen dia";
+
+
+                    }
+                    connection.Close();
+                    reader.Close();
+
+                }
+                else
+                   respuesta= "Lo sentimos, usted no tiene una cuenta con el correo o usuario brindado";
+
+
+            }
+            return respuesta;
+        }
+
+
+
+
+        public void ActualizarPass(string cedula ,string pass)
+        {
+            SqlCommand command;
+            string query = "SP_cambio_password";
+
+            using (SqlConnection connection = new SqlConnection(stringConexion))
+            {
+                command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@cedula",cedula);
+                command.Parameters.AddWithValue("@pass", pass);
+                
+                command.CommandType = CommandType.StoredProcedure;
+
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+
+            }
+        }
+
+
+
+
         //public Empleado Login(string user, string pass)
         //{
 
