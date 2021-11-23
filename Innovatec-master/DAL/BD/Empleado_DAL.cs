@@ -192,61 +192,111 @@ namespace DAL.BD
             }
         }
 
-
-        public Empleado Login(string user, string pass)
+        public bool Login(string user, string pass)
         {
 
-            Empleado oEmpleadoDal = new Empleado();
-            //oEmpleadoDal.Usuario = user;
-            //oEmpleadoDal.Pass = pass;
+          
             SqlCommand command;
             string query = "sp_login";
             //List<Empleado> lstEmpleadosDAL = new List<Empleado>();
             using (SqlConnection connection = new SqlConnection(stringConexion))
             {
-               
+
                 command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@usuario", user);
                 command.Parameters.AddWithValue("@pass", pass);
                 command.CommandType = CommandType.StoredProcedure;
 
-                try
-                {
+               
                     connection.Open();
                     SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
                     while (reader.Read())
                     {
-                        
-                      
-                        oEmpleadoDal.Id_empleado = reader.GetInt32(0);
-                        oEmpleadoDal.Nombre = reader.GetString(1);
-                        oEmpleadoDal.Apellido1 = reader.GetString(2);
-                        oEmpleadoDal.Apellido2 = reader.GetString(3);
-                        oEmpleadoDal.Cedula = reader.GetString(4);
-                        oEmpleadoDal.Telefono = reader.GetString(5);
-                        oEmpleadoDal.Correo = reader.GetString(6);
-                        oEmpleadoDal.Usuario = reader.GetString(7);
-                        oEmpleadoDal.Pass = reader.GetString(8);
-                        oEmpleadoDal.Id_perfil = reader.GetInt32(9);
-                        oEmpleadoDal.Id_departamento = reader.GetInt32(10);
-                       // lstEmpleadosDAL.Add(oEmpleadoDal);
+
+
+                        UserCache.Id_empleado = reader.GetInt32(0);
+                        UserCache.Nombre = reader.GetString(1);
+                        UserCache.Apellido1 = reader.GetString(2);
+                        UserCache.Apellido2 = reader.GetString(3);
+                        UserCache.Cedula = reader.GetString(4);
+                        UserCache.Telefono = reader.GetString(5);
+                        UserCache.Correo = reader.GetString(6);
+                        UserCache.Usuario = reader.GetString(7);
+                        UserCache.Pass = reader.GetString(8);
+                        UserCache.Id_perfil = reader.GetInt32(9);
+                        UserCache.Id_departamento = reader.GetInt32(10);
+
                     }
                     connection.Close();
                     reader.Close();
+                    return true;
                 }
-                catch (Exception ex)
-                {
-                    throw new Exception(ex.Message);
-                }
-                finally
-                {
-                    connection.Close();
-                }
+                else
+                    return false;
 
+            
             }
-            // return lstEmpleadosDAL;
-            return oEmpleadoDal;
+            
         }
+
+
+        //public Empleado Login(string user, string pass)
+        //{
+
+        //    Empleado oEmpleadoDal = new Empleado();
+        //    //oEmpleadoDal.Usuario = user;
+        //    //oEmpleadoDal.Pass = pass;
+        //    SqlCommand command;
+        //    string query = "sp_login";
+        //    //List<Empleado> lstEmpleadosDAL = new List<Empleado>();
+        //    using (SqlConnection connection = new SqlConnection(stringConexion))
+        //    {
+
+        //        command = new SqlCommand(query, connection);
+        //        command.Parameters.AddWithValue("@usuario", user);
+        //        command.Parameters.AddWithValue("@pass", pass);
+        //        command.CommandType = CommandType.StoredProcedure;
+
+        //        try
+        //        {
+        //            connection.Open();
+        //            SqlDataReader reader = command.ExecuteReader();
+        //            while (reader.Read())
+        //            {
+
+
+        //                oEmpleadoDal.Id_empleado = reader.GetInt32(0);
+        //                oEmpleadoDal.Nombre = reader.GetString(1);
+        //                oEmpleadoDal.Apellido1 = reader.GetString(2);
+        //                oEmpleadoDal.Apellido2 = reader.GetString(3);
+        //                oEmpleadoDal.Cedula = reader.GetString(4);
+        //                oEmpleadoDal.Telefono = reader.GetString(5);
+        //                oEmpleadoDal.Correo = reader.GetString(6);
+        //                oEmpleadoDal.Usuario = reader.GetString(7);
+        //                oEmpleadoDal.Pass = reader.GetString(8);
+        //                oEmpleadoDal.Id_perfil = reader.GetInt32(9);
+        //                oEmpleadoDal.Id_departamento = reader.GetInt32(10);
+
+        //            }
+        //            connection.Close();
+        //            reader.Close();
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            throw new Exception(ex.Message);
+        //        }
+        //        finally
+        //        {
+        //            connection.Close();
+        //        }
+
+        //    }
+        //    // return lstEmpleadosDAL;
+        //    return oEmpleadoDal;
+        //}
 
 
         /// <summary>

@@ -20,16 +20,12 @@ using Entidadades;
 
 namespace PL.PANTALLAS
 {
-
-       public partial class Frm_Inicio_PL : Form
+    
+    public partial class Frm_Inicio_PL : Form
     {
 
-        //Cls_BD_DAL Obj_BD_DAL = new Cls_BD_DAL();
-        //CLS_BD_BLL Obj_BD_BLL = new CLS_BD_BLL();
 
-        //Cls_Pacientes_DAL Obj_Pacientes_DAL = new Cls_Pacientes_DAL();
-        //Cls_Pacientes_BLL Obj_Pacientes_BLL = new Cls_Pacientes_BLL();
-
+      
 
         public Frm_Inicio_PL()
         {
@@ -322,6 +318,22 @@ namespace PL.PANTALLAS
 
         private void Frm_Inicio_PL_Load(object sender, EventArgs e)
         {
+            if (UserCache.Id_perfil == 1){
+                btnAuditoria.Enabled = false;
+                }
+           
+            if (UserCache.Id_perfil == 2)
+            {
+                btnAdmin.Enabled = false;
+                btnMantenimiento.Enabled = false;
+
+            }
+
+            if (UserCache.Id_perfil == 3)
+            {
+                btnAuditoria.Enabled = false;
+            }
+            
 
         }
 
@@ -342,17 +354,30 @@ namespace PL.PANTALLAS
 
         private void LoadUserData()
         {
-            Empleado em = new Empleado();
+           int perfilLogueado=UserCache.Id_perfil;
 
-            lblNombre.Text = "Nombre Apellidos" /*UserLoginCache.Nombre+" "+UserLoginCache.Apellidos*/;
-            //lblApellidos.Text = UserLoginCache.Apellidos;
-            //lblCorreo.Text = UserLoginCache.Correo;
-            lblRol.Text = "Rol" /* UserLoginCache.Cargo*/;
+            lblNombre.Text = UserCache.Nombre + "  " + UserCache.Apellido1;
+
+            switch (perfilLogueado)
+            {
+                case 1: lblRol.Text = "Administrador" ;
+                    break;
+                case 2:
+                    lblRol.Text = "Auditor";
+                    break;
+                case 3:
+                    lblRol.Text = "Usuario";
+                    break;
+
+                default:
+                    break;
+            }
+            
         }
 
 
 
 
 
-    }
+       }
 }

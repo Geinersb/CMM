@@ -95,15 +95,14 @@ namespace PL.PANTALLAS
                 if (txtPassword.Text != "CONTRASEÑA")
                 {
                     Empleado_BLL empleado_BLL = new Empleado_BLL();
-                    List<Empleado> lst_empleadoLogin = new List<Empleado>();
-                    Empleado em = new Empleado();
+                    
+                    bool respuesta;
+                     respuesta=empleado_BLL.LoginBLL(txtUsuario.Text, txtPassword.Text);
 
-                    em = empleado_BLL.LoginBLL(txtUsuario.Text, txtPassword.Text);
-
-                    if (em.Nombre != null)
+                    if (respuesta)
                     {
                         Frm_Inicio_PL pantalla = new Frm_Inicio_PL();
-                        MessageBox.Show("BIENVENID@ " + em.Nombre + " " + em.Apellido1);
+                        MessageBox.Show("BIENVENID@ " + UserCache.Nombre + " " + UserCache.Apellido1);
                         pantalla.Show();
                         pantalla.FormClosed += Logout;
                         this.Hide();
@@ -114,7 +113,7 @@ namespace PL.PANTALLAS
                         txtPassword.Text = "CONTRASEÑA";
                         txtPassword.UseSystemPasswordChar = false;
                         txtUsuario.Text = "USUARIO";
-                        //txtUsuario.Focus();
+                        
                     }
                 }
                 else msgError("Por favor ingrese el password.");

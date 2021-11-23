@@ -15,13 +15,21 @@ namespace BLL.CAT_MANT
         Empleado_DAL oEmpleadoAccess = new Empleado_DAL();
 
 
-        public Empleado LoginBLL(string user, string pass)
+        //public Empleado LoginBLL(string user, string pass)
+        //{
+
+        //    // Empleado empleado = new Empleado();
+        //    //empleado.Usuario = user;
+        //    //empleado.Pass = pass;
+        //   // return oEmpleadoAccess.Login(user, pass);
+
+        //}
+
+        public bool LoginBLL(string user, string pass)
         {
 
-            // Empleado empleado = new Empleado();
-            //empleado.Usuario = user;
-            //empleado.Pass = pass;
-            return oEmpleadoAccess.Login(user, pass);
+          
+           return  oEmpleadoAccess.Login(user, pass);
 
         }
 
