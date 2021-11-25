@@ -28,6 +28,7 @@ namespace PL.PANTALLAS
         public Frm_Personal_PL()
         {
             InitializeComponent();
+            CargarDatos();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

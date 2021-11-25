@@ -61,6 +61,7 @@ namespace PL.PANTALLAS
 
             EmpleadoBLL.AgregarEmpleado(Pempleado);
 
+            
         }
 
         public void CargarComboPerfil()
