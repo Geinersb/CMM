@@ -11,6 +11,7 @@ using Entidadades;
 using BLL.CAT_MANT;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
+using DAL.BD;
 
 namespace PL.PANTALLAS
 {
@@ -64,20 +65,15 @@ namespace PL.PANTALLAS
 
         public void CargarComboPerfil()
         {
-            SqlConnection cn = new SqlConnection("Data Source=DESKTOP-6BRVLJ4;Initial Catalog=db_cmm;Integrated Security=True");
-            SqlCommand cm = new SqlCommand("Select nombre from perfil", cn);
+            Perfil_BLLcs pbll = new Perfil_BLLcs();
 
 
-            if (cn.State == ConnectionState.Closed)
+            foreach (Perfil perfil in pbll.ListarPerfiles())
             {
-                cn.Open();
+                cmbRol.Items.Add(perfil.Nombre);
             }
-            SqlDataReader dr = cm.ExecuteReader();
-            while (dr.Read())
-            {
-                cmbRol.Items.Add(dr.GetString(0));
-            }
-            cn.Close();
+
+
         }
 
         private void Frm_Crear_Personal_PL_Load(object sender, EventArgs e)
@@ -89,20 +85,13 @@ namespace PL.PANTALLAS
 
         public void CargarComboDepartamentos()
         {
-            SqlConnection cn = new SqlConnection("Data Source=DESKTOP-6BRVLJ4;Initial Catalog=db_cmm;Integrated Security=True");
-            SqlCommand cm = new SqlCommand("Select nombre from Departamentos", cn);
+            Departamento_BLL DepaBLL = new Departamento_BLL();
 
-
-            if (cn.State == ConnectionState.Closed)
+            
+            foreach (Departamento depa in DepaBLL.ListarDepartamento())
             {
-                cn.Open();
+                cmbDepartamento.Items.Add(depa.Nombre);
             }
-            SqlDataReader dr = cm.ExecuteReader();
-            while (dr.Read())
-            {
-                cmbDepartamento.Items.Add(dr.GetString(0));
-            }
-            cn.Close();
         }
 
 

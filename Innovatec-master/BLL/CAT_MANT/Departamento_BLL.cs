@@ -36,5 +36,10 @@ namespace BLL.CAT_MANT
         }
 
 
+        public List<Departamento> ListarDepartamento()
+        {
+            return oEmpleadoAccess.ListarDepartamentos();
+        }
+
     }
 }

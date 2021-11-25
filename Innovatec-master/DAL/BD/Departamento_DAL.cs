@@ -14,57 +14,48 @@ namespace DAL.BD
 
         private string stringConexion = Properties.Settings.Default.cadena;
 
-        //public List<Departamento> ListarDepartamentos()
-        //{
 
-        //    List<Departamento> lstEmpleadosDAL = new List<Departamento>();
+        public List<Departamento> ListarDepartamentos()
+        {
 
-        //    SqlCommand command;
-        //    string query = "SP_CONSULTA_EMPLEADOS";
+            List<Departamento> lstDepartamentoDAL = new List<Departamento>();
 
-        //    using (SqlConnection connection = new SqlConnection(stringConexion))
-        //    {
-        //        command = new SqlCommand(query, connection);
-        //        command.CommandType = CommandType.StoredProcedure;
+            SqlCommand command;
+            string query = "CONSULTA_DEPARTAMENTOS";
 
-        //        try
-        //        {
-        //            connection.Open();
-        //            SqlDataReader reader = command.ExecuteReader();
+            using (SqlConnection connection = new SqlConnection(stringConexion))
+            {
+                command = new SqlCommand(query, connection);
+                command.CommandType = CommandType.StoredProcedure;
 
-        //            while (reader.Read())
-        //            {
-        //                Empleado oEmpleadoDal = new Empleado();
-        //                oEmpleadoDal.Id_empleado = reader.GetInt32(0);
-        //                oEmpleadoDal.Nombre = reader.GetString(1);
-        //                oEmpleadoDal.Apellido1 = reader.GetString(2);
-        //                oEmpleadoDal.Apellido2 = reader.GetString(3);
-        //                oEmpleadoDal.Cedula = reader.GetString(4);
-        //                oEmpleadoDal.Telefono = reader.GetString(5);
-        //                oEmpleadoDal.Correo = reader.GetString(6);
-        //                oEmpleadoDal.Usuario = reader.GetString(7);
-        //                oEmpleadoDal.Pass = reader.GetString(8);
-        //                oEmpleadoDal.Id_perfil = reader.GetInt32(9);
-        //                oEmpleadoDal.Id_departamento = reader.GetInt32(10);
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
 
-        //                lstEmpleadosDAL.Add(oEmpleadoDal);
-        //            }
-        //            connection.Close();
-        //            reader.Close();
-        //        }
-        //        catch (Exception ex)
-        //        {
+                    while (reader.Read())
+                    {
+                        Departamento oDepartamentoDal = new Departamento();
+                        oDepartamentoDal.Nombre = reader.GetString(0);
 
-        //            throw new Exception(ex.Message);
-        //        }
-        //        finally
-        //        {
-        //            connection.Close();
-        //        }
-        //    }
+                        lstDepartamentoDAL.Add(oDepartamentoDal);
+                    }
+                    connection.Close();
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
 
-        //    return lstEmpleadosDAL;
-        //}
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+
+            return lstDepartamentoDAL;
+        }
 
 
         public DataTable FiltrarDepartamentos(string nombre)
@@ -82,9 +73,7 @@ namespace DAL.BD
             return t1;
         }
 
-
-
-
+               
         public void AgregarDepartamentos(Departamento oEmpleadoDAL)
         {
             SqlCommand command;

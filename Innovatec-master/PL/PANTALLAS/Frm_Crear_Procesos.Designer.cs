@@ -111,6 +111,7 @@ namespace PL.PANTALLAS
             this.txt_Realizado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Realizado.Location = new System.Drawing.Point(256, 310);
             this.txt_Realizado.Name = "txt_Realizado";
+            this.txt_Realizado.ReadOnly = true;
             this.txt_Realizado.Size = new System.Drawing.Size(364, 23);
             this.txt_Realizado.TabIndex = 5;
             // 
@@ -211,6 +212,7 @@ namespace PL.PANTALLAS
             this.txt_Fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Fecha.Location = new System.Drawing.Point(256, 348);
             this.txt_Fecha.Name = "txt_Fecha";
+            this.txt_Fecha.ReadOnly = true;
             this.txt_Fecha.Size = new System.Drawing.Size(364, 23);
             this.txt_Fecha.TabIndex = 43;
             // 

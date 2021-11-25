@@ -15,12 +15,14 @@ namespace DAL.BD
     {
         private string stringConexion = Properties.Settings.Default.cadena;
 
+       
+
         public List<Perfil> ListarPerfiles()
         {
             List<Perfil> lstPerfilesDAL = new List<Perfil>();
 
             SqlCommand command;
-            string query = "sp_mostrar_perfil";
+            string query = "CONSULTA_PERFILES";
 
             using (SqlConnection connection = new SqlConnection(stringConexion))
             {
@@ -35,8 +37,7 @@ namespace DAL.BD
                     while (reader.Read())
                     {
                         Perfil oPerfilDal = new Perfil();
-                        oPerfilDal.Id_perfil = reader.GetInt32(0);
-                        oPerfilDal.Nombre = reader.GetString(1);
+                        oPerfilDal.Nombre = reader.GetString(0);
 
 
                         lstPerfilesDAL.Add(oPerfilDal);
@@ -57,13 +58,12 @@ namespace DAL.BD
 
             return lstPerfilesDAL;
         }
-        
 
 
 
 
 
 
-       
     }
+
 }
