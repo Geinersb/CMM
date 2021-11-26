@@ -195,7 +195,37 @@ as insert into Departamentos(nombre,codigo)
 values (@nombre,@codigo)
 GO
  
+ CREATE PROCEDURE CONSULTA_PERFILES
+AS
+BEGIN
+SELECT [nombre]
+  FROM [dbo].[perfil]
+  END 
+GO
 
+CREATE PROCEDURE CONSULTA_DEPARTAMENTOS
+AS
+BEGIN
+SELECT [nombre]
+  FROM [dbo].[Departamentos]
+  END 
+GO
+
+
+CREATE PROCEDURE [dbo].[SP_FILTRAR_EMPLEADOS]
+(
+@nombre varchar(50)
+)
+as
+begin
+SELECT E.id_empleado, E.nombre, E.apellido1,E.apellido2,E.cedula,E.telefono,E.correo,E.usuario,E.pass,P.nombre as Perfil, D.nombre as Departamento 
+FROM Empleados AS E
+INNER JOIN perfil AS P ON P.id_perfil = E.id_perfil
+INNER JOIN Departamentos as D on D.id_departamento = E.id_departamento
+WHERE e.nombre LIKE '%'+@Nombre+'%' or LEN(ISNULL(@nombre, '')) = 0
+
+END
+GO
 
 
 CREATE PROCEDURE [dbo].[sp_insertar_empleados]
@@ -216,6 +246,41 @@ insert into Empleados(nombre,apellido1,apellido2,cedula,telefono,correo,usuario,
 values (@nombre,@apellido1,@apellido2,@cedula,@telefono,@correo,@usuario,@pass,@perfil,@departamento)
 END
 GO
+
+
+
+CREATE PROCEDURE sp_actualizar_empleado
+@id_empleado int,
+@nombre varchar(50),
+@apellido1 varchar(50),
+@apellido2 varchar(50),
+@cedula varchar(50),
+@telefono varchar(20),
+@correo varchar(50),
+@usuario varchar(20),
+@pass varchar(20),
+@perfil int,
+@departamento int
+AS
+BEGIN
+UPDATE [dbo].[Empleados]
+   SET [nombre] = @nombre 
+      ,[apellido1] = @apellido1
+      ,[apellido2] =@apellido2
+      ,[cedula] = @cedula
+      ,[telefono] =@telefono
+      ,[correo] = @correo
+      ,[usuario] = @usuario
+      ,[pass] = @pass
+      ,[id_perfil] =@perfil
+      ,[id_departamento] = @departamento
+ WHERE  id_empleado = @id_empleado
+ END
+GO
+
+
+
+
 -------
 
 
@@ -370,6 +435,6 @@ GO
 
 
 
-exec dbo.sp_insertar_empleados 'Juan','Jimenez','Perez','402525874','84759658','cavaal93@gmail.com','juan','juan00',2,2
+exec dbo.sp_insertar_empleados 'Geiner','Sanchez','Barboza','114260597','60205084','geinersb20@gmail.com','Admin','Admin',1,1
 
 
