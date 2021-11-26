@@ -113,6 +113,8 @@
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.titulo_lbl);
             this.Controls.Add(this.mensaje_lbl);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -13,6 +13,8 @@ using System.Data.SqlClient;
 using System.Text.RegularExpressions;
 using DAL.BD;
 
+
+
 namespace PL.PANTALLAS
 {
     public partial class Frm_Crear_Personal_PL : Form
@@ -38,30 +40,34 @@ namespace PL.PANTALLAS
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Empleado Pempleado = new Empleado();
-
-           
-
-            Pempleado.Nombre = txtNombre.Text.ToString();
-            Pempleado.Apellido1 = txtPrimerApellido.Text.ToString();
-            Pempleado.Apellido2 = txt_SegundoApellido.Text.ToString();
-            Pempleado.Cedula = txt_Cedula.Text.ToString();
-            Pempleado.Telefono = txtTelefono.Text.ToString();
-            Pempleado.Correo= txtCorreo.Text.ToString();
-            Pempleado.Usuario = txtUsuario.Text.ToString();
-            Pempleado.Pass = txtPassword.Text.ToString();
-            perfil = cmbRol.SelectedIndex;
-            Pempleado.Id_perfil = perfil+1;
-            departamento = cmbDepartamento.SelectedIndex;
-            Pempleado.Id_departamento = departamento+1;
-            //crear los demas variables
-
-            
-
-
-            EmpleadoBLL.AgregarEmpleado(Pempleado);
-            MessageBox.Show("SE HA INSERTADO CORRECTAMENTE EL NUEVO PERSONAL");
-            this.Hide();
+            if (txtNombre.Text==string.Empty || txtPrimerApellido.Text == string.Empty || txt_SegundoApellido.Text == string.Empty ||txt_Cedula.Text
+                == string.Empty || txtTelefono.Text == string.Empty ||txtCorreo.Text == string.Empty ||txtUsuario.Text == string.Empty ||txtPassword.Text == string.Empty ||cmbRol.SelectedItem == null || cmbDepartamento.SelectedItem==null)
+            {
+                MessageBox.Show("TODOS LOS CAMPOS DEBEN ESTAR LLENOS ");
+            }
+            else
+            {
+                Empleado Pempleado = new Empleado();
+                
+                Pempleado.Nombre = txtNombre.Text.ToString();
+                Pempleado.Apellido1 = txtPrimerApellido.Text.ToString();
+                Pempleado.Apellido2 = txt_SegundoApellido.Text.ToString();
+                Pempleado.Cedula = txt_Cedula.Text.ToString();
+                Pempleado.Telefono = txtTelefono.Text.ToString();
+                Pempleado.Correo = txtCorreo.Text.ToString();
+                Pempleado.Usuario = txtUsuario.Text.ToString();
+                Pempleado.Pass = txtPassword.Text.ToString();
+                perfil = cmbRol.SelectedIndex;
+                Pempleado.Id_perfil = perfil + 1;
+                departamento = cmbDepartamento.SelectedIndex;
+                Pempleado.Id_departamento = departamento + 1;
+                //crear los demas variables
+                                             
+                EmpleadoBLL.AgregarEmpleado(Pempleado);
+                MessageBox.Show("SE HA INSERTADO CORRECTAMENTE EL NUEVO PERSONAL");
+                this.Hide();
+            }
+                                                                  
 
         }
 
@@ -270,5 +276,17 @@ namespace PL.PANTALLAS
         {
             f.Handled = BloqueoteclaEspacio(f);
         }
+
+
+        private void CargarDatos()
+        {
+            Frm_Personal_PL pantalla = new Frm_Personal_PL();
+
+            
+        }
+
+
+
+
     }
 }

@@ -132,6 +132,7 @@ namespace DAL.BD
             using (SqlConnection connection = new SqlConnection(stringConexion))
             {
                 command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@id_empleado", oEmpleadoDAL.Id_empleado);
                 command.Parameters.AddWithValue("@nombre", oEmpleadoDAL.Nombre);
                 command.Parameters.AddWithValue("@apellido1", oEmpleadoDAL.Apellido1);
                 command.Parameters.AddWithValue("@apellido2", oEmpleadoDAL.Apellido2);
@@ -140,8 +141,8 @@ namespace DAL.BD
                 command.Parameters.AddWithValue("@correo", oEmpleadoDAL.Correo);
                 command.Parameters.AddWithValue("@usuario", oEmpleadoDAL.Usuario);
                 command.Parameters.AddWithValue("@pass", oEmpleadoDAL.Pass);
-                command.Parameters.AddWithValue("@id_perfil", oEmpleadoDAL.Id_perfil);
-                command.Parameters.AddWithValue("@id_departamento", oEmpleadoDAL.Id_departamento);
+                command.Parameters.AddWithValue("@perfil", oEmpleadoDAL.Id_perfil);
+                command.Parameters.AddWithValue("@departamento", oEmpleadoDAL.Id_departamento);
 
                 command.CommandType = CommandType.StoredProcedure;
 

@@ -32,23 +32,39 @@ namespace PL.PANTALLAS
             this.Close();
         }
 
+        private int perfil = 0;
+        private int departamento = 0;
         private void btnEditar_Click(object sender, EventArgs e)
         {
-               
-            Empleado Pempleado = new Empleado();
 
-            Pempleado.Nombre = txtNombre.Text.ToString();
-            Pempleado.Apellido1 = txtPrimerApellido.Text.ToString();
-            Pempleado.Apellido2 = txt_SegundoApellido.Text.ToString();
-            Pempleado.Cedula = txt_Cedula.Text.ToString();
-            Pempleado.Telefono = txtTelefono.Text.ToString();
-            Pempleado.Correo = txtCorreo.Text.ToString();
-            Pempleado.Usuario = txtUsuario.Text.ToString();
-            Pempleado.Pass = txtPassword.Text.ToString();
-            Pempleado.Id_perfil = Convert.ToInt32(cmbPersonal.SelectedText.ToString()); 
-            Pempleado.Id_departamento = Convert.ToInt32(cmbDepartamento.SelectedText.ToString());
+            if (txtNombre.Text == string.Empty || txtPrimerApellido.Text == string.Empty || txt_SegundoApellido.Text == string.Empty || txt_Cedula.Text
+               == string.Empty || txtTelefono.Text == string.Empty || txtCorreo.Text == string.Empty || txtUsuario.Text == string.Empty || txtPassword.Text == string.Empty || cmbPersonal.SelectedItem == null || cmbDepartamento.SelectedItem == null)
+            {
+                MessageBox.Show("TODOS LOS CAMPOS DEBEN ESTAR LLENOS ");
+            }
+            else
+            {
+                Empleado Pempleado = new Empleado();
+                Pempleado.Id_empleado = Convert.ToInt32(txtIdEmpleado.Text.ToString());
+                Pempleado.Nombre = txtNombre.Text.ToString();
+                Pempleado.Apellido1 = txtPrimerApellido.Text.ToString();
+                Pempleado.Apellido2 = txt_SegundoApellido.Text.ToString();
+                Pempleado.Cedula = txt_Cedula.Text.ToString();
+                Pempleado.Telefono = txtTelefono.Text.ToString();
+                Pempleado.Correo = txtCorreo.Text.ToString();
+                Pempleado.Usuario = txtUsuario.Text.ToString();
+                Pempleado.Pass = txtPassword.Text.ToString();
+                perfil = cmbPersonal.SelectedIndex;
+                Pempleado.Id_perfil = perfil + 1;
+                departamento = cmbDepartamento.SelectedIndex;
+                Pempleado.Id_departamento = departamento + 1;
 
-            editar.ModificarEmpleado(Pempleado);
+                                             
+                editar.ModificarEmpleado(Pempleado);
+
+                MessageBox.Show("SE HA EDITADO CORRECTAMENTE EL NUEVO PERSONAL");
+                this.Hide();
+            }           
 
         }
 
@@ -63,27 +79,30 @@ namespace PL.PANTALLAS
         private void Frm_Modificar_Pacientes_PL_Load(object sender, EventArgs e)
         {
             CargarComboPerfil();
+            CargarComboDepartamentos();
         }
 
 
         public void CargarComboPerfil()
         {
-            Frm_Modificar_Personal_PL pantalla = new Frm_Modificar_Personal_PL();
-
-            SqlConnection cn = new SqlConnection("Data Source=DESKTOP-6BRVLJ4;Initial Catalog=db_cmm;Integrated Security=True");
-            SqlCommand cm = new SqlCommand("Select nombre from perfil", cn);
+            Perfil_BLLcs pbll = new Perfil_BLLcs();
 
 
-            if (cn.State == ConnectionState.Closed)
+            foreach (Perfil perfil in pbll.ListarPerfiles())
             {
-                cn.Open();
+                cmbPersonal.Items.Add(perfil.Nombre);
             }
-            SqlDataReader dr = cm.ExecuteReader();
-            while (dr.Read())
+        }
+
+        public void CargarComboDepartamentos()
+        {
+            Departamento_BLL DepaBLL = new Departamento_BLL();
+
+
+            foreach (Departamento depa in DepaBLL.ListarDepartamento())
             {
-                pantalla.cmbPersonal.Items.Add(dr.GetString(0));
+                cmbDepartamento.Items.Add(depa.Nombre);
             }
-            cn.Close();
         }
 
 
