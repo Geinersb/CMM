@@ -38,20 +38,27 @@ namespace PL.PANTALLAS
 
         private void btnGuardar_Click_1(object sender, EventArgs e)
         {
-            Departamento EDepartamento = new Departamento();
 
-            EDepartamento.Nombre = txtNombre.Text.ToString();
-            EDepartamento.Codigo = txtCodigo.Text.ToString();
-            
-            
+            if (txtNombre.Text== string.Empty || txtCodigo.Text==string.Empty)
+            {
+                MessageBox.Show("TODOS LOS CAMPOS DEBEN ESTAR LLENOS ");
+            }
+            else
+            {
+                Departamento EDepartamento = new Departamento();
 
-            DepartamentoBLL.AgregarDepartamento(EDepartamento);
-            MessageBox.Show("SE HA INSERTADO CORRECTAMENTE EL NUEVO DEPARTAMENTO");
-            this.Hide();
+                EDepartamento.Nombre = txtNombre.Text.ToString();
+                EDepartamento.Codigo = txtCodigo.Text.ToString();
 
-        }
 
-       
+                DepartamentoBLL.AgregarDepartamento(EDepartamento);
+                MessageBox.Show("SE HA INSERTADO CORRECTAMENTE EL NUEVO DEPARTAMENTO");
+                this.Hide();
+            }
+                       
+           
+
+        }      
 
 
 

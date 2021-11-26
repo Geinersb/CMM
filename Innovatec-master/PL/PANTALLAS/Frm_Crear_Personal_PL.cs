@@ -60,8 +60,9 @@ namespace PL.PANTALLAS
 
 
             EmpleadoBLL.AgregarEmpleado(Pempleado);
+            MessageBox.Show("SE HA INSERTADO CORRECTAMENTE EL NUEVO PERSONAL");
+            this.Hide();
 
-            
         }
 
         public void CargarComboPerfil()
