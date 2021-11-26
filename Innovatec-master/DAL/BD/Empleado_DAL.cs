@@ -293,7 +293,7 @@ namespace DAL.BD
                           "\n",
                           recipientMail: new List<string> { correo }
                           );
-                        respuesta= "Hi, " + nombre + "\n Se enviò un nuevo password a su correo asociado.\n" +
+                        respuesta= "Hola, " + nombre + "\n Se enviò un nuevo password a su correo asociado.\n" +
                           "Por favor verifique su correo : " + correo +
                           "\nBuen dia";
 

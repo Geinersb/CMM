@@ -21,10 +21,17 @@ namespace PL
         private void enviarResponse_btn_Click(object sender, EventArgs e)
         {
 
+           
+
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
             var ebll = new Empleado_BLL();
             var result = ebll.RecuperarPass(dato_txt.Text);
             mensaje_lbl.Text = result;
-
         }
+
+       
     }
 }
