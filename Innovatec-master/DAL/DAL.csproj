@@ -42,9 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BD\Auditorias_DAL.cs" />
     <Compile Include="BD\Departamento_DAL.cs" />
     <Compile Include="BD\Empleado_DAL.cs" />
+    <Compile Include="BD\Niveles_DAL.cs" />
     <Compile Include="BD\Perfil_DAL.cs" />
+    <Compile Include="BD\Procesos_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>

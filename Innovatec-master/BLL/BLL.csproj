@@ -42,9 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CAT_MANT\Auditorias_BLL.cs" />
     <Compile Include="CAT_MANT\Departamento_BLL.cs" />
     <Compile Include="CAT_MANT\Empleado_BLL.cs" />
+    <Compile Include="CAT_MANT\Nivel_BLL.cs" />
     <Compile Include="CAT_MANT\Perfil_BLLcs.cs" />
+    <Compile Include="CAT_MANT\Procesos_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -344,10 +344,101 @@ UPDATE [dbo].[Empleados]
 
 
 
+ 
+
+CREATE PROCEDURE [dbo].[SP_CONSULTA_PROCESOS_descripcion]
+(
+@descripcion varchar(50)
+
+)
+as
+begin
+SELECT p.nombre,p.id_proceso,p.descripcion,d.nombre as departemento,p.id_nivel,p.inicial,p.repetible,p.definido,p.gestionado,
+p.optimizado,e.usuario,p.fecha_creacion
+FROM procesos p
+INNER JOIN Empleados e ON p.id_empleado= e.id_empleado 
+INNER JOIN Departamentos d on p.id_departamento = d.id_departamento
+WHERE (p.descripcion LIKE '%'+@descripcion+'%' or LEN(ISNULL(@descripcion, '')) = 0) 
+END
+GO
 
 
 
 
+
+CREATE PROCEDURE [dbo].[SP_CONSULTA_PROCESOS_niveles]
+(
+@nivel int
+
+)
+as
+begin
+SELECT p.nombre,p.id_proceso,p.descripcion,d.nombre as departemento,p.id_nivel,p.inicial,p.repetible,p.definido,p.gestionado,
+p.optimizado,e.usuario,p.fecha_creacion
+FROM procesos p
+INNER JOIN Empleados e ON p.id_empleado= e.id_empleado 
+INNER JOIN Departamentos d on p.id_departamento = d.id_departamento
+WHERE p.id_nivel =@nivel 
+END
+GO
+
+
+
+
+CREATE PROCEDURE [dbo].[SP_CONSULTA_PROCESOS]
+as
+begin
+SELECT p.nombre,p.id_proceso,p.descripcion,d.nombre as departemento,p.id_nivel,p.inicial,p.repetible,p.definido,p.gestionado,
+p.optimizado,e.usuario,p.fecha_creacion
+FROM procesos p
+INNER JOIN Empleados e ON p.id_empleado= e.id_empleado 
+INNER JOIN Departamentos d on p.id_departamento = d.id_departamento
+ 
+END
+GO
+
+
+
+
+create PROCEDURE [dbo].[SP_CONSULTA_NIVELES]
+
+as
+begin
+SELECT * FROM niveles
+END
+GO
+
+
+CREATE PROCEDURE  [dbo].[SP_AGREGAR_AUDITORIAS]
+(
+@id_empleado int,
+@id_departamento int,
+@id_proceso int,
+@hallasgoz01 varchar(256),
+@recomendaciones varchar(256),
+@fecha_limite datetime,
+@fecha_auditoria datetime
+)
+AS
+BEGIN
+INSERT INTO [dbo].[auditorias]
+           ([id_empleado]
+           ,[id_departamento]
+           ,[id_proceso]
+           ,[hallasgoz01]
+           ,[recomendaciones]
+           ,[fecha_limite]
+           ,[fecha_auditoria])
+     VALUES
+           (@id_empleado, 
+            @id_departamento ,
+			@id_proceso ,
+			@hallasgoz01,
+			@recomendaciones ,
+			@fecha_limite ,
+			@fecha_auditoria )
+END
+GO
 
 
 
@@ -435,6 +526,84 @@ GO
 
 
 
+INSERT INTO [dbo].[niveles]
+           ([id_nivel]
+           ,[descripcion])
+     VALUES
+           (1,'Inicial')
+GO
+
+INSERT INTO [dbo].[niveles]
+           ([id_nivel]
+           ,[descripcion])
+     VALUES
+           (2,'Repetible')
+GO
+
+INSERT INTO [dbo].[niveles]
+           ([id_nivel]
+           ,[descripcion])
+     VALUES
+           (3,'Definido')
+GO
+
+INSERT INTO [dbo].[niveles]
+           ([id_nivel]
+           ,[descripcion])
+     VALUES
+           (4,'Gestionado')
+GO
+
+
+
+INSERT INTO [dbo].[niveles]
+           ([id_nivel]
+           ,[descripcion])
+     VALUES
+           (5,'Optimizado')
+GO
+
+
 exec dbo.sp_insertar_empleados 'Geiner','Sanchez','Barboza','114260597','60205084','geinersb20@gmail.com','Admin','Admin',1,1
 
+
+INSERT INTO [dbo].[procesos]
+           ([nombre]
+           ,[descripcion]
+           ,[id_departamento]
+           ,[id_nivel]
+           ,[inicial]
+           ,[repetible]
+           ,[definido]
+           ,[gestionado]
+           ,[optimizado]
+           ,[id_empleado]
+           ,[fecha_creacion]
+           ,[estado])
+     VALUES
+           ('SPT','Lista de tickets',1,4,'No hay lista de tickets asignados',
+		   'Se tiene una lista obsoleta de tickets','Se tiene una lista actualizada de los tickets',
+		   'Se tiene en board todos los tickets asignados','en la aplicacion jira estan los tickets para cada usuario',1,  GETDATE()  ,1)
+GO
+
+
+
+INSERT INTO [dbo].[procesos]
+           ([nombre]
+           ,[descripcion]
+           ,[id_departamento]
+           ,[id_nivel]
+           ,[inicial]
+           ,[repetible]
+           ,[definido]
+           ,[gestionado]
+           ,[optimizado]
+           ,[id_empleado]
+           ,[fecha_creacion]
+           ,[estado])
+     VALUES
+           ('ADT','Gestion de usuarios',2,2,'No hay lista de usuarios ni gestionamineto centralizado',
+		   'Se tiene una lista obsoleta de usuarios locales','Se tiene una lista actualizada de los usuarios',
+		   'Se tiene Active Directory con todos los usuarios','Se tiene usuarios,grupos,en un AD FS',1,  GETDATE()  ,1)
+GO
 
