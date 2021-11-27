@@ -163,11 +163,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="PANTALLAS\Frm_Crear_Auditoria_PL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PANTALLAS\Frm_Crear_Auditoria_PL.Designer.cs">
+      <DependentUpon>Frm_Crear_Auditoria_PL.cs</DependentUpon>
+    </Compile>
     <Compile Include="PANTALLAS\Frm_Modificar_Deapartamentos.PL.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PANTALLAS\Frm_Modificar_Deapartamentos.PL.Designer.cs">
       <DependentUpon>Frm_Modificar_Deapartamentos.PL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PANTALLAS\Frm_Procesos_Archivados_PL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PANTALLAS\Frm_Procesos_Archivados_PL.Designer.cs">
+      <DependentUpon>Frm_Procesos_Archivados_PL.cs</DependentUpon>
     </Compile>
     <Compile Include="PANTALLAS\Frm_Procesos_PL.cs">
       <SubType>Form</SubType>

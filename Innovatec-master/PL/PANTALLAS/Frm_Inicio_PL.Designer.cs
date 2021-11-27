@@ -67,6 +67,7 @@
             this.btnAdmin = new System.Windows.Forms.Button();
             this.Logo = new System.Windows.Forms.PictureBox();
             this.LogoTransition = new Bunifu.UI.WinForms.BunifuTransition(this.components);
+            this.btnArchivados = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -326,7 +327,7 @@
             this.LogoTransition.SetDecoration(this.panelMantenimiento, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.PanelTransition.SetDecoration(this.panelMantenimiento, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.panelMantenimiento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMantenimiento.Location = new System.Drawing.Point(0, 573);
+            this.panelMantenimiento.Location = new System.Drawing.Point(0, 594);
             this.panelMantenimiento.Name = "panelMantenimiento";
             this.panelMantenimiento.Size = new System.Drawing.Size(250, 95);
             this.panelMantenimiento.TabIndex = 11;
@@ -380,7 +381,7 @@
             this.btnMantenimiento.ForeColor = System.Drawing.Color.White;
             this.btnMantenimiento.Image = global::PL.Properties.Resources.gear_2_32;
             this.btnMantenimiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMantenimiento.Location = new System.Drawing.Point(0, 528);
+            this.btnMantenimiento.Location = new System.Drawing.Point(0, 549);
             this.btnMantenimiento.Name = "btnMantenimiento";
             this.btnMantenimiento.Padding = new System.Windows.Forms.Padding(12, 0, 2, 0);
             this.btnMantenimiento.Size = new System.Drawing.Size(250, 45);
@@ -398,7 +399,7 @@
             this.LogoTransition.SetDecoration(this.btnSalir, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Location = new System.Drawing.Point(12, 710);
+            this.btnSalir.Location = new System.Drawing.Point(12, 720);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(35, 36);
             this.btnSalir.TabIndex = 9;
@@ -408,6 +409,7 @@
             // PanelAuditoria
             // 
             this.PanelAuditoria.AccessibleRole = System.Windows.Forms.AccessibleRole.ToolBar;
+            this.PanelAuditoria.Controls.Add(this.btnArchivados);
             this.PanelAuditoria.Controls.Add(this.btn_Historial);
             this.PanelAuditoria.Controls.Add(this.btnMantNutricion);
             this.PanelAuditoria.Controls.Add(this.btnAuditoriaProcesos);
@@ -416,7 +418,7 @@
             this.PanelAuditoria.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelAuditoria.Location = new System.Drawing.Point(0, 392);
             this.PanelAuditoria.Name = "PanelAuditoria";
-            this.PanelAuditoria.Size = new System.Drawing.Size(250, 136);
+            this.PanelAuditoria.Size = new System.Drawing.Size(250, 157);
             this.PanelAuditoria.TabIndex = 8;
             // 
             // btn_Historial
@@ -623,6 +625,23 @@
             animation2.TransparencyCoeff = 0F;
             this.LogoTransition.DefaultAnimation = animation2;
             // 
+            // btnArchivados
+            // 
+            this.btnArchivados.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PanelTransition.SetDecoration(this.btnArchivados, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.LogoTransition.SetDecoration(this.btnArchivados, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnArchivados.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnArchivados.FlatAppearance.BorderSize = 0;
+            this.btnArchivados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnArchivados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnArchivados.ForeColor = System.Drawing.Color.White;
+            this.btnArchivados.Location = new System.Drawing.Point(0, 120);
+            this.btnArchivados.Name = "btnArchivados";
+            this.btnArchivados.Size = new System.Drawing.Size(250, 40);
+            this.btnArchivados.TabIndex = 14;
+            this.btnArchivados.Text = "ARCHIVADOS";
+            this.btnArchivados.UseVisualStyleBackColor = true;
+            // 
             // Frm_Inicio_PL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -695,5 +714,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btn_Historial;
+        private System.Windows.Forms.Button btnArchivados;
     }
 }
