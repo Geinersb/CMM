@@ -412,7 +412,7 @@ GO
 CREATE PROCEDURE  [dbo].[SP_AGREGAR_AUDITORIAS]
 (
 @usuario varchar(20),
-@codigo_departamento int,
+@codigo_departamento varchar(50),
 @id_proceso int,
 @hallazgos varchar(256),
 @recomendaciones varchar(256),
@@ -438,9 +438,6 @@ INSERT INTO [dbo].[auditorias]
 			@fecha_limite ,
 			@fecha_auditoria )
 END
-GO
-
-
 
 
 
@@ -449,19 +446,25 @@ GO
 --Creacion de Llaves foraneas/relaciones entre tablas.
 
 alter table procesos
-add constraint FK_empleado_proceso
+add constraint FK_empleado_procesos
 foreign key (id_empleado) references empleados(id_empleado)
-on update cascade
-on delete cascade
+
 go
 
 
 alter table procesos
 add constraint FK_nivel_proceso
 foreign key (id_nivel) references niveles(id_nivel)
-on update cascade
-on delete cascade
 go
+
+
+
+
+alter table procesos
+add constraint FK_idDepartamento_proceso
+foreign key (id_departamento) references DEPARTAMENTOS (id_departamento)
+go
+
 
 
 
