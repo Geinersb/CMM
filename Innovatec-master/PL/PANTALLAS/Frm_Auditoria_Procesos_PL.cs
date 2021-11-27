@@ -119,5 +119,32 @@ namespace PL.PANTALLAS
         {
             txtFiltro.Text = string.Empty;
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Frm_Crear_Auditoria_PL pantallaAuditar = new Frm_Crear_Auditoria_PL();
+
+
+
+            if (dgvPacientes.Rows.Count > 0)
+            {
+                //pantallaAuditar
+                //pantalla.txtIdEmpleado.Text = dgvPersonal.SelectedRows[0].Cells[0].Value.ToString();
+                //pantalla.txtNombre.Text = dgvPersonal.SelectedRows[0].Cells[1].Value.ToString();
+                //pantalla.txtPrimerApellido.Text = dgvPersonal.SelectedRows[0].Cells[2].Value.ToString();
+                //pantalla.txt_SegundoApellido.Text = dgvPersonal.SelectedRows[0].Cells[3].Value.ToString();
+                //pantalla.txt_Cedula.Text = dgvPersonal.SelectedRows[0].Cells[4].Value.ToString();
+                //pantalla.txtTelefono.Text = dgvPersonal.SelectedRows[0].Cells[5].Value.ToString();
+                //pantalla.txtCorreo.Text = dgvPersonal.SelectedRows[0].Cells[6].Value.ToString();
+                //pantalla.txtUsuario.Text = dgvPersonal.SelectedRows[0].Cells[7].Value.ToString();
+                //pantalla.txtPassword.Text = dgvPersonal.SelectedRows[0].Cells[8].Value.ToString();
+                //pantalla.cmbPersonal.SelectedText = dgvPersonal.SelectedRows[0].Cells[9].Value.ToString();
+                //pantalla.cmbDepartamento.SelectedText = dgvPersonal.SelectedRows[0].Cells[10].Value.ToString();
+
+            }
+
+
+            pantalla.ShowDialog();
+        }
     }
 }

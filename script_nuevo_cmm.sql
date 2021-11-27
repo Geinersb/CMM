@@ -81,7 +81,7 @@ create table auditorias
 	
 	id_auditoria int identity(1,1) primary key,
 	id_empleado int not null,
-	id_departamento int not null,
+	codigo_departamento varchar (50) not null,
 	id_proceso int not null,
 	hallasgoz01 varchar(256) not null,
 	recomendaciones varchar(256) not null,
@@ -412,7 +412,7 @@ GO
 CREATE PROCEDURE  [dbo].[SP_AGREGAR_AUDITORIAS]
 (
 @id_empleado int,
-@id_departamento int,
+@codigo_departamento int,
 @id_proceso int,
 @hallasgoz01 varchar(256),
 @recomendaciones varchar(256),
@@ -423,7 +423,7 @@ AS
 BEGIN
 INSERT INTO [dbo].[auditorias]
            ([id_empleado]
-           ,[id_departamento]
+           ,[codigo_departamento]
            ,[id_proceso]
            ,[hallasgoz01]
            ,[recomendaciones]
@@ -431,7 +431,7 @@ INSERT INTO [dbo].[auditorias]
            ,[fecha_auditoria])
      VALUES
            (@id_empleado, 
-            @id_departamento ,
+            @codigo_departamento ,
 			@id_proceso ,
 			@hallasgoz01,
 			@recomendaciones ,
@@ -565,6 +565,8 @@ GO
 
 
 exec dbo.sp_insertar_empleados 'Geiner','Sanchez','Barboza','114260597','60205084','geinersb20@gmail.com','Admin','Admin',1,1
+exec dbo.sp_insertar_empleados 'Pedro','Oporta','Solis','785961274','85253614','cavaal93@gmail.com','pedro','pedro00',2,2
+
 
 
 INSERT INTO [dbo].[procesos]
