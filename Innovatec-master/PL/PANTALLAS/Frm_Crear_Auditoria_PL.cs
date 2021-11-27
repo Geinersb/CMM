@@ -16,5 +16,25 @@ namespace PL.PANTALLAS
         {
             InitializeComponent();
         }
+
+        private void idproceso_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Frm_Crear_Auditoria_PL_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guardarAuditoria_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usuario_txt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

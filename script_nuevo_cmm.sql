@@ -80,10 +80,10 @@ create table auditorias
 (
 	
 	id_auditoria int identity(1,1) primary key,
-	id_empleado int not null,
+	usuario varchar(20) not null,
 	codigo_departamento varchar (50) not null,
 	id_proceso int not null,
-	hallasgoz01 varchar(256) not null,
+	hallazgos varchar(256) not null,
 	recomendaciones varchar(256) not null,
 	fecha_limite datetime, 
 	fecha_auditoria datetime	
@@ -102,7 +102,7 @@ create table Empleados
 	apellido2 varchar(50) not null,
 	cedula varchar(50) not null,
     telefono varchar(20) not null,
-    correo varchar(20) not null,
+    correo varchar(50) not null,
 	usuario varchar(20) not null,
 	pass varchar(20) not null,
 	id_perfil int not null,
@@ -358,7 +358,7 @@ p.optimizado,e.usuario,p.fecha_creacion
 FROM procesos p
 INNER JOIN Empleados e ON p.id_empleado= e.id_empleado 
 INNER JOIN Departamentos d on p.id_departamento = d.id_departamento
-WHERE (p.descripcion LIKE '%'+@descripcion+'%' or LEN(ISNULL(@descripcion, '')) = 0) 
+WHERE (p.descripcion LIKE '%'+@descripcion+'%' or LEN(ISNULL(@descripcion, '')) = 0) AND  p.estado=1
 END
 GO
 
@@ -378,7 +378,7 @@ p.optimizado,e.usuario,p.fecha_creacion
 FROM procesos p
 INNER JOIN Empleados e ON p.id_empleado= e.id_empleado 
 INNER JOIN Departamentos d on p.id_departamento = d.id_departamento
-WHERE p.id_nivel =@nivel 
+WHERE p.id_nivel =@nivel AND  p.estado=1 
 END
 GO
 
@@ -393,7 +393,7 @@ p.optimizado,e.usuario,p.fecha_creacion
 FROM procesos p
 INNER JOIN Empleados e ON p.id_empleado= e.id_empleado 
 INNER JOIN Departamentos d on p.id_departamento = d.id_departamento
- 
+ WHERE p.estado=1
 END
 GO
 
@@ -411,10 +411,10 @@ GO
 
 CREATE PROCEDURE  [dbo].[SP_AGREGAR_AUDITORIAS]
 (
-@id_empleado int,
+@usuario varchar(20),
 @codigo_departamento int,
 @id_proceso int,
-@hallasgoz01 varchar(256),
+@hallazgos varchar(256),
 @recomendaciones varchar(256),
 @fecha_limite datetime,
 @fecha_auditoria datetime
@@ -422,18 +422,18 @@ CREATE PROCEDURE  [dbo].[SP_AGREGAR_AUDITORIAS]
 AS
 BEGIN
 INSERT INTO [dbo].[auditorias]
-           ([id_empleado]
+           ([usuario]
            ,[codigo_departamento]
            ,[id_proceso]
-           ,[hallasgoz01]
+           ,[hallazgos]
            ,[recomendaciones]
            ,[fecha_limite]
            ,[fecha_auditoria])
      VALUES
-           (@id_empleado, 
+           (@usuario, 
             @codigo_departamento ,
 			@id_proceso ,
-			@hallasgoz01,
+			@hallazgos,
 			@recomendaciones ,
 			@fecha_limite ,
 			@fecha_auditoria )

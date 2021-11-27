@@ -270,6 +270,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PANTALLAS\Frm_Crear_Auditoria_PL.resx">
+      <DependentUpon>Frm_Crear_Auditoria_PL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PANTALLAS\Frm_Modificar_Deapartamentos.PL.resx">
       <DependentUpon>Frm_Modificar_Deapartamentos.PL.cs</DependentUpon>
     </EmbeddedResource>
