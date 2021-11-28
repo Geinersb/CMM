@@ -45,11 +45,11 @@ namespace PL.PANTALLAS
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbtn_Filtrar = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel7 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.btnRefrescar = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.niveles_cbo = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.tsbRefrescar = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacientes)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -224,12 +224,6 @@ namespace PL.PANTALLAS
             this.toolStripLabel7.Size = new System.Drawing.Size(100, 16);
             this.toolStripLabel7.Text = "Buscar Nivel:";
             // 
-            // toolStripTextBox1
-            // 
-            this.toolStripTextBox1.BackColor = System.Drawing.Color.LightGray;
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
-            // 
             // btnRefrescar
             // 
             this.btnRefrescar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -251,39 +245,45 @@ namespace PL.PANTALLAS
             this.toolStripSeparator3,
             this.tsbtn_Filtrar,
             this.toolStripLabel7,
-            this.toolStripTextBox1,
             this.btnRefrescar,
+            this.niveles_cbo,
             this.toolStripSeparator1,
-            this.toolStripButton1,
+            this.tsbRefrescar,
             this.toolStripLabel1});
             this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             this.toolStrip1.Location = new System.Drawing.Point(175, 50);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.toolStrip1.Size = new System.Drawing.Size(635, 23);
+            this.toolStrip1.Size = new System.Drawing.Size(652, 23);
             this.toolStrip1.TabIndex = 22;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
+            // 
+            // niveles_cbo
+            // 
+            this.niveles_cbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.niveles_cbo.Name = "niveles_cbo";
+            this.niveles_cbo.Size = new System.Drawing.Size(121, 23);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 23);
             // 
-            // toolStripButton1
+            // tsbRefrescar
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 20);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.tsbRefrescar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbRefrescar.Image = ((System.Drawing.Image)(resources.GetObject("tsbRefrescar.Image")));
+            this.tsbRefrescar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbRefrescar.Name = "tsbRefrescar";
+            this.tsbRefrescar.Size = new System.Drawing.Size(23, 20);
+            this.tsbRefrescar.Text = "toolStripButton1";
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(73, 16);
-            this.toolStripLabel1.Text = "Refrescar:";
+            this.toolStripLabel1.Size = new System.Drawing.Size(69, 16);
+            this.toolStripLabel1.Text = "Refrescar";
             // 
             // Frm_Procesos_PL
             // 
@@ -324,11 +324,11 @@ namespace PL.PANTALLAS
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton tsbtn_Filtrar;
         private System.Windows.Forms.ToolStripLabel toolStripLabel7;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.ToolStripButton btnRefrescar;
         private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripComboBox niveles_cbo;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton tsbRefrescar;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
     }
 }

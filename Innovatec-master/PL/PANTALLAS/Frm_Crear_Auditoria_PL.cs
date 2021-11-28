@@ -45,19 +45,28 @@ namespace PL.PANTALLAS
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            //faltan validaciones
-            auditoria.Usuario = usuario_txt.Text;
-            auditoria.Codigo_departamento = codigo_txt.Text;
-            auditoria.Id_proceso = Convert.ToInt32(idProceso_txt.Text);
-            auditoria.Hallasgoz01 = hallazgos_txt.Text;
-            auditoria.Recomendaciones = recomendaciones_txt.Text;
-            auditoria.Fecha_limite = Convert.ToDateTime(FechaLimite_dtp.Value.Date);
-            //auditoria.Fecha_auditoria = Convert.ToDateTime(fechaAuditoria_txt.Text);
-            auditoria.Fecha_auditoria = DateTime.Now;
+            if (hallazgos_txt.Text==string.Empty || recomendaciones_txt.Text==string.Empty)
+            {
+                MessageBox.Show("TODOS LOS CAMPOS DEBEN ESTAR LLENOS ");
+            }
+            else
+            {
+                //faltan validaciones
+                auditoria.Usuario = usuario_txt.Text;
+                auditoria.Codigo_departamento = codigo_txt.Text;
+                auditoria.Id_proceso = Convert.ToInt32(idProceso_txt.Text);
+                auditoria.Hallasgoz01 = hallazgos_txt.Text;
+                auditoria.Recomendaciones = recomendaciones_txt.Text;
+                auditoria.Fecha_limite = Convert.ToDateTime(FechaLimite_dtp.Value.Date);
+                //auditoria.Fecha_auditoria = Convert.ToDateTime(fechaAuditoria_txt.Text);
+                auditoria.Fecha_auditoria = DateTime.Now;
 
-            auditoriaBLL.AgregarAuditoria(auditoria);
-            MessageBox.Show("SE HA INSERTADO CORRECTAMENTE LA AUDITORIA");
-            this.Hide();
+                auditoriaBLL.AgregarAuditoria(auditoria);
+                MessageBox.Show("SE HA INSERTADO CORRECTAMENTE LA AUDITORIA");
+                this.Hide();
+            }     
+                      
+            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

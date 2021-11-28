@@ -151,6 +151,9 @@ namespace PL.PANTALLAS
 
         private void tsbtnRefrescar_Click(object sender, EventArgs e)
         {
+                    
+            txtFiltro.Text = string.Empty;
+            niveles_cbo.SelectedItem = null;
             CargarDatos();
         }
     }

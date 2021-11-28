@@ -8,23 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PL.PANTALLAS;
+using Entidadades;
+using BLL.CAT_MANT;
 
-//using DAL.CAT_MANT;
-
-//using BLL.CAT_MANT;
 
 
 namespace PL.PANTALLAS
 {
     public partial class Frm_Procesos_PL : Form
     {
+        Procesos_BLL procesosBLL = new Procesos_BLL();
+        Nivel_BLL nivelesBLL = new Nivel_BLL();
+        Proceso proceso = new Proceso();
+        Nivel nivel = new Nivel();
 
-
-        //Cls_BD_DAL Obj_BD_DAL = new Cls_BD_DAL();
-        //CLS_BD_BLL Obj_BD_BLL = new CLS_BD_BLL();
-
-        //Cls_Pacientes_DAL Obj_Pacientes_DAL = new Cls_Pacientes_DAL();
-        //Cls_Pacientes_BLL Obj_Pacientes_BLL = new Cls_Pacientes_BLL();
 
         public Frm_Procesos_PL()
         {
@@ -54,29 +51,53 @@ namespace PL.PANTALLAS
 
         private void Frm_Admin_PL_Load(object sender, EventArgs e)
         {
-            
+            CargarComboNiveles();
+            CargarDatos();
         }
 
 
         private void CargarDatos()
         {
-            //Cls_Pacientes_BLL Obj_Pacientes_BLL = new Cls_Pacientes_BLL();
-
             
 
-                DataSet DS = new DataSet();
+                this.dgvPacientes.DataSource = null;
+                this.dgvPacientes.Refresh();
+                this.dgvPacientes.DataSource = procesosBLL.ListarProcesos();
+                this.dgvPacientes.Refresh();
 
-            //Obj_Pacientes_BLL.ListarFiltrarPacientes(ref DS, txtFiltro.Text.Trim());
+                // lblTotal.Text = string.Format("Total Registros: {0}", this.dgvPersonal.RowCount);
+           
+        }
 
-                //if (DS != null)
-                //{
+        private void CargarDatosPorDescripcion()
+        {
 
-                //    dgvPacientes.DataSource = null;
-                //    dgvPacientes.DataSource = DS.Tables[0];
-                //}
 
-                //lblTotal.Text = string.Format("Total Registros: {0}", this.dgv_Casos.RowCount);
-         }
+            this.dgvPacientes.DataSource = null;
+            this.dgvPacientes.Refresh();
+            this.dgvPacientes.DataSource = procesosBLL.FiltrarProcesosDescripcion(txtFiltro.Text);
+            this.dgvPacientes.Refresh();
+
+            // lblTotal.Text = string.Format("Total Registros: {0}", this.dgvPersonal.RowCount);
+        }
+
+
+        private void CargarDatosPorNiveles()
+        {
+            int vacio;
+            if (niveles_cbo.SelectedIndex == -1)
+                vacio = 0;
+            else
+                vacio = niveles_cbo.SelectedIndex + 1;
+
+            this.dgvPacientes.DataSource = null;
+            this.dgvPacientes.Refresh();
+            this.dgvPacientes.DataSource = procesosBLL.FiltrarProcesosNivel(vacio);
+            this.dgvPacientes.Refresh();
+
+            // lblTotal.Text = string.Format("Total Registros: {0}", this.dgvPersonal.RowCount);
+        }
+
 
         private void txtFiltro_TextChanged_1(object sender, EventArgs e)
         {
@@ -92,25 +113,7 @@ namespace PL.PANTALLAS
         private void btnEditar_Click(object sender, EventArgs e)
         {
 
-            PANTALLAS.Frm_Modificar_Procesos_PL Pacientes = new Frm_Modificar_Procesos_PL();
-
-            if (dgvPacientes.Rows.Count >0)
-            {
-                //Obj_Pacientes_DAL.sNombre = dgvPacientes.SelectedRows[0].Cells[2].Value.ToString();
-                //Obj_Pacientes_DAL.sApellidos = dgvPacientes.SelectedRows[0].Cells[3].Value.ToString();
-                //Obj_Pacientes_DAL.sIdPaciente= dgvPacientes.SelectedRows[0].Cells[0].Value.ToString();
-                //Obj_Pacientes_DAL.sTipoSangre= dgvPacientes.SelectedRows[0].Cells[5].Value.ToString();
-                //Obj_Pacientes_DAL.sIdContacto= dgvPacientes.SelectedRows[0].Cells[1].Value.ToString();
-                
-                //Obj_Pacientes_DAL.cSexo= Convert.ToChar(dgvPacientes.SelectedRows[0].Cells[6].Value.ToString());
-                //Obj_Pacientes_DAL.DFecha= Convert.ToDateTime(dgvPacientes.SelectedRows[0].Cells[4].Value.ToString());
-                //Obj_Pacientes_DAL.cEstado = Convert.ToChar(dgvPacientes.SelectedRows[0].Cells[7].Value);
-                //Obj_Pacientes_DAL.cBandera = 'U';
-            }
-
-            //Pacientes.Obj_Estados_DAL = Obj_Pacientes_DAL;
-
-            Pacientes.ShowDialog();
+                    
 
             CargarDatos();
         }
@@ -120,8 +123,16 @@ namespace PL.PANTALLAS
 
         }
 
+        public void CargarComboNiveles()
+        {
+            foreach (Nivel nivelito in nivelesBLL.ListarNiveles())
+            {
+                niveles_cbo.Items.Add(nivelito.Id_nivel);
+            }
 
-       
+
+        }
+
 
 
 

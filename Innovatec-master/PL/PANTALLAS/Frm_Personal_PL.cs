@@ -116,6 +116,7 @@ namespace PL.PANTALLAS
         private void btnRefrescar_Click_1(object sender, EventArgs e)
         {
             txtFiltro.Text = string.Empty;
+            CargarDatos();
             //CargarDatos();
         }
 
