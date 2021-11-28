@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL.CAT_MANT;
@@ -62,7 +63,7 @@ namespace PL.PANTALLAS
                                              
                 editar.ModificarEmpleado(Pempleado);
 
-                MessageBox.Show("SE HA EDITADO CORRECTAMENTE EL NUEVO PERSONAL");
+                MessageBox.Show("SE HA EDITADO CORRECTAMENTE EL PERSONAL");
                 this.Hide();
             }           
 
@@ -105,6 +106,55 @@ namespace PL.PANTALLAS
             }
         }
 
+        public static bool ValidarCorreo(string email)
+        {
+            string formatos = @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
+                @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$";
 
+            if (Regex.IsMatch(email, formatos))
+            {
+                if (Regex.Replace(email, formatos, string.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+        private void txtCorreo_Leave(object sender, EventArgs e)
+        {
+            if (txtCorreo.Text == string.Empty)
+            {
+                error.SetError(txtCorreo, "Debe digitar un Correo");
+                txtCorreo.Focus();
+            }
+            else
+            {
+                btnEditar.Enabled = true;
+                error.Clear();
+                if (ValidarCorreo(txtCorreo.Text))
+                {
+                    // Obj_DAL.sCorreo = txt_Correo.Text.Trim();
+
+                }
+                else
+                {
+                    error.SetError(txtCorreo, "Debe digitar un correo electrónico que sea valido");
+                    txtCorreo.Focus();
+                    btnEditar.Enabled = false;
+
+                }
+
+
+            }
+        }
     }
 }

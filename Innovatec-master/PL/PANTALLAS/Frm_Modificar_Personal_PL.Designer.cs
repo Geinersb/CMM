@@ -29,6 +29,7 @@ namespace PL.PANTALLAS
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -56,7 +57,9 @@ namespace PL.PANTALLAS
             this.txtIdEmpleado = new System.Windows.Forms.TextBox();
             this.cmbDepartamento = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.error = new System.Windows.Forms.ErrorProvider(this.components);
             this.BarraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -67,7 +70,7 @@ namespace PL.PANTALLAS
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 14.25F);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(441, 411);
+            this.btnCancelar.Location = new System.Drawing.Point(376, 411);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(152, 40);
             this.btnCancelar.TabIndex = 52;
@@ -119,7 +122,7 @@ namespace PL.PANTALLAS
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.White;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(182, 411);
+            this.btnEditar.Location = new System.Drawing.Point(121, 411);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(152, 40);
             this.btnEditar.TabIndex = 51;
@@ -194,6 +197,7 @@ namespace PL.PANTALLAS
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(326, 23);
             this.txtCorreo.TabIndex = 104;
+            this.txtCorreo.Leave += new System.EventHandler(this.txtCorreo_Leave);
             // 
             // txt_Cedula
             // 
@@ -293,6 +297,7 @@ namespace PL.PANTALLAS
             // 
             // cmbPersonal
             // 
+            this.cmbPersonal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPersonal.FormattingEnabled = true;
             this.cmbPersonal.Location = new System.Drawing.Point(267, 321);
             this.cmbPersonal.Name = "cmbPersonal";
@@ -321,6 +326,7 @@ namespace PL.PANTALLAS
             // 
             // cmbDepartamento
             // 
+            this.cmbDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDepartamento.FormattingEnabled = true;
             this.cmbDepartamento.Location = new System.Drawing.Point(267, 348);
             this.cmbDepartamento.Name = "cmbDepartamento";
@@ -337,6 +343,10 @@ namespace PL.PANTALLAS
             this.label9.Size = new System.Drawing.Size(102, 17);
             this.label9.TabIndex = 119;
             this.label9.Text = "Departamento:";
+            // 
+            // error
+            // 
+            this.error.ContainerControl = this;
             // 
             // Frm_Modificar_Personal_PL
             // 
@@ -375,6 +385,7 @@ namespace PL.PANTALLAS
             this.Load += new System.EventHandler(this.Frm_Modificar_Pacientes_PL_Load);
             this.BarraTitulo.ResumeLayout(false);
             this.BarraTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -408,5 +419,6 @@ namespace PL.PANTALLAS
         public System.Windows.Forms.ComboBox cmbPersonal;
         public System.Windows.Forms.ComboBox cmbDepartamento;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ErrorProvider error;
     }
 }

@@ -29,14 +29,22 @@ namespace PL.PANTALLAS
         private void btnEditar_Click(object sender, EventArgs e)
         {
 
-            departamento.Id_departamento = Convert.ToInt32(txt_IdDepartamento.Text.ToString());
-            departamento.Nombre = txtNombre.Text.ToString();
-            departamento.Codigo = txtCodigo.Text.ToString();
-            //empleado.Nombre = txtnombre;
-            Departamentobll.ModificarDepartamento(departamento);
+            if (txtNombre.Text == string.Empty || txtCodigo.Text == string.Empty)
+            {
+                MessageBox.Show("TODOS LOS CAMPOS DEBEN ESTAR LLENOS ");
+            }
+            else
+            {
+                departamento.Id_departamento = Convert.ToInt32(txt_IdDepartamento.Text.ToString());
+                departamento.Nombre = txtNombre.Text.ToString();
+                departamento.Codigo = txtCodigo.Text.ToString();
+                //empleado.Nombre = txtnombre;
+                Departamentobll.ModificarDepartamento(departamento);
 
-            MessageBox.Show("SE HA EDITADO CORRECTAMENTE EL NUEVO DEPARTAMENTO");
-            this.Hide();
+                MessageBox.Show("SE HA EDITADO CORRECTAMENTE EL DEPARTAMENTO");
+                this.Hide();
+            }
+                                            
 
         }
 
