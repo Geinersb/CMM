@@ -199,6 +199,7 @@ namespace PL.PANTALLAS
             // 
             // cmbNivel
             // 
+            this.cmbNivel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNivel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbNivel.FormattingEnabled = true;
             this.cmbNivel.Location = new System.Drawing.Point(256, 112);
@@ -312,6 +313,7 @@ namespace PL.PANTALLAS
             // 
             // cmbDepartamento
             // 
+            this.cmbDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDepartamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbDepartamento.FormattingEnabled = true;
             this.cmbDepartamento.Location = new System.Drawing.Point(256, 50);

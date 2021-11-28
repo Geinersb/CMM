@@ -38,7 +38,7 @@ namespace PL.PANTALLAS
 
         private void Frm_Pacientes_Load(object sender, EventArgs e)
         {
-            txt_Realizado.Text = (UserCache.Nombre + " " + UserCache.Apellido1).ToString();
+            txt_Realizado.Text = (UserCache.Usuario).ToString();
 
             txt_Fecha.Text = DateTime.Now.ToShortDateString();
 
@@ -46,12 +46,24 @@ namespace PL.PANTALLAS
             string dateString = txt_Fecha.Text;
             var fecha = DateTime.Parse(dateString, cultureInfo, DateTimeStyles.NoCurrentDateDefault);
 
+
+
+            CargarComboDepartamentos();
+
         }
 
 
+        public void CargarComboDepartamentos()
+        {
+            Departamento_BLL DepaBLL = new Departamento_BLL();
 
 
-       
+            foreach (Departamento depa in DepaBLL.ListarDepartamentoCodigo())
+            {
+                cmbDepartamento.Items.Add(depa.Codigo);
+            }
+        }
+
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {

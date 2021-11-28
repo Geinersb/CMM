@@ -57,6 +57,47 @@ namespace DAL.BD
             return lstDepartamentoDAL;
         }
 
+        public List<Departamento> ListarDepartamentoCodigo()
+        {
+
+            List<Departamento> lstDepartamentoDAL = new List<Departamento>();
+
+            SqlCommand command;
+            string query = "CONSULTA_DEPARTAMENTO_CODIGOS";
+
+            using (SqlConnection connection = new SqlConnection(stringConexion))
+            {
+                command = new SqlCommand(query, connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        Departamento oDepartamentoDal = new Departamento();
+                        oDepartamentoDal.Codigo = reader.GetString(0);
+
+                        lstDepartamentoDAL.Add(oDepartamentoDal);
+                    }
+                    connection.Close();
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+
+            return lstDepartamentoDAL;
+        }
 
         public DataTable FiltrarDepartamentos(string nombre)
         {
