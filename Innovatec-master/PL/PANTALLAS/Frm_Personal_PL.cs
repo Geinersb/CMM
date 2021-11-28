@@ -42,7 +42,7 @@ namespace PL.PANTALLAS
         }
 
 
-        private void CargarDatos()
+        public void CargarDatos()
         {
             //Cls_Personal_BLL Obj_Personal_BLL = new Cls_Personal_BLL();
 
