@@ -172,7 +172,6 @@ namespace PL.PANTALLAS
             this.btnGuardar.Size = new System.Drawing.Size(152, 40);
             this.btnGuardar.TabIndex = 9;
             this.btnGuardar.Text = "GUARDAR";
-            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
