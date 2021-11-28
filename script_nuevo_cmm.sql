@@ -424,8 +424,19 @@ INSERT INTO [dbo].[auditorias]
 			@fecha_auditoria )
 END
 
-
-
+GO
+CREATE PROCEDURE SP_EDITAR_NIVELES
+(
+@id_nivel int,
+@descripcion varchar(50)
+)
+AS
+BEGIN
+UPDATE [dbo].[niveles]
+   SET [descripcion] = @descripcion
+ WHERE id_nivel =@id_nivel
+ end
+GO
 
 
 --Creacion de Llaves foraneas/relaciones entre tablas.
@@ -518,28 +529,28 @@ INSERT INTO [dbo].[niveles]
            ([id_nivel]
            ,[descripcion])
      VALUES
-           (1,'Inicial')
+           (1,'1-Inicial: No existe ningun modelo y no se emplea ningun proceso definido.')
 GO
 
 INSERT INTO [dbo].[niveles]
            ([id_nivel]
            ,[descripcion])
      VALUES
-           (2,'Repetible')
+           (2,'2-Repetible: Existe planificación y seguimiento de proyectos y está implementada su gestión.')
 GO
 
 INSERT INTO [dbo].[niveles]
            ([id_nivel]
            ,[descripcion])
      VALUES
-           (3,'Definido')
+           (3,'3-Definido: Documenta y normaliza los procesos a nivel organizativo.')
 GO
 
 INSERT INTO [dbo].[niveles]
            ([id_nivel]
            ,[descripcion])
      VALUES
-           (4,'Gestionado')
+           (4,'4-Gestionado: Enfocado en la gestión de calidad del proceso y del producto.')
 GO
 
 
@@ -548,7 +559,7 @@ INSERT INTO [dbo].[niveles]
            ([id_nivel]
            ,[descripcion])
      VALUES
-           (5,'Optimizado')
+           (5,'5-Optimizado: Proceso continuo de mejora.')
 GO
 
 
@@ -596,4 +607,3 @@ INSERT INTO [dbo].[procesos]
 		   'Se tiene una lista obsoleta de usuarios locales','Se tiene una lista actualizada de los usuarios',
 		   'Se tiene Active Directory con todos los usuarios','Se tiene usuarios,grupos,en un AD FS',1,  GETDATE()  ,1)
 GO
-
