@@ -225,6 +225,7 @@
             this.btnCancelar.TabIndex = 18;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -268,6 +269,7 @@
             this.Controls.Add(this.idproceso_lbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Crear_Auditoria_PL";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Crear_Auditoria_PL";
             this.Load += new System.EventHandler(this.Frm_Crear_Auditoria_PL_Load);
             this.BarraTitulo.ResumeLayout(false);

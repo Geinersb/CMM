@@ -59,5 +59,10 @@ namespace PL.PANTALLAS
             MessageBox.Show("SE HA INSERTADO CORRECTAMENTE LA AUDITORIA");
             this.Hide();
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -103,8 +103,7 @@ namespace PL.PANTALLAS
 
         private void niveles_cbo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtFiltro.Text = string.Empty;
-            CargarDatosPorNiveles();
+            
 
 
         }
@@ -117,7 +116,7 @@ namespace PL.PANTALLAS
 
         private void niveles_cbo_Click(object sender, EventArgs e)
         {
-            txtFiltro.Text = string.Empty;
+           
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -138,5 +137,24 @@ namespace PL.PANTALLAS
 
             pantallaAuditar.ShowDialog();
         }
+
+        private void niveles_cbo_Click_1(object sender, EventArgs e)
+        {
+            txtFiltro.Text = string.Empty;
+        }
+
+        private void niveles_cbo_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            txtFiltro.Text = string.Empty;
+            CargarDatosPorNiveles();
+        }
+
+        private void tsbtnRefrescar_Click(object sender, EventArgs e)
+        {
+            CargarDatos();
+        }
     }
 }
+
+
+
