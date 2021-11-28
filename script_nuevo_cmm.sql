@@ -170,21 +170,6 @@ END
 GO
 
 
-CREATE PROCEDURE [dbo].[SP_FILTRAR_EMPLEADOS]
-(
-@nombre varchar(50)
-)
-as
-begin
-SELECT E.id_empleado, E.nombre, E.apellido1,E.apellido2,E.cedula,E.telefono,E.correo,E.usuario,E.pass ,P.nombre as Perfil, D.nombre as Departamento
-FROM Empleados AS E
-INNER JOIN perfil AS P ON E.id_perfil = P.id_perfil 
-INNER JOIN Departamentos as D on e.id_empleado = D.id_departamento
-WHERE e.nombre LIKE '%'+@Nombre+'%' or LEN(ISNULL(@nombre, '')) = 0
-
-END
-GO
-
 CREATE PROCEDURE [dbo].[sp_INSERTAR_DEPARTAMENTOS]
 
 @nombre varchar(50),
