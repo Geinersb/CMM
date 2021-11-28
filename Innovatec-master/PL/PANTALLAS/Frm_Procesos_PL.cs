@@ -56,7 +56,7 @@ namespace PL.PANTALLAS
         }
 
 
-        private void CargarDatos()
+        public void CargarDatos()
         {
             
 

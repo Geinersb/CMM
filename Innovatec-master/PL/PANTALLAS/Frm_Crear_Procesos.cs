@@ -17,7 +17,7 @@ namespace PL.PANTALLAS
 {
     public partial class Frm_Crear_Procesos : Form
     {
-        
+        Procesos_BLL ProcesoBLL = new Procesos_BLL();
 
         string sMsjError = string.Empty;
         public Frm_Crear_Procesos()
@@ -67,7 +67,36 @@ namespace PL.PANTALLAS
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            
+            if (txtDescripcion.Text==string.Empty)
+            {
+                MessageBox.Show("TODOS LOS CAMPOS DEBEN ESTAR LLENOS ");
+            }
+            else
+            {
+                //Proceso Pempleado = new Proceso();
+                //Pempleado.Nombre = txtNombre.Text.ToString();
+                //Pempleado.Apellido1 = txtPrimerApellido.Text.ToString();
+                //Pempleado.Apellido2 = txt_SegundoApellido.Text.ToString();
+                //Pempleado.Cedula = txt_Cedula.Text.ToString();
+                //Pempleado.Telefono = txtTelefono.Text.ToString();
+                //Pempleado.Correo = txtCorreo.Text.ToString();
+                //Pempleado.Usuario = txtUsuario.Text.ToString();
+                //Pempleado.Pass = txtPassword.Text.ToString();
+                //perfil = cmbRol.SelectedIndex;
+                //Pempleado.Id_perfil = perfil + 1;
+                //departamento = cmbDepartamento.SelectedIndex;
+                //Pempleado.Id_departamento = departamento + 1;
+                ////crear los demas variables
+
+                //EmpleadoBLL.AgregarEmpleado(Pempleado);
+
+                MessageBox.Show("SE HA INSERTADO CORRECTAMENTE EL NUEVO PROCESO");
+                this.Hide();
+
+                Frm_Procesos_PL pantalla = new Frm_Procesos_PL();
+                pantalla.CargarDatos();
+            }
+          
         }
 
 
