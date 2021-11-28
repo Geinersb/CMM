@@ -101,7 +101,8 @@ namespace PL.PANTALLAS
 
         private void txtFiltro_TextChanged_1(object sender, EventArgs e)
         {
-            CargarDatos();
+            CargarDatosPorDescripcion();
+           
         }
 
         private void btnRefrescar_Click(object sender, EventArgs e)
@@ -133,8 +134,28 @@ namespace PL.PANTALLAS
 
         }
 
+        private void tsbRefrescar_Click(object sender, EventArgs e)
+        {
+            txtFiltro.Text = string.Empty;
+            niveles_cbo.SelectedItem = null;
+            CargarDatos();
+        }
 
+        private void niveles_cbo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtFiltro.Text = string.Empty;
+            CargarDatosPorNiveles();
+        }
 
+        private void niveles_cbo_Click(object sender, EventArgs e)
+        {
+            txtFiltro.Text = string.Empty;
+        }
 
+        private void txtFiltro_Click(object sender, EventArgs e)
+        {
+            if (niveles_cbo.SelectedIndex > -1)
+                niveles_cbo.SelectedIndex = -1;
+        }
     }
 }
