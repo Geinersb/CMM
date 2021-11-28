@@ -212,6 +212,13 @@ WHERE e.nombre LIKE '%'+@Nombre+'%' or LEN(ISNULL(@nombre, '')) = 0
 END
 GO
 
+CREATE PROCEDURE CONSULTA_DEPARTAMENTO_CODIGOS
+AS
+BEGIN
+SELECT [codigo]
+  FROM [dbo].[Departamentos]
+  END
+GO
 
 CREATE PROCEDURE [dbo].[sp_insertar_empleados]
 
