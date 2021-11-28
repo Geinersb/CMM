@@ -30,15 +30,15 @@ go
  create table procesos
 	(
 		id_proceso int identity(1,1) primary key,
-		nombre varchar(50),
-		descripcion varchar(50) not null,
+		nombre varchar(100),
+		descripcion varchar(250) not null,
 		id_departamento int,
 		id_nivel int,
-		inicial varchar(100),
-		repetible varchar(100),
-		definido varchar(100),
-		gestionado varchar(100),
-		optimizado varchar(100),
+		inicial varchar(250),
+		repetible varchar(250),
+		definido varchar(250),
+		gestionado varchar(250),
+		optimizado varchar(250),
 		id_empleado int,
 		fecha_creacion datetime,
 		estado int  --estado 1 'activo' estado 0 'archivado'
@@ -50,7 +50,7 @@ go
 create table niveles
 (
 	id_nivel int primary key,
-	descripcion varchar(50) not null,
+	descripcion varchar(500) not null,
 
 )
 go
@@ -102,7 +102,7 @@ create table Empleados
 	apellido2 varchar(50) not null,
 	cedula varchar(50) not null,
     telefono varchar(20) not null,
-    correo varchar(50) not null,
+    correo varchar(100) not null,
 	usuario varchar(20) not null,
 	pass varchar(20) not null,
 	id_perfil int not null,
@@ -133,7 +133,7 @@ CREATE PROCEDURE [dbo].[CONSULTA_EMPLEADOS]
       ,@apellido2 VARCHAR(50)
       ,@cedula VARCHAR(50)
       ,@telefono VARCHAR(50)
-      ,@correo VARCHAR(20)
+      ,@correo VARCHAR(100)
       ,@usuario VARCHAR(20)
       ,@pass VARCHAR(20)
       ,@id_perfil INT
@@ -227,7 +227,7 @@ CREATE PROCEDURE [dbo].[sp_insertar_empleados]
 @apellido2 varchar(50),
 @cedula varchar(50),
 @telefono varchar(20),
-@correo varchar(50),
+@correo varchar(100),
 @usuario varchar(20),
 @pass varchar(20),
 @perfil int,
@@ -248,7 +248,7 @@ CREATE PROCEDURE sp_actualizar_empleado
 @apellido2 varchar(50),
 @cedula varchar(50),
 @telefono varchar(20),
-@correo varchar(50),
+@correo varchar(100),
 @usuario varchar(20),
 @pass varchar(20),
 @perfil int,
@@ -345,7 +345,7 @@ CREATE PROCEDURE [dbo].[SP_CONSULTA_PROCESOS_descripcion]
 )
 as
 begin
-SELECT p.nombre,p.id_proceso,p.descripcion,d.nombre as departemento,p.id_nivel,p.inicial,p.repetible,p.definido,p.gestionado,
+SELECT p.nombre,p.id_proceso,p.descripcion,p.id_nivel,p.inicial,p.repetible,p.definido,p.gestionado,
 p.optimizado,e.usuario,p.fecha_creacion
 FROM procesos p
 INNER JOIN Empleados e ON p.id_empleado= e.id_empleado 
@@ -365,7 +365,7 @@ CREATE PROCEDURE [dbo].[SP_CONSULTA_PROCESOS_niveles]
 )
 as
 begin
-SELECT p.nombre,p.id_proceso,p.descripcion,d.nombre as departemento,p.id_nivel,p.inicial,p.repetible,p.definido,p.gestionado,
+SELECT p.nombre,p.id_proceso,p.descripcion,p.id_nivel,p.inicial,p.repetible,p.definido,p.gestionado,
 p.optimizado,e.usuario,p.fecha_creacion
 FROM procesos p
 INNER JOIN Empleados e ON p.id_empleado= e.id_empleado 
@@ -380,7 +380,7 @@ GO
 CREATE PROCEDURE [dbo].[SP_CONSULTA_PROCESOS]
 as
 begin
-SELECT p.nombre,p.id_proceso,p.descripcion,d.nombre as departemento,p.id_nivel,p.inicial,p.repetible,p.definido,p.gestionado,
+SELECT p.nombre,p.id_proceso,p.descripcion,p.id_nivel,p.inicial,p.repetible,p.definido,p.gestionado,
 p.optimizado,e.usuario,p.fecha_creacion
 FROM procesos p
 INNER JOIN Empleados e ON p.id_empleado= e.id_empleado 
@@ -448,25 +448,25 @@ GO
 
 --Creacion de Llaves foraneas/relaciones entre tablas.
 
-alter table procesos
-add constraint FK_empleado_procesos
-foreign key (id_empleado) references empleados(id_empleado)
+--alter table procesos
+--add constraint FK_empleado_procesos
+--foreign key (id_empleado) references empleados(id_empleado)
 
-go
-
-
-alter table procesos
-add constraint FK_nivel_proceso
-foreign key (id_nivel) references niveles(id_nivel)
-go
+--go
 
 
+--alter table procesos
+--add constraint FK_nivel_proceso
+--foreign key (id_nivel) references niveles(id_nivel)
+--go
 
 
-alter table procesos
-add constraint FK_idDepartamento_proceso
-foreign key (id_departamento) references DEPARTAMENTOS (id_departamento)
-go
+
+
+--alter table procesos
+--add constraint FK_idDepartamento_proceso
+--foreign key (id_departamento) references DEPARTAMENTOS (id_departamento)
+--go
 
 
 
@@ -488,8 +488,8 @@ go
 alter table auditorias
 add constraint FK_detalle_proceso
 foreign key (id_proceso) references procesos(id_proceso)
-on update cascade
-on delete cascade
+--on update cascade
+--on delete cascade
 go
 
 --inserts
