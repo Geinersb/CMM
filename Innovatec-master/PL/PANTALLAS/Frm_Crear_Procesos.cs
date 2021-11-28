@@ -18,6 +18,7 @@ namespace PL.PANTALLAS
     public partial class Frm_Crear_Procesos : Form
     {
         Procesos_BLL ProcesoBLL = new Procesos_BLL();
+        Nivel_BLL NivelBLL = new Nivel_BLL();
 
         string sMsjError = string.Empty;
         public Frm_Crear_Procesos()
@@ -49,6 +50,7 @@ namespace PL.PANTALLAS
 
 
             CargarComboDepartamentos();
+            CargarComboNiveles();
 
         }
 
@@ -100,6 +102,15 @@ namespace PL.PANTALLAS
         }
 
 
+        public void CargarComboNiveles()
+        {
+            foreach (Nivel nivelito in NivelBLL.ListarNiveles())
+            {
+                cmbNivel.Items.Add(nivelito.Descripcion);
+            }
+
+
+        }
 
 
 

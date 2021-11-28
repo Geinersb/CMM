@@ -38,7 +38,7 @@ namespace DAL.BD
                     {
                         Nivel oNivelDal = new Nivel();
                         oNivelDal.Id_nivel = reader.GetInt32(0);
-
+                        oNivelDal.Descripcion = reader.GetString(1);
 
                         lstNivelesDAL.Add(oNivelDal);
                     }

@@ -65,8 +65,7 @@ namespace PL.PANTALLAS
 
                 MessageBox.Show("SE HA EDITADO CORRECTAMENTE EL PERSONAL");
                 this.Hide();
-                Frm_Personal_PL pantalla = new Frm_Personal_PL();
-                pantalla.CargarDatos();
+                
             }           
 
         }

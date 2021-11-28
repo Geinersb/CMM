@@ -28,7 +28,7 @@ namespace PL.PANTALLAS
         public Frm_Personal_PL()
         {
             InitializeComponent();
-            CargarDatos();
+           
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -96,9 +96,11 @@ namespace PL.PANTALLAS
                 pantalla.cmbDepartamento.SelectedText = dgvPersonal.SelectedRows[0].Cells[10].Value.ToString();
 
             }
-                                 
 
+            Frm_Personal_PL personal = new Frm_Personal_PL();           
             pantalla.ShowDialog();
+            
+
         }
 
         private void dgvPersonal_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -315,7 +315,7 @@ namespace PL.PANTALLAS
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
+            
         }
 
         #endregion
@@ -338,5 +338,7 @@ namespace PL.PANTALLAS
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.Label lblTotal;
+
+
     }
 }
