@@ -41,6 +41,10 @@ namespace BLL.CAT_MANT
 
         }
 
+        public void ModificarProceso(Proceso proceso)
+        {
+            oProcesosAccess.ActualizarProceso(proceso);
+        }
 
 
     }

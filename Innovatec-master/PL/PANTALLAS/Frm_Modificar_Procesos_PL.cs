@@ -20,6 +20,7 @@ namespace PL.PANTALLAS
     {
        
         Nivel_BLL NivelBll = new Nivel_BLL();
+        Procesos_BLL ProcesoBll = new Procesos_BLL();
 
         string sMsjError = string.Empty;
 
@@ -39,11 +40,13 @@ namespace PL.PANTALLAS
 
             Proceso Pproceso= new Proceso();
             Pproceso.Id_proceso = Convert.ToInt32(txtIdProceso.Text.ToString());
+            Pproceso.Id_nivel = cmbNivel.SelectedIndex + 1;
+            Pproceso.Estado = 1;
 
 
-             //editar.ModificarEmpleado(Pempleado);
+            ProcesoBll.ModificarProceso(Pproceso);
 
-            MessageBox.Show("SE HA EDITADO CORRECTAMENTE EL PERSONAL");
+            MessageBox.Show("SE HA EDITADO CORRECTAMENTE EL PROCESO");
             this.Hide();
 
 

@@ -100,6 +100,41 @@ namespace DAL.BD
             }
         }
 
+        public void ActualizarProceso(Proceso oEmpleadoDAL)
+        {
+            SqlCommand command;
+            string query = "MODIFICAR_PROCESO ";
+
+            using (SqlConnection connection = new SqlConnection(stringConexion))
+            {
+                command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@id_proceso", oEmpleadoDAL.Id_proceso);
+                command.Parameters.AddWithValue("@Id_nivel", oEmpleadoDAL.Id_nivel);
+                command.Parameters.AddWithValue("@estado", oEmpleadoDAL.Estado);
+                
+
+                command.CommandType = CommandType.StoredProcedure;
+
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+
+            }
+        }
+
+
+
 
     }
 }
