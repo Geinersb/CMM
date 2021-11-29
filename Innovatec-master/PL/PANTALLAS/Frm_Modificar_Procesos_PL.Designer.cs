@@ -125,7 +125,6 @@ namespace PL.PANTALLAS
             this.btnEditar.Size = new System.Drawing.Size(152, 40);
             this.btnEditar.TabIndex = 51;
             this.btnEditar.Text = "EDITAR";
-            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 

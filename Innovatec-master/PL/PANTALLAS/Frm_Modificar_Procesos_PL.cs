@@ -35,7 +35,16 @@ namespace PL.PANTALLAS
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            
+
+
+            Proceso Pproceso= new Proceso();
+            Pproceso.Id_proceso = Convert.ToInt32(txtIdProceso.Text.ToString());
+
+
+             //editar.ModificarEmpleado(Pempleado);
+
+            MessageBox.Show("SE HA EDITADO CORRECTAMENTE EL PERSONAL");
+            this.Hide();
 
 
 
