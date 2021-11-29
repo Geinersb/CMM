@@ -70,6 +70,7 @@ namespace DAL.BD
                 command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@nombre", oEmpleadoDAL.Nombre);
                 command.Parameters.AddWithValue("@descripcion", oEmpleadoDAL.Descripcion);
+                command.Parameters.AddWithValue("@id_departamento", oEmpleadoDAL.Id_departamento);
                 command.Parameters.AddWithValue("@id_nivel", oEmpleadoDAL.Id_nivel);
                 command.Parameters.AddWithValue("@inicial", oEmpleadoDAL.Inicial);
                 command.Parameters.AddWithValue("@repetible", oEmpleadoDAL.Repetible);

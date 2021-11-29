@@ -80,6 +80,7 @@ namespace PL.PANTALLAS
                 Proceso Pproceso = new Proceso();
                 Pproceso.Nombre = cmbDepartamento.SelectedIndex+1;
                 Pproceso.Descripcion = txtDescripcion.Text.ToString();
+                Pproceso.Id_departamento = cmbDepartamento.SelectedIndex + 1; 
                 Pproceso.Id_nivel = cmbNivel.SelectedIndex+1;
                 Pproceso.Inicial = txt_Inicial.Text.ToString();
                 Pproceso.Repetible = txt_Repetible.Text.ToString();
