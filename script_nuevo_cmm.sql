@@ -40,7 +40,7 @@ go
 		gestionado varchar(250),
 		optimizado varchar(250),
 		id_empleado int,
-		fecha_creacion datetime,
+		fecha_creacion date,
 		estado int  --estado 1 'activo' estado 0 'archivado'
 
 	)
@@ -85,8 +85,8 @@ create table auditorias
 	id_proceso int not null,
 	hallazgos varchar(256) not null,
 	recomendaciones varchar(256) not null,
-	fecha_limite datetime, 
-	fecha_auditoria datetime	
+	fecha_limite date, 
+	fecha_auditoria date	
 ) 
 go
 
@@ -345,7 +345,7 @@ CREATE PROCEDURE [dbo].[SP_CONSULTA_PROCESOS_descripcion]
 )
 as
 begin
-SELECT p.nombre,p.id_proceso,p.descripcion,p.id_nivel,p.inicial,p.repetible,p.definido,p.gestionado,
+SELECT p.nombre,p.id_proceso,p.descripcion,p.id_nivel as Valor_Actual,p.inicial,p.repetible,p.definido,p.gestionado,
 p.optimizado,e.usuario,p.fecha_creacion
 FROM procesos p
 INNER JOIN Empleados e ON p.id_empleado= e.id_empleado 
@@ -365,7 +365,7 @@ CREATE PROCEDURE [dbo].[SP_CONSULTA_PROCESOS_niveles]
 )
 as
 begin
-SELECT p.nombre,p.id_proceso,p.descripcion,p.id_nivel,p.inicial,p.repetible,p.definido,p.gestionado,
+SELECT p.nombre,p.id_proceso,p.descripcion,p.id_nivel as Valor_Actual,p.inicial,p.repetible,p.definido,p.gestionado,
 p.optimizado,e.usuario,p.fecha_creacion
 FROM procesos p
 INNER JOIN Empleados e ON p.id_empleado= e.id_empleado 
@@ -380,7 +380,7 @@ GO
 CREATE PROCEDURE [dbo].[SP_CONSULTA_PROCESOS]
 as
 begin
-SELECT p.nombre,p.id_proceso,p.descripcion,p.id_nivel,p.inicial,p.repetible,p.definido,p.gestionado,
+SELECT p.nombre,p.id_proceso,p.descripcion,p.id_nivel as Valor_Actual,p.inicial,p.repetible,p.definido,p.gestionado,
 p.optimizado,e.usuario,p.fecha_creacion
 FROM procesos p
 INNER JOIN Empleados e ON p.id_empleado= e.id_empleado 
@@ -408,8 +408,8 @@ CREATE PROCEDURE  [dbo].[SP_AGREGAR_AUDITORIAS]
 @id_proceso int,
 @hallazgos varchar(256),
 @recomendaciones varchar(256),
-@fecha_limite datetime,
-@fecha_auditoria datetime
+@fecha_limite date,
+@fecha_auditoria date
 )
 AS
 BEGIN
@@ -443,6 +443,87 @@ UPDATE [dbo].[niveles]
    SET [descripcion] = @descripcion
  WHERE id_nivel =@id_nivel
  end
+GO
+
+
+CREATE PROCEDURE AGREGAR_PROCESOS
+(
+@nombre varchar(100),
+@descripcion varchar(250),
+@id_nivel int,
+@inicial varchar(250),
+@repetible varchar(250),
+@definido varchar(250),
+@gestionado varchar(250),
+@optimizado varchar(250),
+@id_empleado int,
+@fecha_creacion date,
+@estado int
+
+)
+AS
+BEGIN
+INSERT INTO [dbo].[procesos]
+           ([nombre]
+           ,[descripcion]           
+           ,[id_nivel]
+           ,[inicial]
+           ,[repetible]
+           ,[definido]
+           ,[gestionado]
+           ,[optimizado]
+           ,[id_empleado]
+           ,[fecha_creacion]
+           ,[estado])
+     VALUES
+           (@nombre
+           ,@descripcion          
+           ,@id_nivel
+           ,@inicial
+           ,@repetible
+           ,@definido
+           ,@gestionado
+           ,@optimizado
+           ,@id_empleado
+           ,GETDATE()
+           ,@estado
+		   )
+		   END
+GO
+
+
+CREATE PROCEDURE MODIFICAR_PROCESO
+(
+@id_proceso int,
+@nombre varchar(100),
+@descripcion varchar(250),
+@id_nivel int,
+@inicial varchar(250),
+@repetible varchar(250),
+@definido varchar(250),
+@gestionado varchar(250),
+@optimizado varchar(250),
+@id_empleado int,
+@fecha_creacion date,
+@estado int
+
+)
+AS
+BEGIN
+UPDATE [dbo].[procesos]
+   SET [nombre] = @nombre
+      ,[descripcion]= @descripcion
+      ,[id_nivel] = @id_nivel
+      ,[inicial] = @inicial
+      ,[repetible] = @repetible
+      ,[definido] = @definido
+      ,[gestionado] = @gestionado
+      ,[optimizado] = @optimizado
+      ,[id_empleado] = @id_empleado
+      ,[fecha_creacion] = @fecha_creacion
+      ,[estado] = @estado
+ WHERE id_proceso = @id_proceso
+ END 
 GO
 
 
