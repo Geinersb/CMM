@@ -32,7 +32,14 @@ namespace BLL.CAT_MANT
         }
 
 
+        public void AgregarProceso(Proceso proceso)
+        {
+            //agrega el empleado a la base
+            oProcesosAccess.AgregarProceso(proceso);
+            //agrega el historial
 
+
+        }
 
 
 

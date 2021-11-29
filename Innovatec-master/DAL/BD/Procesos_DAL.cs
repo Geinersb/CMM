@@ -60,7 +60,44 @@ namespace DAL.BD
         }
 
 
+        public void AgregarProceso(Proceso oEmpleadoDAL)
+        {
+            SqlCommand command;
+            string query = "AGREGAR_PROCESOS";
 
+            using (SqlConnection connection = new SqlConnection(stringConexion))
+            {
+                command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@nombre", oEmpleadoDAL.Nombre);
+                command.Parameters.AddWithValue("@descripcion", oEmpleadoDAL.Descripcion);
+                command.Parameters.AddWithValue("@id_nivel", oEmpleadoDAL.Id_nivel);
+                command.Parameters.AddWithValue("@inicial", oEmpleadoDAL.Inicial);
+                command.Parameters.AddWithValue("@repetible", oEmpleadoDAL.Repetible);
+                command.Parameters.AddWithValue("@definido", oEmpleadoDAL.Definido);
+                command.Parameters.AddWithValue("@gestionado", oEmpleadoDAL.Gestinado);
+                command.Parameters.AddWithValue("@optimizado", oEmpleadoDAL.Optimizado);
+                command.Parameters.AddWithValue("@id_empleado", oEmpleadoDAL.Id_empleado);
+                command.Parameters.AddWithValue("@fecha_creacion", oEmpleadoDAL.Fecha_creacion);
+                command.Parameters.AddWithValue("@estado", oEmpleadoDAL.Estado);
+
+                command.CommandType = CommandType.StoredProcedure;
+
+                try
+                {
+                    connection.Open();
+                    command.ExecuteScalar();
+                    connection.Close();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+        }
 
 
     }

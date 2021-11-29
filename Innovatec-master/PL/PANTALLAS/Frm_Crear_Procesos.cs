@@ -66,37 +66,38 @@ namespace PL.PANTALLAS
             }
         }
 
-
+        //private int perfil = 0;
+        //private int departamento = 0;
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtDescripcion.Text==string.Empty)
+            if (cmbDepartamento.SelectedItem==null|| txtDescripcion.Text==string.Empty || cmbNivel.SelectedItem==null || txt_Inicial.Text==string.Empty
+                || txt_Repetible.Text == string.Empty || txt_Definido.Text == string.Empty|| txt_Gestionado.Text == string.Empty || txt_Optimizado.Text == string.Empty)
             {
                 MessageBox.Show("TODOS LOS CAMPOS DEBEN ESTAR LLENOS ");
             }
             else
             {
-                //Proceso Pempleado = new Proceso();
-                //Pempleado.Nombre = txtNombre.Text.ToString();
-                //Pempleado.Apellido1 = txtPrimerApellido.Text.ToString();
-                //Pempleado.Apellido2 = txt_SegundoApellido.Text.ToString();
-                //Pempleado.Cedula = txt_Cedula.Text.ToString();
-                //Pempleado.Telefono = txtTelefono.Text.ToString();
-                //Pempleado.Correo = txtCorreo.Text.ToString();
-                //Pempleado.Usuario = txtUsuario.Text.ToString();
-                //Pempleado.Pass = txtPassword.Text.ToString();
-                //perfil = cmbRol.SelectedIndex;
-                //Pempleado.Id_perfil = perfil + 1;
-                //departamento = cmbDepartamento.SelectedIndex;
-                //Pempleado.Id_departamento = departamento + 1;
-                ////crear los demas variables
+                Proceso Pproceso = new Proceso();
+                Pproceso.Nombre = cmbDepartamento.SelectedIndex+1;
+                Pproceso.Descripcion = txtDescripcion.Text.ToString();
+                Pproceso.Id_nivel = cmbNivel.SelectedIndex+1;
+                Pproceso.Inicial = txt_Inicial.Text.ToString();
+                Pproceso.Repetible = txt_Repetible.Text.ToString();
+                Pproceso.Definido = txt_Definido.Text.ToString();
+                Pproceso.Gestinado = txt_Gestionado.Text.ToString();
+                Pproceso.Optimizado = txt_Optimizado.Text.ToString();
+                Pproceso.Id_empleado = (UserCache.Id_empleado);
+                Pproceso.Fecha_creacion = Convert.ToDateTime(txt_Fecha.Text);
+                Pproceso.Estado = 1;
 
-                //EmpleadoBLL.AgregarEmpleado(Pempleado);
+                //crear los demas variables
+                ProcesoBLL.AgregarProceso(Pproceso);
+               
 
                 MessageBox.Show("SE HA INSERTADO CORRECTAMENTE EL NUEVO PROCESO");
                 this.Hide();
 
-                Frm_Procesos_PL pantalla = new Frm_Procesos_PL();
-                pantalla.CargarDatos();
+                
             }
           
         }
