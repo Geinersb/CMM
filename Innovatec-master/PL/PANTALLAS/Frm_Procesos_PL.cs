@@ -132,8 +132,9 @@ namespace PL.PANTALLAS
             }
             
             Procesos.ShowDialog();
+            CargarDatos();
 
-            
+
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

@@ -321,7 +321,6 @@ namespace PL.PANTALLAS
         private System.Windows.Forms.Label btnCerrar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.DataGridView dgvProcesos;
         private System.Windows.Forms.ToolStripButton tsbtn_Nombre;
         private System.Windows.Forms.ToolStripLabel toolStripLabel5;
         private System.Windows.Forms.ToolStripTextBox txtFiltro;
@@ -334,5 +333,6 @@ namespace PL.PANTALLAS
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton tsbRefrescar;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        public System.Windows.Forms.DataGridView dgvProcesos;
     }
 }

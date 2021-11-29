@@ -20,7 +20,10 @@ namespace PL.PANTALLAS
     {
        
         Nivel_BLL NivelBll = new Nivel_BLL();
-        Procesos_BLL ProcesoBll = new Procesos_BLL();
+        Procesos_BLL ProcesoBll = new Procesos_BLL();                       
+        Proceso proceso = new Proceso();
+
+        Frm_Procesos_PL Pantalla = new Frm_Procesos_PL();
 
         string sMsjError = string.Empty;
 
@@ -47,6 +50,7 @@ namespace PL.PANTALLAS
             ProcesoBll.ModificarProceso(Pproceso);
 
             MessageBox.Show("SE HA EDITADO CORRECTAMENTE EL PROCESO");
+            CargarDatos();
             this.Hide();
 
 
@@ -73,5 +77,20 @@ namespace PL.PANTALLAS
 
 
         }
+
+
+        public void CargarDatos()
+        {
+
+
+            this.Pantalla.dgvProcesos.DataSource = null;
+            this.Pantalla.dgvProcesos.Refresh();
+            this.Pantalla.dgvProcesos.DataSource = ProcesoBll.ListarProcesos();
+            this.Pantalla.Refresh();
+
+            // lblTotal.Text = string.Format("Total Registros: {0}", this.dgvPersonal.RowCount);
+
+        }
+
     }
 }
