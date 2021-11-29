@@ -446,10 +446,11 @@ UPDATE [dbo].[niveles]
 GO
 
 
-CREATE PROCEDURE AGREGAR_PROCESOS
+CREATE PROCEDURE [dbo].[AGREGAR_PROCESOS]
 (
 @nombre varchar(100),
 @descripcion varchar(250),
+@id_departamento int,
 @id_nivel int,
 @inicial varchar(250),
 @repetible varchar(250),
@@ -465,7 +466,8 @@ AS
 BEGIN
 INSERT INTO [dbo].[procesos]
            ([nombre]
-           ,[descripcion]           
+           ,[descripcion]  
+		   ,[id_departamento]
            ,[id_nivel]
            ,[inicial]
            ,[repetible]
@@ -477,7 +479,8 @@ INSERT INTO [dbo].[procesos]
            ,[estado])
      VALUES
            (@nombre
-           ,@descripcion          
+           ,@descripcion
+		   ,@id_departamento
            ,@id_nivel
            ,@inicial
            ,@repetible
@@ -491,40 +494,20 @@ INSERT INTO [dbo].[procesos]
 		   END
 GO
 
-
-CREATE PROCEDURE MODIFICAR_PROCESO
+CREATE PROCEDURE [dbo].[MODIFICAR_PROCESO]
 (
 @id_proceso int,
-@nombre varchar(100),
-@descripcion varchar(250),
 @id_nivel int,
-@inicial varchar(250),
-@repetible varchar(250),
-@definido varchar(250),
-@gestionado varchar(250),
-@optimizado varchar(250),
-@id_empleado int,
-@fecha_creacion date,
 @estado int
-
 )
 AS
 BEGIN
 UPDATE [dbo].[procesos]
-   SET [nombre] = @nombre
-      ,[descripcion]= @descripcion
-      ,[id_nivel] = @id_nivel
-      ,[inicial] = @inicial
-      ,[repetible] = @repetible
-      ,[definido] = @definido
-      ,[gestionado] = @gestionado
-      ,[optimizado] = @optimizado
-      ,[id_empleado] = @id_empleado
-      ,[fecha_creacion] = @fecha_creacion
+   SET [id_nivel] = @id_nivel      
       ,[estado] = @estado
  WHERE id_proceso = @id_proceso
  END 
-GO
+ GO
 
 
 --Creacion de Llaves foraneas/relaciones entre tablas.
