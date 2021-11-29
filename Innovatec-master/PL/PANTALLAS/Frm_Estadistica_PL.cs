@@ -28,6 +28,8 @@ namespace PL.PANTALLAS
         {
 
             CargarCantidadProcesos();
+            CargarCantidadActivos();
+            CargarCantidadArchivados();
 
 
         }
@@ -54,5 +56,33 @@ namespace PL.PANTALLAS
             }
         }
 
+        public void CargarCantidadActivos()
+        {
+            Procesos_BLL DepaBLL = new Procesos_BLL();
+
+
+            foreach (Proceso depa in DepaBLL.ListarCantidadProcesosActivos())
+            {
+                lblActivos.Text = depa.Id_proceso.ToString();
+
+            }
+        }
+
+        public void CargarCantidadArchivados()
+        {
+            Procesos_BLL DepaBLL = new Procesos_BLL();
+
+
+            foreach (Proceso depa in DepaBLL.ListarCantidadProcesosArchivados())
+            {
+                lblArchivados.Text = depa.Id_proceso.ToString();
+
+            }
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

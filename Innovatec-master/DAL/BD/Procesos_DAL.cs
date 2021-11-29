@@ -178,5 +178,93 @@ namespace DAL.BD
 
 
 
+        public List<Proceso> ListarCantidadProcesosActivos()
+        {
+
+            List<Proceso> lstDepartamentoDAL = new List<Proceso>();
+
+            SqlCommand command;
+            string query = "CANTIDAD_PROCESOS_ACTIVOS";
+
+            using (SqlConnection connection = new SqlConnection(stringConexion))
+            {
+                command = new SqlCommand(query, connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        Proceso oDepartamentoDal = new Proceso();
+                        oDepartamentoDal.Id_proceso = reader.GetInt32(0);
+
+                        lstDepartamentoDAL.Add(oDepartamentoDal);
+                    }
+                    connection.Close();
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+
+            return lstDepartamentoDAL;
+        }
+
+
+
+        public List<Proceso> ListarCantidadProcesosArchivados()
+        {
+
+            List<Proceso> lstDepartamentoDAL = new List<Proceso>();
+
+            SqlCommand command;
+            string query = "CANTIDAD_PROCESOS_ARCHIVADOS";
+
+            using (SqlConnection connection = new SqlConnection(stringConexion))
+            {
+                command = new SqlCommand(query, connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        Proceso oDepartamentoDal = new Proceso();
+                        oDepartamentoDal.Id_proceso = reader.GetInt32(0);
+
+                        lstDepartamentoDAL.Add(oDepartamentoDal);
+                    }
+                    connection.Close();
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+
+            return lstDepartamentoDAL;
+        }
+
+
+
     }
 }
