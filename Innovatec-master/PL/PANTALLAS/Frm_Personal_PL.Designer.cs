@@ -78,7 +78,7 @@ namespace PL.PANTALLAS
             this.toolStrip1.Location = new System.Drawing.Point(272, 49);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.toolStrip1.Size = new System.Drawing.Size(449, 23);
+            this.toolStrip1.Size = new System.Drawing.Size(480, 23);
             this.toolStrip1.TabIndex = 34;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -130,6 +130,7 @@ namespace PL.PANTALLAS
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(23, 20);
             this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripLabel1
             // 
@@ -315,7 +316,7 @@ namespace PL.PANTALLAS
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-            
+
         }
 
         #endregion

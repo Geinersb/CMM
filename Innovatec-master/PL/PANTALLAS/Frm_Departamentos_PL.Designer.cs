@@ -90,7 +90,7 @@ namespace PL.PANTALLAS
             this.toolStrip1.Location = new System.Drawing.Point(263, 41);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.toolStrip1.Size = new System.Drawing.Size(439, 23);
+            this.toolStrip1.Size = new System.Drawing.Size(470, 23);
             this.toolStrip1.TabIndex = 30;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -133,6 +133,7 @@ namespace PL.PANTALLAS
             this.tsbtn_Exportar.Size = new System.Drawing.Size(23, 20);
             this.tsbtn_Exportar.Text = "toolStripButton5";
             this.tsbtn_Exportar.ToolTipText = "Cédula";
+            this.tsbtn_Exportar.Click += new System.EventHandler(this.tsbtn_Exportar_Click);
             // 
             // toolStripLabel3
             // 
