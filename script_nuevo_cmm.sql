@@ -510,6 +510,30 @@ UPDATE [dbo].[procesos]
  GO
 
 
+
+CREATE PROCEDURE CANTIDAD_PROCESOS
+as
+begin
+SELECT COUNT(id_proceso) from procesos
+  END
+GO
+
+CREATE PROCEDURE CANTIDAD_PROCESOS_ACTIVOS
+as
+begin
+SELECT COUNT(estado) from procesos where estado=1
+  END
+GO
+
+
+CREATE PROCEDURE CANTIDAD_PROCESOS_ARCHIVADOS
+as
+begin
+SELECT COUNT(estado) from procesos where estado=0
+  END
+
+
+
 --Creacion de Llaves foraneas/relaciones entre tablas.
 
 --alter table procesos
