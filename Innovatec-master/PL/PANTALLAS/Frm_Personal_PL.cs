@@ -97,7 +97,7 @@ namespace PL.PANTALLAS
 
             }
 
-            Frm_Personal_PL personal = new Frm_Personal_PL();           
+            //Frm_Personal_PL personal = new Frm_Personal_PL();           
             pantalla.ShowDialog();
             
 

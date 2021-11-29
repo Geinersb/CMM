@@ -60,10 +60,10 @@ namespace PL.PANTALLAS
         {
             
 
-                this.dgvPacientes.DataSource = null;
-                this.dgvPacientes.Refresh();
-                this.dgvPacientes.DataSource = procesosBLL.ListarProcesos();
-                this.dgvPacientes.Refresh();
+                this.dgvProcesos.DataSource = null;
+                this.dgvProcesos.Refresh();
+                this.dgvProcesos.DataSource = procesosBLL.ListarProcesos();
+                this.dgvProcesos.Refresh();
 
                 // lblTotal.Text = string.Format("Total Registros: {0}", this.dgvPersonal.RowCount);
            
@@ -73,10 +73,10 @@ namespace PL.PANTALLAS
         {
 
 
-            this.dgvPacientes.DataSource = null;
-            this.dgvPacientes.Refresh();
-            this.dgvPacientes.DataSource = procesosBLL.FiltrarProcesosDescripcion(txtFiltro.Text);
-            this.dgvPacientes.Refresh();
+            this.dgvProcesos.DataSource = null;
+            this.dgvProcesos.Refresh();
+            this.dgvProcesos.DataSource = procesosBLL.FiltrarProcesosDescripcion(txtFiltro.Text);
+            this.dgvProcesos.Refresh();
 
             // lblTotal.Text = string.Format("Total Registros: {0}", this.dgvPersonal.RowCount);
         }
@@ -90,10 +90,10 @@ namespace PL.PANTALLAS
             else
                 vacio = niveles_cbo.SelectedIndex + 1;
 
-            this.dgvPacientes.DataSource = null;
-            this.dgvPacientes.Refresh();
-            this.dgvPacientes.DataSource = procesosBLL.FiltrarProcesosNivel(vacio);
-            this.dgvPacientes.Refresh();
+            this.dgvProcesos.DataSource = null;
+            this.dgvProcesos.Refresh();
+            this.dgvProcesos.DataSource = procesosBLL.FiltrarProcesosNivel(vacio);
+            this.dgvProcesos.Refresh();
 
             // lblTotal.Text = string.Format("Total Registros: {0}", this.dgvPersonal.RowCount);
         }
@@ -113,10 +113,27 @@ namespace PL.PANTALLAS
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            Frm_Modificar_Procesos_PL Procesos = new Frm_Modificar_Procesos_PL();
 
-                    
+            if (dgvProcesos.Rows.Count > 0)
+            {
+                Procesos.txtDepartamento.Text=dgvProcesos.SelectedRows[0].Cells[0].Value.ToString();
+                Procesos.txtIdProceso.Text= dgvProcesos.SelectedRows[0].Cells[1].Value.ToString();
+                Procesos.txtDescripción.Text = dgvProcesos.SelectedRows[0].Cells[2].Value.ToString();
+                Procesos.cmbNivel.SelectedValue = dgvProcesos.SelectedRows[0].Cells[3].Value.ToString();
+                Procesos.txtInicial.Text = dgvProcesos.SelectedRows[0].Cells[4].Value.ToString();
+                Procesos.txtRepetible.Text = dgvProcesos.SelectedRows[0].Cells[5].Value.ToString();
+                Procesos.txtDefinido.Text = dgvProcesos.SelectedRows[0].Cells[6].Value.ToString();
+                Procesos.txtGestionado.Text = dgvProcesos.SelectedRows[0].Cells[7].Value.ToString();
+                Procesos.txtOptimizado.Text = dgvProcesos.SelectedRows[0].Cells[8].Value.ToString();
+                Procesos.txtRealizado.Text = dgvProcesos.SelectedRows[0].Cells[9].Value.ToString();
+                Procesos.txtFecha.Text = dgvProcesos.SelectedRows[0].Cells[10].Value.ToString();               
 
-            CargarDatos();
+            }
+            
+            Procesos.ShowDialog();
+
+            
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
