@@ -35,8 +35,9 @@ namespace PL.PANTALLAS
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            Frm_Crear_Procesos pantalla = new Frm_Crear_Procesos();
+            Frm_Crear_Procesos pantalla = new Frm_Crear_Procesos();            
             pantalla.ShowDialog();
+            CargarDatos();
         }
 
         private void txtFiltro_TextChanged(object sender, EventArgs e)

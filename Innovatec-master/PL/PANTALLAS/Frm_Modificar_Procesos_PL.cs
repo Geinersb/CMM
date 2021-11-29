@@ -39,19 +39,25 @@ namespace PL.PANTALLAS
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            if (cmbNivel.SelectedItem == null)
+            {
+                MessageBox.Show("DEBE SELECCIONAR EL NIVEL DEL PROCESO");
+            }
+            else
+            {
+                Proceso Pproceso = new Proceso();
+                Pproceso.Id_proceso = Convert.ToInt32(txtIdProceso.Text.ToString());
+                Pproceso.Id_nivel = cmbNivel.SelectedIndex + 1;
+                Pproceso.Estado = 1;
 
 
-            Proceso Pproceso= new Proceso();
-            Pproceso.Id_proceso = Convert.ToInt32(txtIdProceso.Text.ToString());
-            Pproceso.Id_nivel = cmbNivel.SelectedIndex + 1;
-            Pproceso.Estado = 1;
+                ProcesoBll.ModificarProceso(Pproceso);
 
+                MessageBox.Show("SE HA EDITADO CORRECTAMENTE EL PROCESO");
+                this.Hide();
+            }
 
-            ProcesoBll.ModificarProceso(Pproceso);
-
-            MessageBox.Show("SE HA EDITADO CORRECTAMENTE EL PROCESO");
-            CargarDatos();
-            this.Hide();
+            
 
 
 
@@ -79,18 +85,7 @@ namespace PL.PANTALLAS
         }
 
 
-        public void CargarDatos()
-        {
-
-
-            this.Pantalla.dgvProcesos.DataSource = null;
-            this.Pantalla.dgvProcesos.Refresh();
-            this.Pantalla.dgvProcesos.DataSource = ProcesoBll.ListarProcesos();
-            this.Pantalla.Refresh();
-
-            // lblTotal.Text = string.Format("Total Registros: {0}", this.dgvPersonal.RowCount);
-
-        }
+       
 
     }
 }

@@ -37,7 +37,8 @@ namespace PL.PANTALLAS
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             Frm_Crear_Departamentos_PL Departamentos = new Frm_Crear_Departamentos_PL();
-            Departamentos.ShowDialog(); 
+            Departamentos.ShowDialog();
+            CargarDatos();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -51,12 +52,11 @@ namespace PL.PANTALLAS
                 PantModificar.txtCodigo.Text= dgvDepartamentos.SelectedRows[0].Cells[2].Value.ToString();
 
             }
-
-
+                        
             //PantModificar. = Entidadades = Edepartamento;
             PantModificar.ShowDialog();
-
             CargarDatos();
+
         }
 
         private void txtFiltro_TextChanged(object sender, EventArgs e)

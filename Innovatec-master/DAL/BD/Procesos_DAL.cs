@@ -134,6 +134,48 @@ namespace DAL.BD
         }
 
 
+        public List<Proceso> ListarCantidadProcesos()
+        {
+
+            List<Proceso> lstDepartamentoDAL = new List<Proceso>();
+
+            SqlCommand command;
+            string query = "CANTIDAD_PROCESOS";
+
+            using (SqlConnection connection = new SqlConnection(stringConexion))
+            {
+                command = new SqlCommand(query, connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        Proceso oDepartamentoDal = new Proceso();
+                        oDepartamentoDal.Id_proceso = reader.GetInt32(0);
+
+                        lstDepartamentoDAL.Add(oDepartamentoDal);
+                    }
+                    connection.Close();
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+
+            return lstDepartamentoDAL;
+        }
+
 
 
     }

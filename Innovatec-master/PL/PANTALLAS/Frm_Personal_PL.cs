@@ -68,6 +68,7 @@ namespace PL.PANTALLAS
         {
             Frm_Crear_Personal_PL pantalla = new Frm_Crear_Personal_PL();
             pantalla.ShowDialog();
+            CargarDatos();
         }
 
         private void txtFiltro_TextChanged(object sender, EventArgs e)
@@ -99,7 +100,7 @@ namespace PL.PANTALLAS
 
             //Frm_Personal_PL personal = new Frm_Personal_PL();           
             pantalla.ShowDialog();
-            
+            CargarDatos();
 
         }
 

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidadades;
+using BLL.CAT_MANT;
 
 namespace PL.PANTALLAS
 {
@@ -25,6 +27,9 @@ namespace PL.PANTALLAS
         private void Frm_Enfermeria_PL_Load(object sender, EventArgs e)
         {
 
+            CargarCantidadProcesos();
+
+
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -36,5 +41,18 @@ namespace PL.PANTALLAS
         {
 
         }
+
+        public void CargarCantidadProcesos()
+        {
+            Procesos_BLL DepaBLL = new Procesos_BLL();
+
+
+            foreach (Proceso depa in DepaBLL.ListarCantidadProcesos())
+            {
+                lblProcesos.Text = depa.Id_proceso.ToString();
+                
+            }
+        }
+
     }
 }

@@ -47,5 +47,10 @@ namespace BLL.CAT_MANT
         }
 
 
+        public List<Proceso> ListarCantidadProcesos()
+        {
+            return oProcesosAccess.ListarCantidadProcesos();
+        }
+
     }
 }
