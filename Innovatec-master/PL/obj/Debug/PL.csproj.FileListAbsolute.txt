@@ -518,6 +518,8 @@ C:\Users\Marjorie\Documents\Proyecto\CMM\Innovatec-master\PL\obj\Debug\PL.csproj
 C:\Users\Marjorie\Documents\Proyecto\CMM\Innovatec-master\PL\obj\Debug\PL.exe
 C:\Users\Marjorie\Documents\Proyecto\CMM\Innovatec-master\PL\obj\Debug\PL.pdb
 C:\Users\geine\Source\Repos\CMM\Innovatec-master\PL\obj\Debug\PL.Form1.resources
+C:\Users\geine\Source\Repos\CMM\Innovatec-master\PL\obj\Debug\PL.PANTALLAS.Frm_Crear_Auditoria_PL.resources
+C:\Users\geine\Source\Repos\CMM\Innovatec-master\PL\obj\Debug\PL.csproj.ResolveComReference.cache
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\bin\Debug\PL.exe.config
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\bin\Debug\PL.exe
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\bin\Debug\PL.pdb
@@ -560,6 +562,8 @@ C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\bin\Debug\DAL.dll
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\bin\Debug\Entidadades.dll
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\bin\Debug\MaterialDesignColors.dll
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\bin\Debug\Microsoft.Office.Interop.Excel.dll
+C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\bin\Debug\stdole.dll
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\bin\Debug\BLL.pdb
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\bin\Debug\DAL.pdb
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\bin\Debug\DAL.dll.config
@@ -600,6 +604,7 @@ C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\bin\Debug\MaterialDesignColo
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.csprojAssemblyReference.cache
+C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.csproj.ResolveComReference.cache
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.Form1.resources
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.PANTALLAS.Frm_Crear_Auditoria_PL.resources
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.PANTALLAS.Frm_Modificar_Deapartamentos.resources
@@ -624,5 +629,4 @@ C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.csproj.CoreComp
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.csproj.CopyComplete
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.exe
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.pdb
-C:\Users\geine\Source\Repos\CMM\Innovatec-master\PL\obj\Debug\PL.PANTALLAS.Frm_Crear_Auditoria_PL.resources
-C:\Users\geine\Source\Repos\CMM\Innovatec-master\PL\obj\Debug\PL.csproj.ResolveComReference.cache
+C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.PANTALLAS.Frm_Procesos_Archivados_PL.resources

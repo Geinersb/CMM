@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidadades;
+using BLL.CAT_MANT;
+
 
 //using DAL.CAT_MANT;
 
@@ -16,15 +19,9 @@ namespace PL.PANTALLAS
 {
     public partial class Frm_Historial_PL : Form
     {
+        
 
-
-
-        //Cls_BD_DAL Obj_BD_DAL = new Cls_BD_DAL();
-        //CLS_BD_BLL Obj_BD_BLL = new CLS_BD_BLL();
-
-        //Cls_Contactos_DAL Obj_Contactos_DAL = new Cls_Contactos_DAL();
-        //Cls_Contactos_BLL Obj_Contactos_BLL = new Cls_Contactos_BLL();
-
+        Auditorias_BLL auditoriabll = new Auditorias_BLL();
 
         public Frm_Historial_PL()
         {
@@ -33,28 +30,33 @@ namespace PL.PANTALLAS
 
         private void Frm_Contactos_PL_Load(object sender, EventArgs e)
         {
+            CargarDatos();
+            this.CargarComboCodigos();
             
         }
 
 
         private void CargarDatos()
         {
-           //Cls_Contactos_BLL Obj_Contactos_BLL = new Cls_Contactos_BLL();
+
+            this.dgvContactos.DataSource = null;
+            this.dgvContactos.Refresh();
+            this.dgvContactos.DataSource = auditoriabll.ListarAuditorias();
+            this.dgvContactos.Refresh();
+            
+
+        }
 
 
 
-            DataSet DS = new DataSet();
-
-            //Obj_Contactos_BLL.ListarFiltrarContactos(ref DS, txtFiltro.Text.Trim());
-
-            if (DS != null)
+        public void CargarComboCodigos()
+        {
+            foreach (Departamento depa in auditoriabll.ListarCodigosDepartamento())
             {
-
-                dgvContactos.DataSource = null;
-                dgvContactos.DataSource = DS.Tables[0];
+                codigoDepartamento_cbo.Items.Add(depa.Codigo);
             }
 
-            //lblTotal.Text = string.Format("Total Registros: {0}", this.dgv_Casos.RowCount);
+
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -83,6 +85,32 @@ namespace PL.PANTALLAS
         {
             Frm_Modificar_Personal_PL Familiares = new Frm_Modificar_Personal_PL();
             Familiares.ShowDialog();
+        }
+
+        private void codigoDepartamento_cbo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            string valor = this.codigoDepartamento_cbo.GetItemText(this.codigoDepartamento_cbo.SelectedItem);
+            CargarAuditoriasPorCodigo(valor);
+        }
+
+
+        private void CargarAuditoriasPorCodigo(string codigo)
+        {
+           
+
+            this.dgvContactos.DataSource = null;
+            this.dgvContactos.Refresh();
+            this.dgvContactos.DataSource = auditoriabll.FiltarAuditoriasCodigo(codigo);
+            this.dgvContactos.Refresh();
+
+            // lblTotal.Text = string.Format("Total Registros: {0}", this.dgvPersonal.RowCount);
+        }
+
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+            this.CargarDatos();
+            this.codigoDepartamento_cbo.SelectedItem = null;
         }
     }
 }

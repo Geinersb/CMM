@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Entidadades;
 using DAL.BD;
+using System.Data;
 
 namespace BLL.CAT_MANT
 {
     public class Auditorias_BLL
     {
         Auditorias_DAL oAuditoriaAccess = new Auditorias_DAL();
-
-
+        Departamento_DAL oDepartamento = new Departamento_DAL();
 
         public void AgregarAuditoria(Auditoria auditoria)
         {
@@ -23,6 +23,20 @@ namespace BLL.CAT_MANT
 
         }
 
+        public List<Departamento> ListarCodigosDepartamento()
+        {
+            return oDepartamento.ListarDepartamentoCodigo();
+        }
+
+        public List<Auditoria> ListarAuditorias()
+        {
+            return oAuditoriaAccess.ListarAuditorias();
+        }
+
+        public DataTable FiltarAuditoriasCodigo(string codigo)
+        {
+            return oAuditoriaAccess.FiltrarAuditorias(codigo);
+        }
 
     }
 }

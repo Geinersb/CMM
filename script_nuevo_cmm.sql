@@ -534,6 +534,35 @@ SELECT COUNT(estado) from procesos where estado=0
 
 
 
+
+
+CREATE PROCEDURE [dbo].[SP_CONSULTA_AUDITORIAS]
+as
+begin
+select * from auditorias
+END
+GO
+
+
+
+
+
+
+
+
+CREATE PROCEDURE [dbo].[SP_CONSULTA_AUDITORIAS_CODIGO]
+(
+@codigo VARCHAR(50)
+
+)
+as
+begin
+select * from auditorias a
+WHERE a.codigo_departamento =@codigo 
+END
+
+
+
 --Creacion de Llaves foraneas/relaciones entre tablas.
 
 --alter table procesos
