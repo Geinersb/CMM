@@ -93,6 +93,16 @@ namespace PL.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap excel_logo1 {
+            get {
+                object obj = ResourceManager.GetObject("excel-logo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gear_2_32 {
             get {
                 object obj = ResourceManager.GetObject("gear-2-32", resourceCulture);
@@ -246,6 +256,16 @@ namespace PL.Properties {
         internal static System.Drawing.Bitmap producto {
             get {
                 object obj = ResourceManager.GetObject("producto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Refrescar {
+            get {
+                object obj = ResourceManager.GetObject("Refrescar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
