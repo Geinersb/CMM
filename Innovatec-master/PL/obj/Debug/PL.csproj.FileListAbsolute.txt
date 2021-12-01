@@ -630,3 +630,6 @@ C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.csproj.CopyComp
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.exe
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.pdb
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.PANTALLAS.Frm_Procesos_Archivados_PL.resources
+C:\Users\geine\Source\Repos\CMM\Innovatec-master\PL\obj\Debug\PL.PANTALLAS.Frm_Procesos_ArchivadosAdmin_PL.resources
+C:\Users\geine\Source\Repos\CMM\Innovatec-master\PL\obj\Debug\PL.PANTALLAS.Frm_Procesos_Archivados_PL.resources
+C:\Users\geine\Source\Repos\CMM\Innovatec-master\PL\obj\Debug\PL.PANTALLAS.Frm_Acciones_PL.resources

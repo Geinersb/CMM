@@ -145,7 +145,7 @@
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
-      <Private>True</Private>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -167,6 +167,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="PANTALLAS\Frm_Acciones_PL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PANTALLAS\Frm_Acciones_PL.Designer.cs">
+      <DependentUpon>Frm_Acciones_PL.cs</DependentUpon>
+    </Compile>
     <Compile Include="PANTALLAS\Frm_Crear_Auditoria_PL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,12 @@
     </Compile>
     <Compile Include="PANTALLAS\Frm_Modificar_Deapartamentos.PL.Designer.cs">
       <DependentUpon>Frm_Modificar_Deapartamentos.PL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PANTALLAS\Frm_Procesos_ArchivadosAdmin_PL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PANTALLAS\Frm_Procesos_ArchivadosAdmin_PL.Designer.cs">
+      <DependentUpon>Frm_Procesos_ArchivadosAdmin_PL.cs</DependentUpon>
     </Compile>
     <Compile Include="PANTALLAS\Frm_Procesos_Archivados_PL.cs">
       <SubType>Form</SubType>
@@ -274,11 +286,17 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PANTALLAS\Frm_Acciones_PL.resx">
+      <DependentUpon>Frm_Acciones_PL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PANTALLAS\Frm_Crear_Auditoria_PL.resx">
       <DependentUpon>Frm_Crear_Auditoria_PL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PANTALLAS\Frm_Modificar_Deapartamentos.PL.resx">
       <DependentUpon>Frm_Modificar_Deapartamentos.PL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PANTALLAS\Frm_Procesos_ArchivadosAdmin_PL.resx">
+      <DependentUpon>Frm_Procesos_ArchivadosAdmin_PL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PANTALLAS\Frm_Procesos_Archivados_PL.resx">
       <DependentUpon>Frm_Procesos_Archivados_PL.cs</DependentUpon>

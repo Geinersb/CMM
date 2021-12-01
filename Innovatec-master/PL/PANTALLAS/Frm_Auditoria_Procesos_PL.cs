@@ -124,7 +124,6 @@ namespace PL.PANTALLAS
             Frm_Crear_Auditoria_PL pantallaAuditar = new Frm_Crear_Auditoria_PL();
             
 
-
             if (dgvPacientes.Rows.Count > 0)
             {
                 
@@ -134,8 +133,8 @@ namespace PL.PANTALLAS
                 pantallaAuditar.fechaAuditoria_txt.Text= DateTime.Now.ToLongDateString();
             }
 
-
             pantallaAuditar.ShowDialog();
+
         }
 
         private void niveles_cbo_Click_1(object sender, EventArgs e)

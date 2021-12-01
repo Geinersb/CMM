@@ -55,9 +55,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{b3112c3e-b649-440f-ac8e-e683c4847b67}</Project>
       <Name>DAL</Name>
@@ -66,6 +63,9 @@
       <Project>{b7417772-74ec-43e5-8b63-fb198e3ba2f6}</Project>
       <Name>Entidadades</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

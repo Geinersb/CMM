@@ -196,7 +196,7 @@ namespace PL.PANTALLAS
 
         private void btnFamilia_Click(object sender, EventArgs e)
         {
-            openChildForm(new Frm_Historial_PL());
+            openChildForm(new Frm_Acciones_PL());
             hideSubMenu();
         }
 
@@ -207,7 +207,7 @@ namespace PL.PANTALLAS
 
         private void btnPersonal_Click(object sender, EventArgs e)
         {
-            openChildForm(new Frm_Estadistica_PL());
+            openChildForm(new Frm_Procesos_ArchivadosAdmin_PL());
             hideSubMenu();
         }
 
@@ -338,6 +338,12 @@ namespace PL.PANTALLAS
             }
             
 
+        }
+
+        private void btnArchivados_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Frm_Procesos_Archivados_PL());
+            hideSubMenu();
         }
 
         private void openChildForm(Form childForm)

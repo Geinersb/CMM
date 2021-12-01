@@ -53,7 +53,7 @@ namespace PL.PANTALLAS
         {
             foreach (Departamento depa in auditoriabll.ListarCodigosDepartamento())
             {
-                codigoDepartamento_cbo.Items.Add(depa.Codigo);
+                toolStripComboBox1.Items.Add(depa.Codigo);
             }
 
 
@@ -77,8 +77,7 @@ namespace PL.PANTALLAS
 
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
-            txtFiltro.Text = string.Empty;
-            CargarDatos();
+           
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -89,9 +88,7 @@ namespace PL.PANTALLAS
 
         private void codigoDepartamento_cbo_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            string valor = this.codigoDepartamento_cbo.GetItemText(this.codigoDepartamento_cbo.SelectedItem);
-            CargarAuditoriasPorCodigo(valor);
+                        
         }
 
 
@@ -110,7 +107,19 @@ namespace PL.PANTALLAS
         private void toolStripLabel1_Click(object sender, EventArgs e)
         {
             this.CargarDatos();
-            this.codigoDepartamento_cbo.SelectedItem = null;
+            this.toolStripComboBox1.SelectedItem = null;
+        }
+
+        private void toolStripComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //string valor = this.toolStripComboBox1.GetItemText(this.toolStripComboBox1.SelectedItem);
+            //CargarAuditoriasPorCodigo(valor);
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            this.CargarDatos();
+            this.toolStripComboBox1.SelectedItem = null;
         }
     }
 }
