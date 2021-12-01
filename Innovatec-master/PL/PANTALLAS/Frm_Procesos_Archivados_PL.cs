@@ -46,7 +46,7 @@ namespace PL.PANTALLAS
 
         private void Frm_Procesos_Archivados_PL_Load(object sender, EventArgs e)
         {
-            CargarComboNiveles();
+           
             CargarDatos();
         }
 
@@ -56,37 +56,32 @@ namespace PL.PANTALLAS
 
             this.dgvProcesos.DataSource = null;
             this.dgvProcesos.Refresh();
-            this.dgvProcesos.DataSource = procesosBLL.ListarProcesos();
+            this.dgvProcesos.DataSource = procesosBLL.ListarProcesosArchivados();
             this.dgvProcesos.Refresh();
 
             // lblTotal.Text = string.Format("Total Registros: {0}", this.dgvPersonal.RowCount);
         }
 
-        private void CargarDatosPorNiveles()
+        private void CargarDatosProcesosArchivadosPorDescripcion()
         {
-            int vacio;
-            if (niveles_cbo.SelectedIndex == -1)
-                vacio = 0;
-            else
-                vacio = niveles_cbo.SelectedIndex + 1;
+
 
             this.dgvProcesos.DataSource = null;
             this.dgvProcesos.Refresh();
-            this.dgvProcesos.DataSource = procesosBLL.FiltrarProcesosNivel(vacio);
+            this.dgvProcesos.DataSource = procesosBLL.ListarProcesosArchivadosPorDescripcion(txtFiltro.Text);
             this.dgvProcesos.Refresh();
 
             // lblTotal.Text = string.Format("Total Registros: {0}", this.dgvPersonal.RowCount);
         }
 
-
-        public void CargarComboNiveles()
+        private void txtFiltro_Click(object sender, EventArgs e)
         {
-            foreach (Nivel nivelito in nivelesBLL.ListarNiveles())
-            {
-                niveles_cbo.Items.Add(nivelito.Id_nivel);
-            }
 
+        }
 
+        private void txtFiltro_TextChanged(object sender, EventArgs e)
+        {
+            this.CargarDatosProcesosArchivadosPorDescripcion();
         }
     }
 }

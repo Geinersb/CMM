@@ -60,6 +60,41 @@ namespace DAL.BD
         }
 
 
+        public DataTable ListarProcesosArchivados()
+        {
+            SqlConnection connection = new SqlConnection(stringConexion);
+            string query = "SP_CONSULTA_PROCESOS_ARCHIVADOS ";
+
+            SqlCommand cmd = new SqlCommand(query, connection);
+
+            DataTable t1 = new DataTable();
+            using (SqlDataAdapter a = new SqlDataAdapter(cmd))
+            {
+                a.Fill(t1);
+            }
+            return t1;
+        }
+
+
+
+        public DataTable FiltrarProcesosArchivadosPorDescripcion(string descripcion)
+        {
+            SqlConnection connection = new SqlConnection(stringConexion);
+            string query = "SP_CONSULTA_PROCESOS_ARCHIVADOS_DESCRIPCION '" + descripcion + "'";
+
+            SqlCommand cmd = new SqlCommand(query, connection);
+
+            DataTable t1 = new DataTable();
+            using (SqlDataAdapter a = new SqlDataAdapter(cmd))
+            {
+                a.Fill(t1);
+            }
+            return t1;
+        }
+
+
+
+
         public void AgregarProceso(Proceso oEmpleadoDAL)
         {
             SqlCommand command;

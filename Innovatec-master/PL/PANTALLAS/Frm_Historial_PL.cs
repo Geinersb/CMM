@@ -112,14 +112,23 @@ namespace PL.PANTALLAS
 
         private void toolStripComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string valor = this.toolStripComboBox1.ComboBox.GetItemText(this.toolStripComboBox1.SelectedItem);
+
             //string valor = this.toolStripComboBox1.GetItemText(this.toolStripComboBox1.SelectedItem);
-            //CargarAuditoriasPorCodigo(valor);
+            CargarAuditoriasPorCodigo(valor);
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             this.CargarDatos();
             this.toolStripComboBox1.SelectedItem = null;
+        }
+
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            this.toolStripComboBox1.SelectedItem = null;
+            this.CargarDatos();
+           
         }
     }
 }

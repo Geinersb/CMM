@@ -176,5 +176,29 @@ namespace PL.PANTALLAS
             if (niveles_cbo.SelectedIndex > -1)
                 niveles_cbo.SelectedIndex = -1;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int nivel = 0;
+           
+
+            nivel = Convert.ToInt32(dgvProcesos.SelectedRows[0].Cells[3].Value.ToString());
+            if (nivel != 5)
+            {
+                MessageBox.Show("Sòlo se pueden archivar procesos con valor actual igual a 5");
+            }
+            else
+            {
+                //modificar el estado del proceso a 0
+                proceso.Id_proceso = Convert.ToInt32(dgvProcesos.SelectedRows[0].Cells[1].Value.ToString());
+                proceso.Id_nivel = nivel;
+                proceso.Estado = 0;
+                procesosBLL.ModificarProceso(proceso);
+                txtFiltro.Text = string.Empty;
+                niveles_cbo.SelectedItem = null;
+                CargarDatos();
+                MessageBox.Show("Proceso archivado");
+            }
+        }
     }
 }

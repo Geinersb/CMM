@@ -531,7 +531,7 @@ as
 begin
 SELECT COUNT(estado) from procesos where estado=0
   END
-
+  go
 
 
 
@@ -560,7 +560,27 @@ begin
 select * from auditorias a
 WHERE a.codigo_departamento =@codigo 
 END
+go
 
+
+
+
+CREATE PROCEDURE [dbo].[SP_CONSULTA_PROCESOS_ARCHIVADOS_DESCRIPCION]
+(
+@descripcion varchar(250)
+)
+as
+begin
+SELECT p.nombre,p.id_proceso,p.descripcion,p.id_nivel as Valor_Actual,p.inicial,p.repetible,p.definido,p.gestionado,
+p.optimizado,e.usuario,p.fecha_creacion
+FROM procesos p
+INNER JOIN Empleados e ON p.id_empleado= e.id_empleado 
+INNER JOIN Departamentos d on p.id_departamento = d.id_departamento
+ WHERE p.estado=0 and p.descripcion LIKE '%'+@descripcion+'%' or  p.estado=0 and LEN(ISNULL(@descripcion, '')) = 0
+ 
+
+END
+go
 
 
 --Creacion de Llaves foraneas/relaciones entre tablas.

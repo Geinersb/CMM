@@ -31,6 +31,17 @@ namespace BLL.CAT_MANT
 
         }
 
+        public DataTable ListarProcesosArchivados()
+        {
+            return oProcesosAccess.ListarProcesosArchivados();
+
+        }
+
+        public DataTable ListarProcesosArchivadosPorDescripcion(string descripcion)
+        {
+            return oProcesosAccess.FiltrarProcesosArchivadosPorDescripcion(descripcion);
+
+        }
 
         public void AgregarProceso(Proceso proceso)
         {

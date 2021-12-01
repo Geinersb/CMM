@@ -309,6 +309,7 @@ namespace PL.PANTALLAS
             this.button1.Text = "Archivar";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Frm_Procesos_PL
             // 
