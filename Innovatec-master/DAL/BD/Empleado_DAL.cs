@@ -315,6 +315,12 @@ namespace DAL.BD
 
 
 
+
+
+
+
+
+
         public void ActualizarPass(string cedula ,string pass)
         {
             SqlCommand command;
@@ -344,6 +350,105 @@ namespace DAL.BD
                 }
 
             }
+        }
+
+
+
+        public void EnviarCorreosAuditorias(Auditoria auditoria)
+        {
+            SqlCommand command;
+            string query = "CONSULTA_CORREOS";
+           
+            using (SqlConnection connection = new SqlConnection(stringConexion))
+            {
+
+                command = new SqlCommand(query, connection);
+                //command.Parameters.AddWithValue("@userRequesting ", );
+                
+                // command.Parameters.AddWithValue("@pass", userRequesting);
+                command.CommandType = CommandType.StoredProcedure;
+
+
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        //nombre del correo
+                        
+                        string correo = reader.GetString(0);
+                       
+                        var mailService = new Entidadades.SystemSupportMail();
+
+                        
+                       
+
+
+                        mailService.sendMail(
+                          subject: "SYSTEM: Password recovery request",
+                          body: "Hola, " + " " + "\nSe realizò un proceso de auditoria .\n" +
+                          "auditoria: " +auditoria.Codigo_departamento + auditoria.Id_proceso +" "+auditoria.Hallasgoz01+" "+auditoria.Recomendaciones+" "+auditoria.Fecha_auditoria +
+                          "\n",
+                          recipientMail: new List<string> { correo }
+                          );
+                       
+
+
+                    }
+                    connection.Close();
+                    reader.Close();
+
+                }
+               
+
+            }
+            
+        }
+
+
+
+        public List<string> ListarCorreosEmpleados()
+        {
+
+            List<string> lstcorreos = new List<string>();
+
+            SqlCommand command;
+            string query = "CONSULTA_CORREOS";
+
+            using (SqlConnection connection = new SqlConnection(stringConexion))
+            {
+                command = new SqlCommand(query, connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        string correos;
+                       correos = reader.GetString(0);
+
+                        lstcorreos.Add(correos);
+                    }
+                    connection.Close();
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+
+            return lstcorreos;
         }
 
 

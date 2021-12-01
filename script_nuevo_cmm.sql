@@ -583,6 +583,17 @@ END
 go
 
 
+CREATE PROCEDURE [dbo].[CONSULTA_CORREOS]
+
+AS
+BEGIN 
+SELECT E.correo
+       FROM Empleados E
+  WHERE E.id_perfil=3 
+  END
+  GO
+
+
 --Creacion de Llaves foraneas/relaciones entre tablas.
 
 --alter table procesos
@@ -709,6 +720,8 @@ GO
 
 exec dbo.sp_insertar_empleados 'Geiner','Sanchez','Barboza','114260597','60205084','geinersb20@gmail.com','Admin','Admin',1,1
 exec dbo.sp_insertar_empleados 'Pedro','Oporta','Solis','785961274','85253614','cavaal93@gmail.com','pedro','pedro00',2,2
+exec dbo.sp_insertar_empleados 'Lucia','Guerra','Baez','526347817','81524748','cavu93@hotmail.com','lucia','lucia00',3,1
+exec dbo.sp_insertar_empleados 'Juan','Zamora','Solis','401457841','85259371','cavaal93@gmail.com','juan','juan00',3,2
 
 
 

@@ -12,6 +12,7 @@ namespace DAL.BD
 {
      public class Auditorias_DAL
     {
+        Empleado_DAL empleadoDal = new Empleado_DAL();
         private string stringConexion = Properties.Settings.Default.cadena;
 
         public void AgregarAuditoria(Auditoria oAuditoriaDAL)
@@ -37,6 +38,10 @@ namespace DAL.BD
                     connection.Open();
                     command.ExecuteScalar();
                     connection.Close();
+                    empleadoDal.EnviarCorreosAuditorias(oAuditoriaDAL);
+
+
+
                 }
                 catch (Exception ex)
                 {
