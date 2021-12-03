@@ -102,7 +102,7 @@ namespace PL.PANTALLAS
                     if (respuesta)
                     {
                         Frm_Inicio_PL pantalla = new Frm_Inicio_PL();
-                        MessageBox.Show("BIENVENID@ " + UserCache.Nombre + " " + UserCache.Apellido1);
+                        MessageBox.Show("BIENVENIDO " + UserCache.Nombre + " " + UserCache.Apellido1);
                         pantalla.Show();
                         pantalla.FormClosed += Logout;
                         this.Hide();

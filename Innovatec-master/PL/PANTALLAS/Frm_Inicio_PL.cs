@@ -80,7 +80,7 @@ namespace PL.PANTALLAS
         private void iconCerrar_Click(object sender, EventArgs e)
         {
 
-            if (MessageBox.Show("Esta segur@ de cerrar la aplicación?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (MessageBox.Show("Esta seguro de cerrar la aplicación?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 Application.Exit();
             }
@@ -269,7 +269,7 @@ namespace PL.PANTALLAS
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Esta segur@ de cerrar sesión?","Warning",MessageBoxButtons.YesNo,MessageBoxIcon.Warning)== DialogResult.Yes)
+            if (MessageBox.Show("Esta seguro de cerrar sesión?","Warning",MessageBoxButtons.YesNo,MessageBoxIcon.Warning)== DialogResult.Yes)
             {
                 this.Hide();
                 Frm_Login_PL Login = new Frm_Login_PL();
@@ -365,7 +365,7 @@ namespace PL.PANTALLAS
         {
            int perfilLogueado=UserCache.Id_perfil;
 
-            lblNombre.Text = UserCache.Nombre + "  " + UserCache.Apellido1;
+            lblNombre.Text = UserCache.Nombre + " " + UserCache.Apellido1;
 
             switch (perfilLogueado)
             {
