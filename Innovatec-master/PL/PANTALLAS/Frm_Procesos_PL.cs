@@ -200,5 +200,12 @@ namespace PL.PANTALLAS
                 MessageBox.Show("Proceso archivado");
             }
         }
+
+        private void btnAuditorias_Click(object sender, EventArgs e)
+        {
+            Frm_Historial_Auditorias_Admin_PL Auditorias = new Frm_Historial_Auditorias_Admin_PL();
+
+            Auditorias.ShowDialog();
+        }
     }
 }
