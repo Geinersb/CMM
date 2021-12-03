@@ -87,8 +87,18 @@ namespace DAL.BD
 
         public void AgregarUsuario(Empleado oEmpleadoDAL)
         {
+
+            string nuevoPassword = this.generarPassword();
+            oEmpleadoDAL.Pass = nuevoPassword;
+            //generar un nuevo usuario
+            //oEmpleadoDAL.Usuario = this.generarUsuario(oEmpleadoDAL.Nombre);
+
+            //comprobar que no exista ese usuario sino hay que volverlo a generar
+
             SqlCommand command;
-            string query = "sp_Agregar_empleados";
+            string query = "sp_insertar_empleados";
+
+
 
             using (SqlConnection connection = new SqlConnection(stringConexion))
             {
@@ -99,7 +109,10 @@ namespace DAL.BD
                 command.Parameters.AddWithValue("@cedula", oEmpleadoDAL.Cedula);
                 command.Parameters.AddWithValue("@telefono", oEmpleadoDAL.Telefono);
                 command.Parameters.AddWithValue("@correo", oEmpleadoDAL.Correo);
-                command.Parameters.AddWithValue("@usuario", oEmpleadoDAL.Usuario);               
+                command.Parameters.AddWithValue("@usuario", oEmpleadoDAL.Usuario);
+                command.Parameters.AddWithValue("@pass", oEmpleadoDAL.Pass);
+
+
                 command.Parameters.AddWithValue("@perfil", oEmpleadoDAL.Id_perfil);
                 command.Parameters.AddWithValue("@departamento", oEmpleadoDAL.Id_departamento);
 
@@ -108,7 +121,10 @@ namespace DAL.BD
                 try
                 {
                     connection.Open();
+                    this.enviarPass(nuevoPassword, oEmpleadoDAL.Correo, oEmpleadoDAL.Nombre);
+
                     command.ExecuteScalar();
+                   
                     connection.Close();
                 }
                 catch (Exception ex)
@@ -311,8 +327,60 @@ namespace DAL.BD
         }
 
 
+        public string generarPassword()
+        {
+            //generar el password
+            var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            var Charsarr = new char[8];
+            var random = new Random();
+
+            for (int i = 0; i < Charsarr.Length; i++)
+            {
+                Charsarr[i] = characters[random.Next(characters.Length)];
+            }
+
+            var resultString = new String(Charsarr);
+            return resultString;
+        }
 
 
+        public string generarUsuario(string nombreEmpleado)
+        {
+            //generar el usuario
+            var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            var Charsarr = new char[5];
+            var random = new Random();
+            string nuevoUser;
+            for (int i = 0; i < Charsarr.Length; i++)
+            {
+                Charsarr[i] = characters[random.Next(characters.Length)];
+            }
+
+            var resultString = new String(Charsarr);
+            nuevoUser= nombreEmpleado + resultString;
+            return nuevoUser;
+        }
+
+
+        public void enviarPass(string pass,string correo,string nombre)
+        {
+                        string contraseña = pass;
+                        string email = correo;
+                        var mailService = new Entidadades.SystemSupportMail();
+           
+
+
+
+                        mailService.sendMail(
+                          subject: "SYSTEM: Password recovery request",
+                          body: "Hola, " + nombre + "\nSe agrego su usuario correctaente al sistema.\n" +
+                          "su contraseña es : " + pass +
+                          "\n",
+                          recipientMail: new List<string> { correo }
+                          );
+                       
+
+        }
 
 
 
@@ -320,7 +388,7 @@ namespace DAL.BD
 
 
         public void ActualizarPass(string cedula ,string pass)
-        {
+        { 
             SqlCommand command;
             string query = "SP_cambio_password";
 

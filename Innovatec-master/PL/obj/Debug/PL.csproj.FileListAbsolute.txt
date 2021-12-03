@@ -634,3 +634,4 @@ C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.csproj.CopyComp
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.exe
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.pdb
 C:\Users\geine\Source\Repos\CMM\Innovatec-master\PL\obj\Debug\PL.PANTALLAS.Frm_Historial_Auditorias_Admin_PL.resources
+C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.PANTALLAS.Frm_Historial_Auditorias_Admin_PL.resources
