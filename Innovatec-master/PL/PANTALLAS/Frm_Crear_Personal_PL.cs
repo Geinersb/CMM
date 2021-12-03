@@ -41,7 +41,7 @@ namespace PL.PANTALLAS
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (txtNombre.Text==string.Empty || txtPrimerApellido.Text == string.Empty || txt_SegundoApellido.Text == string.Empty ||txt_Cedula.Text
-                == string.Empty || txtTelefono.Text == string.Empty ||txtCorreo.Text == string.Empty ||txtUsuario.Text == string.Empty ||txtPassword.Text == string.Empty ||cmbRol.SelectedItem == null || cmbDepartamento.SelectedItem==null)
+                == string.Empty || txtTelefono.Text == string.Empty ||txtCorreo.Text == string.Empty ||txtUsuario.Text == string.Empty ||cmbRol.SelectedItem == null || cmbDepartamento.SelectedItem==null)
             {
                 MessageBox.Show("TODOS LOS CAMPOS DEBEN ESTAR LLENOS ");
             }
@@ -55,8 +55,7 @@ namespace PL.PANTALLAS
                 Pempleado.Cedula = txt_Cedula.Text.ToString();
                 Pempleado.Telefono = txtTelefono.Text.ToString();
                 Pempleado.Correo = txtCorreo.Text.ToString();
-                Pempleado.Usuario = txtUsuario.Text.ToString();
-                Pempleado.Pass = txtPassword.Text.ToString();
+                Pempleado.Usuario = txtUsuario.Text.ToString();               
                 perfil = cmbRol.SelectedIndex;
                 Pempleado.Id_perfil = perfil + 1;
                 departamento = cmbDepartamento.SelectedIndex;

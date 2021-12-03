@@ -174,10 +174,10 @@ namespace PL.PANTALLAS
             this.toolStripLabel1,
             this.toolStripSeparator2});
             this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
-            this.toolStrip1.Location = new System.Drawing.Point(176, 41);
+            this.toolStrip1.Location = new System.Drawing.Point(158, 41);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.toolStrip1.Size = new System.Drawing.Size(658, 23);
+            this.toolStrip1.Size = new System.Drawing.Size(664, 23);
             this.toolStrip1.TabIndex = 27;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -264,8 +264,8 @@ namespace PL.PANTALLAS
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(69, 16);
-            this.toolStripLabel1.Text = "Refrescar";
+            this.toolStripLabel1.Size = new System.Drawing.Size(75, 16);
+            this.toolStripLabel1.Text = "Actualizar";
             // 
             // toolStripSeparator2
             // 

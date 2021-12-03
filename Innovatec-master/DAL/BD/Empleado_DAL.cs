@@ -88,7 +88,7 @@ namespace DAL.BD
         public void AgregarUsuario(Empleado oEmpleadoDAL)
         {
             SqlCommand command;
-            string query = "sp_insertar_empleados";
+            string query = "sp_Agregar_empleados";
 
             using (SqlConnection connection = new SqlConnection(stringConexion))
             {
@@ -99,8 +99,7 @@ namespace DAL.BD
                 command.Parameters.AddWithValue("@cedula", oEmpleadoDAL.Cedula);
                 command.Parameters.AddWithValue("@telefono", oEmpleadoDAL.Telefono);
                 command.Parameters.AddWithValue("@correo", oEmpleadoDAL.Correo);
-                command.Parameters.AddWithValue("@usuario", oEmpleadoDAL.Usuario);
-                command.Parameters.AddWithValue("@pass", oEmpleadoDAL.Pass);
+                command.Parameters.AddWithValue("@usuario", oEmpleadoDAL.Usuario);               
                 command.Parameters.AddWithValue("@perfil", oEmpleadoDAL.Id_perfil);
                 command.Parameters.AddWithValue("@departamento", oEmpleadoDAL.Id_departamento);
 
@@ -139,8 +138,7 @@ namespace DAL.BD
                 command.Parameters.AddWithValue("@cedula", oEmpleadoDAL.Cedula);
                 command.Parameters.AddWithValue("@telefono", oEmpleadoDAL.Telefono);
                 command.Parameters.AddWithValue("@correo", oEmpleadoDAL.Correo);
-                command.Parameters.AddWithValue("@usuario", oEmpleadoDAL.Usuario);
-                command.Parameters.AddWithValue("@pass", oEmpleadoDAL.Pass);
+                command.Parameters.AddWithValue("@usuario", oEmpleadoDAL.Usuario);                
                 command.Parameters.AddWithValue("@perfil", oEmpleadoDAL.Id_perfil);
                 command.Parameters.AddWithValue("@departamento", oEmpleadoDAL.Id_departamento);
 

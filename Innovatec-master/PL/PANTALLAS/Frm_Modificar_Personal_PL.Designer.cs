@@ -37,8 +37,6 @@ namespace PL.PANTALLAS
             this.btnEditar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
@@ -70,7 +68,7 @@ namespace PL.PANTALLAS
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 14.25F);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(376, 411);
+            this.btnCancelar.Location = new System.Drawing.Point(441, 386);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(152, 40);
             this.btnCancelar.TabIndex = 52;
@@ -122,7 +120,7 @@ namespace PL.PANTALLAS
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.White;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(121, 411);
+            this.btnEditar.Location = new System.Drawing.Point(267, 386);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(152, 40);
             this.btnEditar.TabIndex = 51;
@@ -135,7 +133,7 @@ namespace PL.PANTALLAS
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(72, 150);
+            this.label4.Location = new System.Drawing.Point(69, 150);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(127, 17);
             this.label4.TabIndex = 115;
@@ -146,30 +144,11 @@ namespace PL.PANTALLAS
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label13.Location = new System.Drawing.Point(76, 263);
+            this.label13.Location = new System.Drawing.Point(70, 263);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(61, 17);
             this.label13.TabIndex = 114;
             this.label13.Text = "Usuario:";
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(267, 292);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(326, 23);
-            this.txtPassword.TabIndex = 106;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label11.Location = new System.Drawing.Point(72, 292);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(73, 17);
-            this.label11.TabIndex = 113;
-            this.label11.Text = "Password:";
             // 
             // txtUsuario
             // 
@@ -184,7 +163,7 @@ namespace PL.PANTALLAS
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label12.Location = new System.Drawing.Point(76, 237);
+            this.label12.Location = new System.Drawing.Point(69, 234);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(55, 17);
             this.label12.TabIndex = 112;
@@ -213,7 +192,7 @@ namespace PL.PANTALLAS
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(76, 321);
+            this.label5.Location = new System.Drawing.Point(70, 298);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(33, 17);
             this.label5.TabIndex = 111;
@@ -224,7 +203,7 @@ namespace PL.PANTALLAS
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label8.Location = new System.Drawing.Point(72, 208);
+            this.label8.Location = new System.Drawing.Point(69, 205);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(68, 17);
             this.label8.TabIndex = 110;
@@ -235,7 +214,7 @@ namespace PL.PANTALLAS
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(72, 179);
+            this.label3.Location = new System.Drawing.Point(69, 179);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 17);
             this.label3.TabIndex = 109;
@@ -257,7 +236,7 @@ namespace PL.PANTALLAS
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(69, 95);
+            this.label2.Location = new System.Drawing.Point(69, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 17);
             this.label2.TabIndex = 107;
@@ -299,7 +278,7 @@ namespace PL.PANTALLAS
             // 
             this.cmbPersonal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPersonal.FormattingEnabled = true;
-            this.cmbPersonal.Location = new System.Drawing.Point(267, 321);
+            this.cmbPersonal.Location = new System.Drawing.Point(267, 298);
             this.cmbPersonal.Name = "cmbPersonal";
             this.cmbPersonal.Size = new System.Drawing.Size(326, 21);
             this.cmbPersonal.TabIndex = 116;
@@ -311,9 +290,9 @@ namespace PL.PANTALLAS
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label7.Location = new System.Drawing.Point(69, 66);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 17);
+            this.label7.Size = new System.Drawing.Size(129, 17);
             this.label7.TabIndex = 118;
-            this.label7.Text = "Id Empleado:";
+            this.label7.Text = "Número Empleado:";
             // 
             // txtIdEmpleado
             // 
@@ -328,7 +307,7 @@ namespace PL.PANTALLAS
             // 
             this.cmbDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDepartamento.FormattingEnabled = true;
-            this.cmbDepartamento.Location = new System.Drawing.Point(267, 348);
+            this.cmbDepartamento.Location = new System.Drawing.Point(267, 331);
             this.cmbDepartamento.Name = "cmbDepartamento";
             this.cmbDepartamento.Size = new System.Drawing.Size(326, 21);
             this.cmbDepartamento.TabIndex = 120;
@@ -338,7 +317,7 @@ namespace PL.PANTALLAS
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label9.Location = new System.Drawing.Point(76, 348);
+            this.label9.Location = new System.Drawing.Point(69, 331);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(102, 17);
             this.label9.TabIndex = 119;
@@ -360,8 +339,6 @@ namespace PL.PANTALLAS
             this.Controls.Add(this.cmbPersonal);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtCorreo);
@@ -399,8 +376,6 @@ namespace PL.PANTALLAS
         private System.Windows.Forms.Button BtnCerrar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label13;
-        public System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Label label11;
         public System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label label12;
         public System.Windows.Forms.TextBox txtCorreo;

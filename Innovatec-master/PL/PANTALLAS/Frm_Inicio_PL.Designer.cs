@@ -30,26 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             Bunifu.UI.WinForms.BunifuAnimatorNS.Animation animation1 = new Bunifu.UI.WinForms.BunifuAnimatorNS.Animation();
-            Bunifu.UI.WinForms.BunifuAnimatorNS.Animation animation2 = new Bunifu.UI.WinForms.BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Inicio_PL));
+            Bunifu.UI.WinForms.BunifuAnimatorNS.Animation animation2 = new Bunifu.UI.WinForms.BunifuAnimatorNS.Animation();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.tmFechaHora = new System.Windows.Forms.Timer(this.components);
             this.PanelTransition = new Bunifu.UI.WinForms.BunifuTransition(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panelChildForm = new System.Windows.Forms.Panel();
-            this.LogoTransition = new Bunifu.UI.WinForms.BunifuTransition(this.components);
-            this.bunifuGradientPanel2 = new Bunifu.UI.WinForms.BunifuGradientPanel();
-            this.lblRol = new System.Windows.Forms.Label();
-            this.lbFecha = new System.Windows.Forms.Label();
-            this.lblHora = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
             this.iconRestaurar = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.iconMinimizar = new System.Windows.Forms.PictureBox();
             this.iconCerrar = new System.Windows.Forms.PictureBox();
             this.iconMaximizar = new System.Windows.Forms.PictureBox();
+            this.panelChildForm = new System.Windows.Forms.Panel();
+            this.bunifuGradientPanel2 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.lblRol = new System.Windows.Forms.Label();
+            this.lbFecha = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.MenuVertical = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.panelMantenimiento = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -68,14 +67,15 @@
             this.btnPacientes = new System.Windows.Forms.Button();
             this.btnAdmin = new System.Windows.Forms.Button();
             this.Logo = new System.Windows.Forms.PictureBox();
+            this.LogoTransition = new Bunifu.UI.WinForms.BunifuTransition(this.components);
             this.panel2.SuspendLayout();
-            this.panelChildForm.SuspendLayout();
-            this.bunifuGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconMaximizar)).BeginInit();
+            this.panelChildForm.SuspendLayout();
+            this.bunifuGradientPanel2.SuspendLayout();
             this.MenuVertical.SuspendLayout();
             this.panelMantenimiento.SuspendLayout();
             this.PanelAuditoria.SuspendLayout();
@@ -130,6 +130,81 @@
             this.panel2.TabIndex = 8;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
+            // iconRestaurar
+            // 
+            this.iconRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PanelTransition.SetDecoration(this.iconRestaurar, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.LogoTransition.SetDecoration(this.iconRestaurar, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.iconRestaurar.Image = global::PL.Properties.Resources.icon_restaurar;
+            this.iconRestaurar.Location = new System.Drawing.Point(1039, 12);
+            this.iconRestaurar.Name = "iconRestaurar";
+            this.iconRestaurar.Size = new System.Drawing.Size(25, 25);
+            this.iconRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconRestaurar.TabIndex = 4;
+            this.iconRestaurar.TabStop = false;
+            this.iconRestaurar.Visible = false;
+            this.iconRestaurar.Click += new System.EventHandler(this.iconRestaurar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PanelTransition.SetDecoration(this.pictureBox1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.LogoTransition.SetDecoration(this.pictureBox1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.pictureBox1.Image = global::PL.Properties.Resources.Mobile_Menu_Icon;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // iconMinimizar
+            // 
+            this.iconMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PanelTransition.SetDecoration(this.iconMinimizar, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.LogoTransition.SetDecoration(this.iconMinimizar, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.iconMinimizar.Image = global::PL.Properties.Resources.icon_minimizar;
+            this.iconMinimizar.Location = new System.Drawing.Point(999, 12);
+            this.iconMinimizar.Name = "iconMinimizar";
+            this.iconMinimizar.Size = new System.Drawing.Size(25, 25);
+            this.iconMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconMinimizar.TabIndex = 3;
+            this.iconMinimizar.TabStop = false;
+            this.iconMinimizar.Click += new System.EventHandler(this.iconMinimizar_Click);
+            // 
+            // iconCerrar
+            // 
+            this.iconCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PanelTransition.SetDecoration(this.iconCerrar, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.LogoTransition.SetDecoration(this.iconCerrar, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.iconCerrar.Image = global::PL.Properties.Resources.icon_cerrar2;
+            this.iconCerrar.Location = new System.Drawing.Point(1081, 12);
+            this.iconCerrar.Name = "iconCerrar";
+            this.iconCerrar.Size = new System.Drawing.Size(25, 25);
+            this.iconCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconCerrar.TabIndex = 1;
+            this.iconCerrar.TabStop = false;
+            this.iconCerrar.Click += new System.EventHandler(this.iconCerrar_Click);
+            // 
+            // iconMaximizar
+            // 
+            this.iconMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PanelTransition.SetDecoration(this.iconMaximizar, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.LogoTransition.SetDecoration(this.iconMaximizar, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.iconMaximizar.Image = global::PL.Properties.Resources.icon_maximizar;
+            this.iconMaximizar.Location = new System.Drawing.Point(1039, 12);
+            this.iconMaximizar.Name = "iconMaximizar";
+            this.iconMaximizar.Size = new System.Drawing.Size(25, 25);
+            this.iconMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconMaximizar.TabIndex = 2;
+            this.iconMaximizar.TabStop = false;
+            this.iconMaximizar.Click += new System.EventHandler(this.iconMaximizar_Click);
+            // 
             // panelChildForm
             // 
             this.panelChildForm.Controls.Add(this.bunifuGradientPanel2);
@@ -140,27 +215,6 @@
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(1119, 723);
             this.panelChildForm.TabIndex = 10;
-            // 
-            // LogoTransition
-            // 
-            this.LogoTransition.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.Mosaic;
-            this.LogoTransition.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 20;
-            animation2.Padding = new System.Windows.Forms.Padding(30);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.LogoTransition.DefaultAnimation = animation2;
             // 
             // bunifuGradientPanel2
             // 
@@ -238,81 +292,6 @@
             this.lblNombre.Size = new System.Drawing.Size(163, 18);
             this.lblNombre.TabIndex = 9;
             this.lblNombre.Text = "Nombres y Apellidos";
-            // 
-            // iconRestaurar
-            // 
-            this.iconRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PanelTransition.SetDecoration(this.iconRestaurar, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.LogoTransition.SetDecoration(this.iconRestaurar, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.iconRestaurar.Image = global::PL.Properties.Resources.icon_restaurar;
-            this.iconRestaurar.Location = new System.Drawing.Point(1039, 12);
-            this.iconRestaurar.Name = "iconRestaurar";
-            this.iconRestaurar.Size = new System.Drawing.Size(25, 25);
-            this.iconRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconRestaurar.TabIndex = 4;
-            this.iconRestaurar.TabStop = false;
-            this.iconRestaurar.Visible = false;
-            this.iconRestaurar.Click += new System.EventHandler(this.iconRestaurar_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PanelTransition.SetDecoration(this.pictureBox1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.LogoTransition.SetDecoration(this.pictureBox1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.pictureBox1.Image = global::PL.Properties.Resources.Mobile_Menu_Icon;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // iconMinimizar
-            // 
-            this.iconMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PanelTransition.SetDecoration(this.iconMinimizar, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.LogoTransition.SetDecoration(this.iconMinimizar, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.iconMinimizar.Image = global::PL.Properties.Resources.icon_minimizar;
-            this.iconMinimizar.Location = new System.Drawing.Point(999, 12);
-            this.iconMinimizar.Name = "iconMinimizar";
-            this.iconMinimizar.Size = new System.Drawing.Size(25, 25);
-            this.iconMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconMinimizar.TabIndex = 3;
-            this.iconMinimizar.TabStop = false;
-            this.iconMinimizar.Click += new System.EventHandler(this.iconMinimizar_Click);
-            // 
-            // iconCerrar
-            // 
-            this.iconCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PanelTransition.SetDecoration(this.iconCerrar, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.LogoTransition.SetDecoration(this.iconCerrar, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.iconCerrar.Image = global::PL.Properties.Resources.icon_cerrar2;
-            this.iconCerrar.Location = new System.Drawing.Point(1081, 12);
-            this.iconCerrar.Name = "iconCerrar";
-            this.iconCerrar.Size = new System.Drawing.Size(25, 25);
-            this.iconCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconCerrar.TabIndex = 1;
-            this.iconCerrar.TabStop = false;
-            this.iconCerrar.Click += new System.EventHandler(this.iconCerrar_Click);
-            // 
-            // iconMaximizar
-            // 
-            this.iconMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PanelTransition.SetDecoration(this.iconMaximizar, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.LogoTransition.SetDecoration(this.iconMaximizar, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.iconMaximizar.Image = global::PL.Properties.Resources.icon_maximizar;
-            this.iconMaximizar.Location = new System.Drawing.Point(1039, 12);
-            this.iconMaximizar.Name = "iconMaximizar";
-            this.iconMaximizar.Size = new System.Drawing.Size(25, 25);
-            this.iconMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconMaximizar.TabIndex = 2;
-            this.iconMaximizar.TabStop = false;
-            this.iconMaximizar.Click += new System.EventHandler(this.iconMaximizar_Click);
             // 
             // MenuVertical
             // 
@@ -420,7 +399,7 @@
             this.LogoTransition.SetDecoration(this.btnSalir, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Location = new System.Drawing.Point(12, 720);
+            this.btnSalir.Location = new System.Drawing.Point(12, 695);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(35, 36);
             this.btnSalir.TabIndex = 9;
@@ -643,6 +622,27 @@
             this.Logo.TabIndex = 1;
             this.Logo.TabStop = false;
             // 
+            // LogoTransition
+            // 
+            this.LogoTransition.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.Mosaic;
+            this.LogoTransition.Cursor = null;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 20;
+            animation2.Padding = new System.Windows.Forms.Padding(30);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.LogoTransition.DefaultAnimation = animation2;
+            // 
             // Frm_Inicio_PL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -661,14 +661,14 @@
             this.Text = "Residencia Geriatrica Nuestra Señora de los Angeles";
             this.Load += new System.EventHandler(this.Frm_Inicio_PL_Load);
             this.panel2.ResumeLayout(false);
-            this.panelChildForm.ResumeLayout(false);
-            this.bunifuGradientPanel2.ResumeLayout(false);
-            this.bunifuGradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconMaximizar)).EndInit();
+            this.panelChildForm.ResumeLayout(false);
+            this.bunifuGradientPanel2.ResumeLayout(false);
+            this.bunifuGradientPanel2.PerformLayout();
             this.MenuVertical.ResumeLayout(false);
             this.panelMantenimiento.ResumeLayout(false);
             this.PanelAuditoria.ResumeLayout(false);

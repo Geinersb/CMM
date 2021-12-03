@@ -54,7 +54,7 @@
             // 
             this.idproceso_lbl.AutoSize = true;
             this.idproceso_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.idproceso_lbl.Location = new System.Drawing.Point(170, 47);
+            this.idproceso_lbl.Location = new System.Drawing.Point(105, 70);
             this.idproceso_lbl.Name = "idproceso_lbl";
             this.idproceso_lbl.Size = new System.Drawing.Size(75, 17);
             this.idproceso_lbl.TabIndex = 0;
@@ -65,7 +65,7 @@
             // 
             this.codigo_lbl.AutoSize = true;
             this.codigo_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.codigo_lbl.Location = new System.Drawing.Point(170, 82);
+            this.codigo_lbl.Location = new System.Drawing.Point(105, 95);
             this.codigo_lbl.Name = "codigo_lbl";
             this.codigo_lbl.Size = new System.Drawing.Size(52, 17);
             this.codigo_lbl.TabIndex = 1;
@@ -75,7 +75,7 @@
             // 
             this.hallazgos_lbl.AutoSize = true;
             this.hallazgos_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.hallazgos_lbl.Location = new System.Drawing.Point(170, 123);
+            this.hallazgos_lbl.Location = new System.Drawing.Point(105, 122);
             this.hallazgos_lbl.Name = "hallazgos_lbl";
             this.hallazgos_lbl.Size = new System.Drawing.Size(70, 17);
             this.hallazgos_lbl.TabIndex = 2;
@@ -85,7 +85,7 @@
             // 
             this.Recomendaciones_lbl.AutoSize = true;
             this.Recomendaciones_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.Recomendaciones_lbl.Location = new System.Drawing.Point(163, 187);
+            this.Recomendaciones_lbl.Location = new System.Drawing.Point(105, 178);
             this.Recomendaciones_lbl.Name = "Recomendaciones_lbl";
             this.Recomendaciones_lbl.Size = new System.Drawing.Size(125, 17);
             this.Recomendaciones_lbl.TabIndex = 3;
@@ -95,7 +95,7 @@
             // 
             this.FechaLimite_lbl.AutoSize = true;
             this.FechaLimite_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FechaLimite_lbl.Location = new System.Drawing.Point(163, 265);
+            this.FechaLimite_lbl.Location = new System.Drawing.Point(105, 244);
             this.FechaLimite_lbl.Name = "FechaLimite_lbl";
             this.FechaLimite_lbl.Size = new System.Drawing.Size(88, 17);
             this.FechaLimite_lbl.TabIndex = 4;
@@ -105,7 +105,7 @@
             // 
             this.FechaAuditoria_lb.AutoSize = true;
             this.FechaAuditoria_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FechaAuditoria_lb.Location = new System.Drawing.Point(163, 312);
+            this.FechaAuditoria_lb.Location = new System.Drawing.Point(105, 270);
             this.FechaAuditoria_lb.Name = "FechaAuditoria_lb";
             this.FechaAuditoria_lb.Size = new System.Drawing.Size(107, 17);
             this.FechaAuditoria_lb.TabIndex = 5;
@@ -115,7 +115,7 @@
             // 
             this.usuario_lbl.AutoSize = true;
             this.usuario_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.usuario_lbl.Location = new System.Drawing.Point(163, 353);
+            this.usuario_lbl.Location = new System.Drawing.Point(105, 296);
             this.usuario_lbl.Name = "usuario_lbl";
             this.usuario_lbl.Size = new System.Drawing.Size(57, 17);
             this.usuario_lbl.TabIndex = 6;
@@ -123,30 +123,30 @@
             // 
             // FechaLimite_dtp
             // 
-            this.FechaLimite_dtp.Location = new System.Drawing.Point(302, 261);
+            this.FechaLimite_dtp.Location = new System.Drawing.Point(237, 244);
             this.FechaLimite_dtp.Name = "FechaLimite_dtp";
-            this.FechaLimite_dtp.Size = new System.Drawing.Size(213, 20);
+            this.FechaLimite_dtp.Size = new System.Drawing.Size(290, 20);
             this.FechaLimite_dtp.TabIndex = 8;
             // 
             // idProceso_txt
             // 
-            this.idProceso_txt.Location = new System.Drawing.Point(294, 44);
+            this.idProceso_txt.Location = new System.Drawing.Point(236, 69);
             this.idProceso_txt.Name = "idProceso_txt";
             this.idProceso_txt.ReadOnly = true;
-            this.idProceso_txt.Size = new System.Drawing.Size(210, 20);
+            this.idProceso_txt.Size = new System.Drawing.Size(291, 20);
             this.idProceso_txt.TabIndex = 9;
             // 
             // codigo_txt
             // 
-            this.codigo_txt.Location = new System.Drawing.Point(290, 82);
+            this.codigo_txt.Location = new System.Drawing.Point(236, 95);
             this.codigo_txt.Name = "codigo_txt";
             this.codigo_txt.ReadOnly = true;
-            this.codigo_txt.Size = new System.Drawing.Size(214, 20);
+            this.codigo_txt.Size = new System.Drawing.Size(291, 20);
             this.codigo_txt.TabIndex = 10;
             // 
             // hallazgos_txt
             // 
-            this.hallazgos_txt.Location = new System.Drawing.Point(294, 123);
+            this.hallazgos_txt.Location = new System.Drawing.Point(236, 121);
             this.hallazgos_txt.Multiline = true;
             this.hallazgos_txt.Name = "hallazgos_txt";
             this.hallazgos_txt.Size = new System.Drawing.Size(291, 47);
@@ -154,7 +154,7 @@
             // 
             // recomendaciones_txt
             // 
-            this.recomendaciones_txt.Location = new System.Drawing.Point(294, 187);
+            this.recomendaciones_txt.Location = new System.Drawing.Point(236, 177);
             this.recomendaciones_txt.Multiline = true;
             this.recomendaciones_txt.Name = "recomendaciones_txt";
             this.recomendaciones_txt.Size = new System.Drawing.Size(291, 49);
@@ -162,18 +162,18 @@
             // 
             // fechaAuditoria_txt
             // 
-            this.fechaAuditoria_txt.Location = new System.Drawing.Point(302, 309);
+            this.fechaAuditoria_txt.Location = new System.Drawing.Point(236, 270);
             this.fechaAuditoria_txt.Name = "fechaAuditoria_txt";
             this.fechaAuditoria_txt.ReadOnly = true;
-            this.fechaAuditoria_txt.Size = new System.Drawing.Size(202, 20);
+            this.fechaAuditoria_txt.Size = new System.Drawing.Size(291, 20);
             this.fechaAuditoria_txt.TabIndex = 13;
             // 
             // usuario_txt
             // 
-            this.usuario_txt.Location = new System.Drawing.Point(302, 353);
+            this.usuario_txt.Location = new System.Drawing.Point(236, 296);
             this.usuario_txt.Name = "usuario_txt";
             this.usuario_txt.ReadOnly = true;
-            this.usuario_txt.Size = new System.Drawing.Size(202, 20);
+            this.usuario_txt.Size = new System.Drawing.Size(291, 20);
             this.usuario_txt.TabIndex = 14;
             this.usuario_txt.TextChanged += new System.EventHandler(this.usuario_txt_TextChanged);
             // 
@@ -185,7 +185,7 @@
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(710, 38);
+            this.BarraTitulo.Size = new System.Drawing.Size(635, 38);
             this.BarraTitulo.TabIndex = 17;
             // 
             // label6
@@ -205,7 +205,7 @@
             this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCerrar.FlatAppearance.BorderSize = 0;
             this.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCerrar.Location = new System.Drawing.Point(672, 0);
+            this.BtnCerrar.Location = new System.Drawing.Point(597, 0);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(38, 38);
             this.BtnCerrar.TabIndex = 4;
@@ -219,9 +219,9 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 14.25F);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(433, 409);
+            this.btnCancelar.Location = new System.Drawing.Point(402, 336);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(152, 40);
+            this.btnCancelar.Size = new System.Drawing.Size(125, 40);
             this.btnCancelar.TabIndex = 18;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -237,9 +237,9 @@
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(166, 409);
+            this.btnGuardar.Location = new System.Drawing.Point(236, 336);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(152, 40);
+            this.btnGuardar.Size = new System.Drawing.Size(132, 40);
             this.btnGuardar.TabIndex = 19;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -249,7 +249,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(710, 476);
+            this.ClientSize = new System.Drawing.Size(635, 437);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.BarraTitulo);

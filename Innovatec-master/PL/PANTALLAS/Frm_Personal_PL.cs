@@ -91,10 +91,9 @@ namespace PL.PANTALLAS
                 pantalla.txt_Cedula.Text= dgvPersonal.SelectedRows[0].Cells[4].Value.ToString();
                 pantalla.txtTelefono.Text= dgvPersonal.SelectedRows[0].Cells[5].Value.ToString();
                 pantalla.txtCorreo.Text= dgvPersonal.SelectedRows[0].Cells[6].Value.ToString();
-                pantalla.txtUsuario.Text= dgvPersonal.SelectedRows[0].Cells[7].Value.ToString();
-                pantalla.txtPassword.Text= dgvPersonal.SelectedRows[0].Cells[8].Value.ToString();
-                pantalla.cmbPersonal.SelectedText= dgvPersonal.SelectedRows[0].Cells[9].Value.ToString();
-                pantalla.cmbDepartamento.SelectedText = dgvPersonal.SelectedRows[0].Cells[10].Value.ToString();
+                pantalla.txtUsuario.Text= dgvPersonal.SelectedRows[0].Cells[7].Value.ToString();                
+                pantalla.cmbPersonal.SelectedText= dgvPersonal.SelectedRows[0].Cells[8].Value.ToString();
+                pantalla.cmbDepartamento.SelectedText = dgvPersonal.SelectedRows[0].Cells[9].Value.ToString();
 
             }
 

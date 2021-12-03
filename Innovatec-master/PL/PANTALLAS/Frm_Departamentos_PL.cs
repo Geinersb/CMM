@@ -47,7 +47,7 @@ namespace PL.PANTALLAS
                                  
             if (dgvDepartamentos.Rows.Count > 0)
             {
-                PantModificar.txt_IdDepartamento.Text= dgvDepartamentos.SelectedRows[0].Cells[0].Value.ToString();
+                PantModificar.txt_IdDepartamento.Text = dgvDepartamentos.SelectedRows[0].Cells[0].Value.ToString();
                 PantModificar.txtNombre.Text= dgvDepartamentos.SelectedRows[0].Cells[1].Value.ToString();
                 PantModificar.txtCodigo.Text= dgvDepartamentos.SelectedRows[0].Cells[2].Value.ToString();
 
