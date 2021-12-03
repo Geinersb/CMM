@@ -91,7 +91,7 @@ namespace DAL.BD
             string nuevoPassword = this.generarPassword();
             oEmpleadoDAL.Pass = nuevoPassword;
             //generar un nuevo usuario
-            //oEmpleadoDAL.Usuario = this.generarUsuario(oEmpleadoDAL.Nombre);
+            oEmpleadoDAL.Usuario = this.generarUsuario(oEmpleadoDAL.Nombre);
 
             //comprobar que no exista ese usuario sino hay que volverlo a generar
 
@@ -121,7 +121,7 @@ namespace DAL.BD
                 try
                 {
                     connection.Open();
-                    this.enviarPass(nuevoPassword, oEmpleadoDAL.Correo, oEmpleadoDAL.Nombre);
+                    this.enviarPass(nuevoPassword, oEmpleadoDAL.Correo, oEmpleadoDAL.Nombre,oEmpleadoDAL.Usuario);
 
                     command.ExecuteScalar();
                    
@@ -362,7 +362,7 @@ namespace DAL.BD
         }
 
 
-        public void enviarPass(string pass,string correo,string nombre)
+        public void enviarPass(string pass,string correo,string nombre,string user)
         {
                         string contraseña = pass;
                         string email = correo;
@@ -373,9 +373,10 @@ namespace DAL.BD
 
                         mailService.sendMail(
                           subject: "SYSTEM: Password recovery request",
-                          body: "Hola, " + nombre + "\nSe agrego su usuario correctaente al sistema.\n" +
-                          "su contraseña es : " + pass +
-                          "\n",
+                          body: "Buen dìa, " + nombre + "\nSe agregò su usuario correctaente al sistema.\n" +
+                          "su usuario es : " + user +
+                          "\n"+
+                          "su contraseña es :"+pass + "\n",
                           recipientMail: new List<string> { correo }
                           );
                        
