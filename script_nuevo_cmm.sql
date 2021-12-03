@@ -387,7 +387,7 @@ CREATE PROCEDURE [dbo].[SP_CONSULTA_PROCESOS_niveles]
 )
 as
 begin
-SELECT p.nombre AS Nombre,p.id_proceso AS NúmeroProceso,p.descripcion AS Descripción,p.id_nivel as Valor_Actual,p.inicial AS Inicial,p.repetible AS Repetible,p.definido AS Definido,p.gestionado AS Gestionado,
+SELECT p.nombre AS Nombre,p.id_proceso AS NúmeroProceso,p.descripcion AS Descripción,p.id_nivel as ValorActual,p.inicial AS Inicial,p.repetible AS Repetible,p.definido AS Definido,p.gestionado AS Gestionado,
 p.optimizado AS Optimizado,e.usuario AS Usuario,p.fecha_creacion AS FechaCreación
 FROM procesos p
 INNER JOIN Empleados e ON p.id_empleado= e.id_empleado 
@@ -561,7 +561,7 @@ SELECT COUNT(estado) from procesos where estado=0
 
 as
 begin
-SELECT p.nombre AS CódigoDepartamento,p.id_proceso AS NúmeroProceso,p.descripcion AS Descripción,p.id_nivel as ValorActual,p.inicial AS Inicial,p.repetible AS Repetible,p.definido AS Definido,p.gestionado AS Gestionado,
+SELECT p.nombre AS CódigoDepartamento,p.id_proceso AS NúmeroProceso,p.descripcion AS Descripción,p.id_nivel AS ValorActual,p.inicial AS Inicial,p.repetible AS Repetible,p.definido AS Definido,p.gestionado AS Gestionado,
 p.optimizado AS Optimizado,e.usuario AS Usuario,p.fecha_creacion AS FechaCreación
 FROM procesos p
 INNER JOIN Empleados e ON p.id_empleado= e.id_empleado 
