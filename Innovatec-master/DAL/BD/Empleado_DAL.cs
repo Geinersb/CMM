@@ -372,8 +372,8 @@ namespace DAL.BD
 
 
                         mailService.sendMail(
-                          subject: "SYSTEM: Password recovery request",
-                          body: "Buen dìa, " + nombre + "\nSe agregò su usuario correctaente al sistema.\n" +
+                          subject: "SYSTEM:  envio de  usuario y contraseña ",
+                          body: "Buen dìa, " + nombre + "\nSe agregò su usuario correctamente al sistema.\n" +
                           "su usuario es : " + user +
                           "\n"+
                           "su contraseña es :"+pass + "\n",
@@ -454,7 +454,7 @@ namespace DAL.BD
 
 
                         mailService.sendMail(
-                          subject: "SYSTEM: Password recovery request",
+                          subject: "SYSTEM: Nueva Auditoria",
                           body: "Hola, " + " " + "\nSe realizò un proceso de auditoria .\n" +
                           "auditoria: " +auditoria.Codigo_departamento + auditoria.Id_proceso +" "+auditoria.Hallasgoz01+" "+auditoria.Recomendaciones+" "+auditoria.Fecha_auditoria +
                           "\n",

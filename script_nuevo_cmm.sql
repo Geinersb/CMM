@@ -307,10 +307,11 @@ AS
 BEGIN
 
 SELECT * FROM  Empleados 
-WHERE usuario = @usuario AND pass = @pass
+WHERE usuario = @usuario COLLATE SQL_Latin1_General_CP1_CS_AS AND pass = @pass COLLATE SQL_Latin1_General_CP1_CS_AS
 
 END
 GO
+
 
 -----
 CREATE PROCEDURE [dbo].[SP_MODIFICAR_DEPARTAMENTOS] 

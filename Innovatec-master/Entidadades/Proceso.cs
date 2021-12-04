@@ -9,7 +9,7 @@ namespace Entidadades
    public class Proceso
     {
         public int Id_proceso { get; set; }
-        public int Nombre { get; set; }
+        public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public int Id_departamento { get; set; }
         public int Id_nivel { get; set; }

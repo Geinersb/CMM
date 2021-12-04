@@ -78,7 +78,7 @@ namespace PL.PANTALLAS
             else
             {
                 Proceso Pproceso = new Proceso();
-                Pproceso.Nombre = cmbDepartamento.SelectedIndex+1;
+                Pproceso.Nombre = cmbDepartamento.GetItemText(cmbDepartamento.SelectedItem);
                 Pproceso.Descripcion = txtDescripcion.Text.ToString();
                 Pproceso.Id_departamento = cmbDepartamento.SelectedIndex + 1; 
                 Pproceso.Id_nivel = cmbNivel.SelectedIndex+1;
