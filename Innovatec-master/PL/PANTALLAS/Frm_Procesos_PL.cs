@@ -204,7 +204,8 @@ namespace PL.PANTALLAS
         private void btnAuditorias_Click(object sender, EventArgs e)
         {
             Frm_Historial_Auditorias_Admin_PL Auditorias = new Frm_Historial_Auditorias_Admin_PL();
-
+            int idProceso = Convert.ToInt32(dgvProcesos.SelectedRows[0].Cells[1].Value.ToString());
+            Auditorias.idProcesoSeleccionado= idProceso;
             Auditorias.ShowDialog();
         }
     }

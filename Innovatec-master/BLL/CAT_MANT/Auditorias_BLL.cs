@@ -38,5 +38,10 @@ namespace BLL.CAT_MANT
             return oAuditoriaAccess.FiltrarAuditorias(codigo);
         }
 
+        public DataTable FiltarAuditoriasPorIdProceso(int idProceso)
+        {
+            return oAuditoriaAccess.FiltrarAuditoriasPorIdProceso(idProceso);
+        }
+
     }
 }

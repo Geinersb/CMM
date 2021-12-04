@@ -627,6 +627,23 @@ SELECT E.correo
   GO
 
 
+
+
+  
+CREATE PROCEDURE [dbo].[SP_CONSULTA_AUDITORIAS_POR_IDPROCESO]
+(
+@idProceso int
+)
+as
+begin
+select a.id_auditoria AS Número, a.usuario AS Usuario, a.codigo_departamento AS [Código Departamento],a.id_proceso AS[ Número Proceso],a.hallazgos AS Hallazgos, a.recomendaciones AS Recomendaciones,
+a.fecha_limite AS [Fecha Límite], a.fecha_auditoria AS [Fecha Auditoría] FROM auditorias a
+WHERE a.id_proceso = @idProceso 
+END
+go
+
+
+
 --Creacion de Llaves foraneas/relaciones entre tablas.
 
 --alter table procesos

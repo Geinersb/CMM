@@ -121,6 +121,20 @@ namespace DAL.BD
         }
 
 
+        public DataTable FiltrarAuditoriasPorIdProceso(int idProceso)
+        {
+            SqlConnection connection = new SqlConnection(stringConexion);
+            string query = "SP_CONSULTA_AUDITORIAS_POR_IDPROCESO '" + idProceso + "'";
+
+            SqlCommand cmd = new SqlCommand(query, connection);
+
+            DataTable t1 = new DataTable();
+            using (SqlDataAdapter a = new SqlDataAdapter(cmd))
+            {
+                a.Fill(t1);
+            }
+            return t1;
+        }
 
 
     }
