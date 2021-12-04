@@ -68,6 +68,7 @@
             this.btnAdmin = new System.Windows.Forms.Button();
             this.Logo = new System.Windows.Forms.PictureBox();
             this.LogoTransition = new Bunifu.UI.WinForms.BunifuTransition(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -81,6 +82,7 @@
             this.PanelAuditoria.SuspendLayout();
             this.PanelAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -207,6 +209,7 @@
             // 
             // panelChildForm
             // 
+            this.panelChildForm.Controls.Add(this.pictureBox2);
             this.panelChildForm.Controls.Add(this.bunifuGradientPanel2);
             this.LogoTransition.SetDecoration(this.panelChildForm, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.PanelTransition.SetDecoration(this.panelChildForm, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
@@ -643,6 +646,18 @@
             animation2.TransparencyCoeff = 0F;
             this.LogoTransition.DefaultAnimation = animation2;
             // 
+            // pictureBox2
+            // 
+            this.PanelTransition.SetDecoration(this.pictureBox2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.LogoTransition.SetDecoration(this.pictureBox2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.pictureBox2.Image = global::PL.Properties.Resources.Logo;
+            this.pictureBox2.Location = new System.Drawing.Point(398, 181);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(338, 213);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            // 
             // Frm_Inicio_PL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -674,6 +689,7 @@
             this.PanelAuditoria.ResumeLayout(false);
             this.PanelAdmin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -716,5 +732,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btn_Historial;
         private System.Windows.Forms.Button btnArchivados;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

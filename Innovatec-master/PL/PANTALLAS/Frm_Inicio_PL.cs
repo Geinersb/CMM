@@ -319,9 +319,9 @@ namespace PL.PANTALLAS
         private void Frm_Inicio_PL_Load(object sender, EventArgs e)
         {
             if (UserCache.Id_perfil == 1){
-                btnAuditoria.Enabled = true;
-                btnAdmin.Enabled = true;
-                btnAuditoria.Enabled = true;
+                btnAuditoria.Enabled = false;
+                btnAdmin.Enabled = false;
+                btnMantenimiento.Enabled = true;
                 }
            
             if (UserCache.Id_perfil == 2)

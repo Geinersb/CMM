@@ -83,5 +83,10 @@ namespace PL.PANTALLAS
         {
             this.CargarDatosProcesosArchivadosPorDescripcion();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -100,5 +100,10 @@ namespace PL.PANTALLAS
         {
             this.CargarDatosProcesosArchivadosPorDescripcion();
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

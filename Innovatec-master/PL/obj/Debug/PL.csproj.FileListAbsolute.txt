@@ -523,6 +523,7 @@ C:\Users\geine\Source\Repos\CMM\Innovatec-master\PL\obj\Debug\PL.csproj.ResolveC
 C:\Users\geine\Source\Repos\CMM\Innovatec-master\PL\obj\Debug\PL.PANTALLAS.Frm_Procesos_ArchivadosAdmin_PL.resources
 C:\Users\geine\Source\Repos\CMM\Innovatec-master\PL\obj\Debug\PL.PANTALLAS.Frm_Procesos_Archivados_PL.resources
 C:\Users\geine\Source\Repos\CMM\Innovatec-master\PL\obj\Debug\PL.PANTALLAS.Frm_Acciones_PL.resources
+C:\Users\geine\Source\Repos\CMM\Innovatec-master\PL\obj\Debug\PL.PANTALLAS.Frm_Historial_Auditorias_Admin_PL.resources
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\bin\Debug\PL.exe.config
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\bin\Debug\PL.exe
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\bin\Debug\PL.pdb
@@ -609,6 +610,7 @@ C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.csproj.ResolveC
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.Form1.resources
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.PANTALLAS.Frm_Acciones_PL.resources
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.PANTALLAS.Frm_Crear_Auditoria_PL.resources
+C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.PANTALLAS.Frm_Historial_Auditorias_Admin_PL.resources
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.PANTALLAS.Frm_Modificar_Deapartamentos.resources
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.PANTALLAS.Frm_Procesos_ArchivadosAdmin_PL.resources
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.PANTALLAS.Frm_Procesos_Archivados_PL.resources
@@ -633,5 +635,3 @@ C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.csproj.CoreComp
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.csproj.CopyComplete
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.exe
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.pdb
-C:\Users\geine\Source\Repos\CMM\Innovatec-master\PL\obj\Debug\PL.PANTALLAS.Frm_Historial_Auditorias_Admin_PL.resources
-C:\Users\Marjorie\Downloads\CMM\Innovatec-master\PL\obj\Debug\PL.PANTALLAS.Frm_Historial_Auditorias_Admin_PL.resources

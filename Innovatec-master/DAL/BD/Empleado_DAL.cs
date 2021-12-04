@@ -302,15 +302,15 @@ namespace DAL.BD
 
 
                         mailService.sendMail(
-                          subject: "SYSTEM: Password recovery request",
-                          body: "Hola, " + nombre + "\nRecibimos una solicitud de cambio de password.\n" +
-                          "su nuevo password es : " + resultString +
+                          subject: "SYSTEM: Recuperación de contraseña",
+                          body: "Hola, " + nombre + "\nRecibimos una solicitud de cambio de contraseña.\n" +
+                          "Su nueva contraseña es : " + resultString +
                           "\n",
                           recipientMail: new List<string> { correo }
                           );
-                        respuesta= "Hola, " + nombre + "\n Se enviò un nuevo password a su correo asociado.\n" +
+                        respuesta= "Hola, " + nombre + "\n Se envió una nueva contraseña a su correo asociado.\n" +
                           "Por favor verifique su correo : " + correo +
-                          "\nBuen dia";
+                          "\nBuen día";
 
 
                     }
@@ -367,16 +367,12 @@ namespace DAL.BD
                         string contraseña = pass;
                         string email = correo;
                         var mailService = new Entidadades.SystemSupportMail();
-           
-
-
-
                         mailService.sendMail(
-                          subject: "SYSTEM:  envio de  usuario y contraseña ",
-                          body: "Buen dìa, " + nombre + "\nSe agregò su usuario correctamente al sistema.\n" +
-                          "su usuario es : " + user +
+                          subject: "SYSTEM:  Envío de usuario y contraseña ",
+                          body: "Buen día, " + nombre + "\nSe agregó su usuario correctamente al sistema.\n" +
+                          "Su usuario es : " + user +
                           "\n"+
-                          "su contraseña es :"+pass + "\n",
+                          "Su contraseña es :"+pass + "\n",
                           recipientMail: new List<string> { correo }
                           );
                        
@@ -455,8 +451,8 @@ namespace DAL.BD
 
                         mailService.sendMail(
                           subject: "SYSTEM: Nueva Auditoria",
-                          body: "Hola, " + " " + "\nSe realizò un proceso de auditoria .\n" +
-                          "auditoria: " +auditoria.Codigo_departamento + auditoria.Id_proceso +" "+auditoria.Hallasgoz01+" "+auditoria.Recomendaciones+" "+auditoria.Fecha_auditoria +
+                          body: "Hola, " + "se ha realizado un proceso de auditoría .\n" +
+                          "Auditoría: " +auditoria.Codigo_departamento + auditoria.Id_proceso +" "+auditoria.Hallasgoz01+" "+auditoria.Recomendaciones+" "+auditoria.Fecha_auditoria +
                           "\n",
                           recipientMail: new List<string> { correo }
                           );
