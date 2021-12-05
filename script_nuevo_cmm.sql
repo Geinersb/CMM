@@ -166,7 +166,7 @@ CREATE PROCEDURE [dbo].[SP_FILTRAR_Departamentos]
 )
 as
 begin
-SELECT  E.id_departamento AS NúmeroDepartamento,E.nombre AS NombreDepartamento, E.codigo AS Codigo
+SELECT  E.id_departamento AS [Número Departamento],E.nombre AS [Nombre Departamento], E.codigo AS Codigo
 FROM Departamentos AS E
 WHERE e.nombre LIKE '%'+@Nombre+'%' or LEN(ISNULL(@nombre, '')) = 0
 END
@@ -207,7 +207,7 @@ CREATE PROCEDURE [dbo].[SP_FILTRAR_EMPLEADOS]
 )
 as
 begin
-SELECT E.id_empleado AS NúmeroUsuario, E.nombre AS Nombre, E.apellido1 AS PrimerApellido,E.apellido2 AS SegundoApellido,E.cedula AS Cédula,E.telefono AS Teléfono,E.correo AS Correo,E.usuario AS Usuario,P.nombre as Perfil, D.nombre as Departamento 
+SELECT E.id_empleado AS [Número Usuario], E.nombre AS Nombre, E.apellido1 AS [Primer Apellido],E.apellido2 AS [Segundo Apellido],E.cedula AS Cédula,E.telefono AS Teléfono,E.correo AS Correo,E.usuario AS Usuario,P.nombre as Perfil, D.nombre as Departamento 
 FROM Empleados AS E
 INNER JOIN perfil AS P ON P.id_perfil = E.id_perfil
 INNER JOIN Departamentos as D on D.id_departamento = E.id_departamento
@@ -368,8 +368,8 @@ CREATE PROCEDURE [dbo].[SP_CONSULTA_PROCESOS_descripcion]
 )
 as
 begin
-SELECT p.nombre AS Nombre,p.id_proceso AS NúmeroProceso,p.descripcion AS Descripción,p.id_nivel as Valor_Actual,p.inicial AS Inicial,p.repetible AS Repetible,p.definido AS Definido,p.gestionado AS Gestionado,
-p.optimizado AS Optimizado,e.usuario AS Usuario,p.fecha_creacion AS FechaCreación
+SELECT p.nombre AS Nombre,p.id_proceso AS [Número Proceso],p.descripcion AS Descripción,p.id_nivel as [Valor Actual],p.inicial AS Inicial,p.repetible AS Repetible,p.definido AS Definido,p.gestionado AS Gestionado,
+p.optimizado AS Optimizado,e.usuario AS Usuario,p.fecha_creacion AS [Fecha Creación]
 FROM procesos p
 INNER JOIN Empleados e ON p.id_empleado= e.id_empleado 
 INNER JOIN Departamentos d on p.id_departamento = d.id_departamento
@@ -388,8 +388,8 @@ CREATE PROCEDURE [dbo].[SP_CONSULTA_PROCESOS_niveles]
 )
 as
 begin
-SELECT p.nombre AS Nombre,p.id_proceso AS NúmeroProceso,p.descripcion AS Descripción,p.id_nivel as ValorActual,p.inicial AS Inicial,p.repetible AS Repetible,p.definido AS Definido,p.gestionado AS Gestionado,
-p.optimizado AS Optimizado,e.usuario AS Usuario,p.fecha_creacion AS FechaCreación
+SELECT p.nombre AS Nombre,p.id_proceso AS [Número Proceso],p.descripcion AS Descripción,p.id_nivel as [Valor Actual],p.inicial AS Inicial,p.repetible AS Repetible,p.definido AS Definido,p.gestionado AS Gestionado,
+p.optimizado AS Optimizado,e.usuario AS Usuario,p.fecha_creacion AS [Fecha Creación]
 FROM procesos p
 INNER JOIN Empleados e ON p.id_empleado= e.id_empleado 
 INNER JOIN Departamentos d on p.id_departamento = d.id_departamento
@@ -403,8 +403,8 @@ GO
 CREATE PROCEDURE [dbo].[SP_CONSULTA_PROCESOS]
 as
 begin
-SELECT p.nombre as CódigoDepartamento ,p.id_proceso AS NúmeroProceso,p.descripcion AS Descripción ,p.id_nivel as ValorActual,p.inicial AS Inicial ,p.repetible AS Repetible,p.definido AS Definido,p.gestionado AS Gestionado,
-p.optimizado AS Optimizado,e.usuario AS Usuario,p.fecha_creacion AS FechaCreación
+SELECT p.nombre as [Código Departamento] ,p.id_proceso AS [Número Proceso],p.descripcion AS Descripción ,p.id_nivel as [Valor Actual],p.inicial AS Inicial ,p.repetible AS Repetible,p.definido AS Definido,p.gestionado AS Gestionado,
+p.optimizado AS Optimizado,e.usuario AS Usuario,p.fecha_creacion AS [Fecha Creación]
 FROM procesos p
 INNER JOIN Empleados e ON p.id_empleado= e.id_empleado 
 INNER JOIN Departamentos d on p.id_departamento = d.id_departamento
@@ -562,8 +562,8 @@ SELECT COUNT(estado) from procesos where estado=0
 
 as
 begin
-SELECT p.nombre AS CódigoDepartamento,p.id_proceso AS NúmeroProceso,p.descripcion AS Descripción,p.id_nivel AS ValorActual,p.inicial AS Inicial,p.repetible AS Repetible,p.definido AS Definido,p.gestionado AS Gestionado,
-p.optimizado AS Optimizado,e.usuario AS Usuario,p.fecha_creacion AS FechaCreación
+SELECT p.nombre AS [Código Departamento],p.id_proceso AS [Número Proceso],p.descripcion AS Descripción,p.id_nivel AS [Valor Actual],p.inicial AS Inicial,p.repetible AS Repetible,p.definido AS Definido,p.gestionado AS Gestionado,
+p.optimizado AS Optimizado,e.usuario AS Usuario,p.fecha_creacion AS [Fecha Creación]
 FROM procesos p
 INNER JOIN Empleados e ON p.id_empleado= e.id_empleado 
 INNER JOIN Departamentos d on p.id_departamento = d.id_departamento
@@ -577,8 +577,8 @@ GO
 create PROCEDURE [dbo].[SP_CONSULTA_AUDITORIAS]
 as
 begin
-select A.id_auditoria AS Número, A.usuario AS Usuario, A.codigo_departamento AS CodigoDepartamento, A.id_proceso AS NúmeroProceso, A.hallazgos AS Hallazgos, A.recomendaciones AS Recomendaciones, A.fecha_limite AS FechaLímite,
-A.fecha_auditoria AS FechaAuditoria
+select A.id_auditoria AS Número, A.usuario AS Usuario, A.codigo_departamento AS [Codigo Departamento], A.id_proceso AS [Número Proceso], A.hallazgos AS Hallazgos, A.recomendaciones AS Recomendaciones, A.fecha_limite AS [Fecha Límite],
+A.fecha_auditoria AS [Fecha Auditoria]
 from auditorias A
 END
 GO
@@ -592,8 +592,8 @@ CREATE PROCEDURE [dbo].[SP_CONSULTA_AUDITORIAS_CODIGO]
 )
 as
 begin
-select a.id_auditoria AS Número, a.usuario AS Usuario, a.codigo_departamento AS CódigoDepartamento,a.id_proceso AS NúmeroProceso,a.hallazgos AS Hallazgos, a.recomendaciones AS Recomendaciones,
-a.fecha_limite AS FechaLímite, a.fecha_auditoria AS FechaAuditoría FROM auditorias a
+select a.id_auditoria AS Número, a.usuario AS Usuario, a.codigo_departamento AS [Código Departamento],a.id_proceso AS [Número Proceso],a.hallazgos AS Hallazgos, a.recomendaciones AS Recomendaciones,
+a.fecha_limite AS [Fecha Límite], a.fecha_auditoria AS [Fecha Auditoría] FROM auditorias a
 WHERE a.codigo_departamento = @codigo 
 END
 go
@@ -605,8 +605,8 @@ CREATE PROCEDURE [dbo].[SP_CONSULTA_PROCESOS_ARCHIVADOS_DESCRIPCION]
 )
 as
 begin
-SELECT p.nombre AS CódigoDepartamento,p.id_proceso AS NúmeroProceso,p.descripcion AS Descripción,p.id_nivel as ValorActual,p.inicial AS Inicial,p.repetible AS Repetible,p.definido AS Definido,p.gestionado AS Gestionado,
-p.optimizado AS Optimizado,e.usuario AS Optimizado,p.fecha_creacion AS FechaCreación
+SELECT p.nombre AS [Código Departamento],p.id_proceso AS [Número Proceso],p.descripcion AS Descripción,p.id_nivel as [Valor Actual],p.inicial AS Inicial,p.repetible AS Repetible,p.definido AS Definido,p.gestionado AS Gestionado,
+p.optimizado AS Optimizado,e.usuario AS Optimizado,p.fecha_creacion AS [Fecha Creación]
 FROM procesos p
 INNER JOIN Empleados e ON p.id_empleado= e.id_empleado 
 INNER JOIN Departamentos d on p.id_departamento = d.id_departamento
@@ -815,4 +815,3 @@ INSERT INTO [dbo].[procesos]
 		   'Se tiene una lista obsoleta de usuarios locales','Se tiene una lista actualizada de los usuarios',
 		   'Se tiene Active Directory con todos los usuarios','Se tiene usuarios,grupos,en un AD FS',1,  GETDATE()  ,1)
 GO
-
