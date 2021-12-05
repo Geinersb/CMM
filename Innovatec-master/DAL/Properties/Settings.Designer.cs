@@ -26,8 +26,8 @@ namespace DAL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-5AQTLJ4\\SQLEXPRESS;Initial Catalog=db_cmm;User ID=sa;Password" +
-            "=base1234")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=proyectocmm-server.database.windows.net;Initial Catalog=proyectocmm-d" +
+            "b;User ID=administrador;Password=contraseña00-")]
         public string cadena {
             get {
                 return ((string)(this["cadena"]));

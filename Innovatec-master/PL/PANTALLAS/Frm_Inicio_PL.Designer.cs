@@ -44,6 +44,7 @@
             this.iconCerrar = new System.Windows.Forms.PictureBox();
             this.iconMaximizar = new System.Windows.Forms.PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuGradientPanel2 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.lblRol = new System.Windows.Forms.Label();
             this.lbFecha = new System.Windows.Forms.Label();
@@ -63,12 +64,10 @@
             this.btnAuditoria = new System.Windows.Forms.Button();
             this.PanelAdmin = new System.Windows.Forms.Panel();
             this.btnEstadistica = new System.Windows.Forms.Button();
-            this.btnFamilia = new System.Windows.Forms.Button();
             this.btnPacientes = new System.Windows.Forms.Button();
             this.btnAdmin = new System.Windows.Forms.Button();
             this.Logo = new System.Windows.Forms.PictureBox();
             this.LogoTransition = new Bunifu.UI.WinForms.BunifuTransition(this.components);
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -76,13 +75,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconMaximizar)).BeginInit();
             this.panelChildForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.bunifuGradientPanel2.SuspendLayout();
             this.MenuVertical.SuspendLayout();
             this.panelMantenimiento.SuspendLayout();
             this.PanelAuditoria.SuspendLayout();
             this.PanelAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -218,6 +217,18 @@
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(1119, 723);
             this.panelChildForm.TabIndex = 10;
+            // 
+            // pictureBox2
+            // 
+            this.PanelTransition.SetDecoration(this.pictureBox2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.LogoTransition.SetDecoration(this.pictureBox2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.pictureBox2.Image = global::PL.Properties.Resources.Logo;
+            this.pictureBox2.Location = new System.Drawing.Point(398, 181);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(338, 213);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
             // 
             // bunifuGradientPanel2
             // 
@@ -522,7 +533,6 @@
             // PanelAdmin
             // 
             this.PanelAdmin.Controls.Add(this.btnEstadistica);
-            this.PanelAdmin.Controls.Add(this.btnFamilia);
             this.PanelAdmin.Controls.Add(this.btnPacientes);
             this.LogoTransition.SetDecoration(this.PanelAdmin, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.PanelTransition.SetDecoration(this.PanelAdmin, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
@@ -542,31 +552,13 @@
             this.btnEstadistica.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnEstadistica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEstadistica.ForeColor = System.Drawing.Color.White;
-            this.btnEstadistica.Location = new System.Drawing.Point(0, 80);
+            this.btnEstadistica.Location = new System.Drawing.Point(0, 40);
             this.btnEstadistica.Name = "btnEstadistica";
             this.btnEstadistica.Size = new System.Drawing.Size(250, 40);
             this.btnEstadistica.TabIndex = 5;
             this.btnEstadistica.Text = "ARCHIVADOS";
             this.btnEstadistica.UseVisualStyleBackColor = true;
             this.btnEstadistica.Click += new System.EventHandler(this.btnPersonal_Click);
-            // 
-            // btnFamilia
-            // 
-            this.btnFamilia.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PanelTransition.SetDecoration(this.btnFamilia, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.LogoTransition.SetDecoration(this.btnFamilia, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.btnFamilia.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFamilia.FlatAppearance.BorderSize = 0;
-            this.btnFamilia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnFamilia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFamilia.ForeColor = System.Drawing.Color.White;
-            this.btnFamilia.Location = new System.Drawing.Point(0, 40);
-            this.btnFamilia.Name = "btnFamilia";
-            this.btnFamilia.Size = new System.Drawing.Size(250, 40);
-            this.btnFamilia.TabIndex = 4;
-            this.btnFamilia.Text = "HISTORIAL";
-            this.btnFamilia.UseVisualStyleBackColor = true;
-            this.btnFamilia.Click += new System.EventHandler(this.btnFamilia_Click);
             // 
             // btnPacientes
             // 
@@ -646,18 +638,6 @@
             animation2.TransparencyCoeff = 0F;
             this.LogoTransition.DefaultAnimation = animation2;
             // 
-            // pictureBox2
-            // 
-            this.PanelTransition.SetDecoration(this.pictureBox2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.LogoTransition.SetDecoration(this.pictureBox2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.pictureBox2.Image = global::PL.Properties.Resources.Logo;
-            this.pictureBox2.Location = new System.Drawing.Point(398, 181);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(338, 213);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
-            // 
             // Frm_Inicio_PL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -682,6 +662,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconMaximizar)).EndInit();
             this.panelChildForm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.bunifuGradientPanel2.PerformLayout();
             this.MenuVertical.ResumeLayout(false);
@@ -689,7 +670,6 @@
             this.PanelAuditoria.ResumeLayout(false);
             this.PanelAdmin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -713,7 +693,6 @@
         private System.Windows.Forms.Button btnAuditoria;
         private System.Windows.Forms.Panel PanelAdmin;
         private System.Windows.Forms.Button btnEstadistica;
-        private System.Windows.Forms.Button btnFamilia;
         private System.Windows.Forms.Button btnPacientes;
         private System.Windows.Forms.Button btnAdmin;
         private System.Windows.Forms.PictureBox Logo;
