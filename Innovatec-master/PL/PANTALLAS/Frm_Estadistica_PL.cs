@@ -156,7 +156,7 @@ namespace PL.PANTALLAS
             dt = pbll.ListarProcesos();
             var objetos = dt.AsEnumerable().Select(x=>
             new {
-                nivel =x.Field<int>("ValorActual")
+                nivel =x.Field<int>("Valor Actual")
             });
 
             foreach (var objeto in objetos)
@@ -211,7 +211,7 @@ namespace PL.PANTALLAS
             dt = pbll.ListarProcesos();
             var objetos = dt.AsEnumerable().Select(x =>
             new {
-                nivel = x.Field<int>("ValorActual")
+                nivel = x.Field<int>("Valor Actual")
             });
 
             foreach (var objeto in objetos)
