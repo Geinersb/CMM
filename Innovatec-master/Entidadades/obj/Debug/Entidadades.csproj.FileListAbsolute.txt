@@ -21,3 +21,4 @@ C:\Users\Marjorie\Downloads\CMM\Innovatec-master\Entidadades\bin\Debug\Entidadad
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\Entidadades\obj\Debug\Entidadades.csproj.CoreCompileInputs.cache
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\Entidadades\obj\Debug\Entidadades.dll
 C:\Users\Marjorie\Downloads\CMM\Innovatec-master\Entidadades\obj\Debug\Entidadades.pdb
+C:\Users\Marjorie\Downloads\CMM\Innovatec-master\Entidadades\obj\Debug\Entidadades.csprojAssemblyReference.cache

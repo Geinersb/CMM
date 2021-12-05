@@ -9,11 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidadades;
 using BLL.CAT_MANT;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace PL.PANTALLAS
 {
     public partial class Frm_Estadistica_PL : Form
     {
+
+        Procesos_BLL pbll = new Procesos_BLL();
+
         public Frm_Estadistica_PL()
         {
             InitializeComponent();
@@ -30,6 +34,8 @@ namespace PL.PANTALLAS
             CargarCantidadProcesos();
             CargarCantidadActivos();
             CargarCantidadArchivados();
+            CargarBarras();
+            CargarPie();
 
 
         }
@@ -67,6 +73,10 @@ namespace PL.PANTALLAS
 
             }
         }
+
+
+
+
 
         public void CargarCantidadArchivados()
         {
@@ -119,6 +129,125 @@ namespace PL.PANTALLAS
 
             MessageBox.Show("DOCUMENTO GENERADO CON ÉXITO!!", "GENIAL", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void chart1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+
+        public void CargarBarras()
+        {
+
+            String[] nombresN = {"nivel 1", "nivel 2", "nivel 3", "nivel 4", "nivel 5" };
+          //  int[] niveles = { };
+
+            int n1 = 0;
+            int n2=0;
+            int n3 = 0;
+                int n4=0;
+            int n5 = 0;            
+           // this.chart1.Titles.Add("Grafico de Niveles");
+             
+            DataTable dt = new DataTable();
+            dt = pbll.ListarProcesos();
+            var objetos = dt.AsEnumerable().Select(x=>
+            new {
+                nivel =x.Field<int>("ValorActual")
+            });
+
+            foreach (var objeto in objetos)
+            {
+                if (objeto.nivel == 1)
+                    n1++;
+                if (objeto.nivel == 2)
+                    n2++;
+                if (objeto.nivel == 3)
+                    n3++;
+                if (objeto.nivel == 4)
+                    n4++;
+                if (objeto.nivel == 5)
+                    n5++;
+            }
+            //niveles[0] = n1;
+            //niveles[1] = n2;
+            //niveles[2] = n3;
+            //niveles[3] = n4;
+            //niveles[4] = n5;
+            int[] niveles = { n1,n2,n3,n4,n5};
+
+
+            for (int i = 0; i < nombresN.Length; i++)
+            {
+                Series seriegf = chart1.Series.Add(nombresN[i]);
+              //  seriegf.Label = niveles[i].ToString();
+                seriegf.Points.Add(niveles[i]);
+            }
+
+
+
+        }
+
+
+
+
+        public void CargarPie()
+        {
+
+            String[] nombresN = { "nivel 1", "nivel 2", "nivel 3", "nivel 4", "nivel 5" };
+            //  int[] niveles = { };
+
+            int n1 = 0;
+            int n2 = 0;
+            int n3 = 0;
+            int n4 = 0;
+            int n5 = 0;
+            this.chart1.Titles.Add("Gráfico de Niveles");
+
+            DataTable dt = new DataTable();
+            dt = pbll.ListarProcesos();
+            var objetos = dt.AsEnumerable().Select(x =>
+            new {
+                nivel = x.Field<int>("ValorActual")
+            });
+
+            foreach (var objeto in objetos)
+            {
+                if (objeto.nivel == 1)
+                    n1++;
+                if (objeto.nivel == 2)
+                    n2++;
+                if (objeto.nivel == 3)
+                    n3++;
+                if (objeto.nivel == 4)
+                    n4++;
+                if (objeto.nivel == 5)
+                    n5++;
+            }
+            //niveles[0] = n1;
+            //niveles[1] = n2;
+            //niveles[2] = n3;
+            //niveles[3] = n4;
+            //niveles[4] = n5;
+            int[] niveles = { n1, n2, n3, n4, n5 };
+
+
+            for (int i = 0; i < nombresN.Length; i++)
+            {
+                //Series seriegf = chart1.Series.Add(nombresN[i]);
+                //seriegf.Label = niveles[i].ToString();
+                //seriegf.Points.Add(niveles[i]);
+                chart2.Series["Series1"].Points.AddXY(nombresN[i], niveles[i]);
+                
+            }
+
+
+
+        }
+
 
     }
 }
