@@ -319,7 +319,7 @@ namespace DAL.BD
 
                 }
                 else
-                   respuesta= "Lo sentimos, usted no tiene una cuenta con el correo o usuario brindado";
+                   respuesta= "Lo sentimos, usted no tiene una cuenta \n con el correo o usuario brindado";
 
 
             }

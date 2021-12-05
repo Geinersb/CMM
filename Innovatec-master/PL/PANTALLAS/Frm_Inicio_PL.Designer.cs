@@ -341,7 +341,7 @@
             this.LogoTransition.SetDecoration(this.panelMantenimiento, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.PanelTransition.SetDecoration(this.panelMantenimiento, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.panelMantenimiento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMantenimiento.Location = new System.Drawing.Point(0, 594);
+            this.panelMantenimiento.Location = new System.Drawing.Point(0, 565);
             this.panelMantenimiento.Name = "panelMantenimiento";
             this.panelMantenimiento.Size = new System.Drawing.Size(250, 95);
             this.panelMantenimiento.TabIndex = 11;
@@ -395,7 +395,7 @@
             this.btnMantenimiento.ForeColor = System.Drawing.Color.White;
             this.btnMantenimiento.Image = global::PL.Properties.Resources.gear_2_32;
             this.btnMantenimiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMantenimiento.Location = new System.Drawing.Point(0, 549);
+            this.btnMantenimiento.Location = new System.Drawing.Point(0, 520);
             this.btnMantenimiento.Name = "btnMantenimiento";
             this.btnMantenimiento.Padding = new System.Windows.Forms.Padding(12, 0, 2, 0);
             this.btnMantenimiento.Size = new System.Drawing.Size(250, 45);
@@ -430,7 +430,7 @@
             this.LogoTransition.SetDecoration(this.PanelAuditoria, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.PanelTransition.SetDecoration(this.PanelAuditoria, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.PanelAuditoria.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelAuditoria.Location = new System.Drawing.Point(0, 392);
+            this.PanelAuditoria.Location = new System.Drawing.Point(0, 363);
             this.PanelAuditoria.Name = "PanelAuditoria";
             this.PanelAuditoria.Size = new System.Drawing.Size(250, 157);
             this.PanelAuditoria.TabIndex = 8;
@@ -520,7 +520,7 @@
             this.btnAuditoria.ForeColor = System.Drawing.Color.White;
             this.btnAuditoria.Image = global::PL.Properties.Resources.pages__2_;
             this.btnAuditoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAuditoria.Location = new System.Drawing.Point(0, 347);
+            this.btnAuditoria.Location = new System.Drawing.Point(0, 318);
             this.btnAuditoria.Name = "btnAuditoria";
             this.btnAuditoria.Padding = new System.Windows.Forms.Padding(9, 0, 5, 0);
             this.btnAuditoria.Size = new System.Drawing.Size(250, 45);
@@ -539,7 +539,7 @@
             this.PanelAdmin.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelAdmin.Location = new System.Drawing.Point(0, 212);
             this.PanelAdmin.Name = "PanelAdmin";
-            this.PanelAdmin.Size = new System.Drawing.Size(250, 135);
+            this.PanelAdmin.Size = new System.Drawing.Size(250, 106);
             this.PanelAdmin.TabIndex = 3;
             // 
             // btnEstadistica
@@ -650,6 +650,7 @@
             this.PanelTransition.SetDecoration(this, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.LogoTransition.SetDecoration(this, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frm_Inicio_PL";
             this.Opacity = 0.92D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

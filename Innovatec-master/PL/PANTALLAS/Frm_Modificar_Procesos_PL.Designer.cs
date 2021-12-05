@@ -124,7 +124,7 @@ namespace PL.PANTALLAS
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(152, 40);
             this.btnEditar.TabIndex = 51;
-            this.btnEditar.Text = "EDITAR";
+            this.btnEditar.Text = "ACTUALIZAR";
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
@@ -379,7 +379,7 @@ namespace PL.PANTALLAS
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.BarraTitulo);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Modificar_Procesos_PL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Procesos";
